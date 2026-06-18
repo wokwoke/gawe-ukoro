@@ -10,7 +10,6 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-height:100vh;font-size:15px;}
-/* LAYOUT */
 .app{display:flex;flex-direction:column;height:100vh;overflow:hidden;}
 .topbar{background:#12122a;padding:10px 16px;border-bottom:1px solid #2a2a4a;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .topbar-left h1{font-size:1.1rem;color:#a78bfa;letter-spacing:3px;font-weight:700;}
@@ -19,13 +18,11 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .mode-btn{padding:6px 14px;border-radius:20px;border:1px solid #333;background:#1a1a1a;color:#777;font-size:0.72rem;cursor:pointer;}
 .mode-btn.active{background:#4f46e5;color:#fff;border-color:#4f46e5;}
 .body{display:flex;flex:1;overflow:hidden;}
-/* PANEL KIRI */
 .left{width:52%;overflow-y:auto;border-right:1px solid #1e1e1e;}
 .tab-bar{display:flex;background:#111;border-bottom:1px solid #1e1e1e;flex-shrink:0;position:sticky;top:0;z-index:10;}
 .tab{flex:1;padding:10px 0;text-align:center;font-size:0.72rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
 .tab.active{color:#a78bfa;border-bottom-color:#a78bfa;}
 .tab-content{padding:14px;}
-/* CHIPS */
 .sec{margin-bottom:18px;}
 .sec-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .chips{display:flex;flex-wrap:wrap;gap:5px;}
@@ -38,7 +35,6 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .chip.on.c-instr{background:#6d28d9;}
 .chip.on.c-prod{background:#0e7490;}
 .grup-label{width:100%;font-size:0.62rem;color:#444;margin-top:6px;margin-bottom:2px;}
-/* STRUCTURE */
 .lib-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .lib-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
 .lib-chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#888;font-size:0.73rem;cursor:pointer;}
@@ -60,7 +56,6 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .sub-chips{display:flex;flex-wrap:wrap;gap:4px;}
 .sub-chip{padding:4px 9px;border-radius:10px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.67rem;cursor:pointer;}
 .sub-chip.on{background:#1e3a5f;color:#93c5fd;border-color:#1e3a5f;}
-/* PANEL KANAN */
 .right{width:48%;display:flex;flex-direction:column;overflow:hidden;}
 .out-tabs{display:flex;background:#111;border-bottom:1px solid #1e1e1e;}
 .out-tab{flex:1;padding:9px 0;text-align:center;font-size:0.7rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
@@ -71,31 +66,37 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .out-empty{color:#333;font-size:0.78rem;text-align:center;padding:40px 20px;line-height:2;}
 .action-bar{padding:10px 12px;border-top:1px solid #1e1e1e;display:flex;gap:6px;flex-shrink:0;}
 .act-btn{flex:1;padding:10px 6px;border-radius:8px;border:none;font-size:0.72rem;cursor:pointer;font-weight:600;transition:all 0.2s;}
+.act-btn:disabled{opacity:0.35;cursor:not-allowed;}
 .btn-style{background:#4338ca;color:#fff;}
 .btn-struct{background:#047857;color:#fff;}
 .btn-save{background:#b45309;color:#fff;}
 .btn-reset{background:#1a1a1a;color:#666;border:1px solid #252525;}
 .btn-ok{background:#059669;color:#fff;}
-/* PRESET PANEL */
 .preset-list{display:flex;flex-direction:column;gap:8px;}
-.preset-item{background:#161616;border:1px solid #252525;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;}
-.preset-item:active{background:#1e1e1e;}
-.preset-info{flex:1;}
+.preset-item{background:#161616;border:1px solid #252525;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;}
+.preset-info{flex:1;cursor:pointer;}
 .preset-name{font-size:0.78rem;color:#e0e0e0;font-weight:600;}
 .preset-cat{font-size:0.65rem;color:#555;margin-top:2px;}
-.preset-del{color:#ef4444;font-size:0.8rem;padding:4px 8px;background:none;border:1px solid #2a2a2a;border-radius:6px;cursor:pointer;}
-.preset-empty{color:#333;font-size:0.78rem;text-align:center;padding:40px 20px;}
-/* MODAL */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
+.preset-actions{display:flex;gap:4px;}
+.preset-btn{padding:5px 9px;background:none;border:1px solid #2a2a2a;border-radius:6px;font-size:0.67rem;cursor:pointer;}
+.preset-btn.load{color:#a78bfa;}
+.preset-btn.exp{color:#4ade80;}
+.preset-btn.del{color:#ef4444;}
+.preset-empty{color:#333;font-size:0.78rem;text-align:center;padding:40px 20px;line-height:2;}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
 .modal{background:#161616;border:1px solid #2a2a2a;border-radius:14px;padding:20px;width:100%;max-width:400px;}
 .modal h3{font-size:0.9rem;color:#a78bfa;margin-bottom:16px;}
-.modal input{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:12px;}
-.modal select{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:16px;}
+.modal input{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:12px;outline:none;}
+.modal input:focus{border-color:#4f46e5;}
+.modal select{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:16px;outline:none;}
 .modal-btns{display:flex;gap:8px;}
-/* EXPORT MODAL */
-.export-text{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:12px;font-size:0.7rem;color:#aaa;font-family:monospace;white-space:pre-wrap;max-height:300px;overflow-y:auto;margin-bottom:12px;}
-/* COPIED */
-.copied{background:#059669 !important;}
+.export-box{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:12px;font-size:0.7rem;color:#aaa;font-family:monospace;white-space:pre-wrap;max-height:260px;overflow-y:auto;margin-bottom:12px;line-height:1.6;}
+/* TOAST */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1e1e1e;border:1px solid #333;color:#e0e0e0;padding:10px 20px;border-radius:20px;font-size:0.78rem;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast.success{border-color:#059669;color:#4ade80;}
+.toast.error{border-color:#dc2626;color:#f87171;}
+.toast.info{border-color:#4f46e5;color:#a78bfa;}
 @media(max-width:680px){
   .body{flex-direction:column;}
   .left{width:100%;height:55vh;border-right:none;border-bottom:1px solid #1e1e1e;}
@@ -105,56 +106,88 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 </head>
 <body>
 <div id="root"></div>
+<div class="toast" id="toast"></div>
 <script type="text/babel">
-const {useState,useEffect,useRef,useCallback}=React;
+const {useState,useEffect,useCallback}=React;
 
-/* ── helpers ── */
+/* ── utils ── */
 const toMMSS=s=>{const m=Math.floor(s/60);return `${m}:${String(s%60).padStart(2,'0')}`;};
 const getAllSub=data=>{const m={};Object.values(data.sub_instruksi||{}).flat().forEach(x=>{m[x.id]=x;});return m;};
+
+/* ── toast ── */
+const showToast=(msg,type='info',dur=2500)=>{
+  const el=document.getElementById('toast');
+  if(!el)return;
+  el.textContent=msg;
+  el.className=`toast ${type} show`;
+  clearTimeout(el._t);
+  el._t=setTimeout(()=>{el.className='toast';},dur);
+};
+
+/* ── clipboard fallback ── */
+const copyText=async(text,label)=>{
+  if(!text){showToast('Tidak ada konten untuk disalin','error');return;}
+  try{
+    if(navigator.clipboard&&window.isSecureContext){
+      await navigator.clipboard.writeText(text);
+    } else {
+      const ta=document.createElement('textarea');
+      ta.value=text;
+      ta.style.cssText='position:fixed;left:-9999px;top:-9999px;opacity:0;';
+      document.body.appendChild(ta);
+      ta.focus();ta.select();
+      const ok=document.execCommand('copy');
+      document.body.removeChild(ta);
+      if(!ok) throw new Error('execCommand failed');
+    }
+    showToast(`✓ ${label} tersalin!`,'success');
+  } catch(e){
+    showToast(`Gagal menyalin — coba long-press teks output`,'error',4000);
+    console.error('Copy error:',e);
+  }
+};
 
 /* ══════════════════ APP ══════════════════ */
 function App(){
   const [D,setD]=useState(null);
-  const [mode,setMode]=useState('vocal'); // vocal | instrumental
+  const [mode,setMode]=useState('vocal');
   const [leftTab,setLeftTab]=useState('style');
   const [outTab,setOutTab]=useState('output');
-  /* style selections */
   const [sel,setSel]=useState({ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});
-  /* timeline */
   const [timeline,setTimeline]=useState([]);
-  /* presets */
   const [presets,setPresets]=useState([]);
-  /* modals */
   const [saveModal,setSaveModal]=useState(false);
   const [saveName,setSaveName]=useState('');
   const [saveCat,setSaveCat]=useState('');
   const [exportModal,setExportModal]=useState(null);
-  /* copy feedback */
-  const [copiedStyle,setCopiedStyle]=useState(false);
-  const [copiedStruct,setCopiedStruct]=useState(false);
 
-  /* load data */
   useEffect(()=>{
-    fetch('ukoro-data.json').then(r=>r.json()).then(d=>{
-      setD(d);
-      setSaveCat(d.kategori_preset[0]);
-    }).catch(e=>console.error(e));
-    const saved=localStorage.getItem('ukoro_presets');
-    if(saved)setPresets(JSON.parse(saved));
+    fetch('ukoro-data.json')
+      .then(r=>{if(!r.ok)throw new Error('Data tidak ditemukan');return r.json();})
+      .then(d=>{setD(d);setSaveCat(d.kategori_preset[0]);})
+      .catch(e=>{showToast('Gagal memuat data kamus','error');console.error(e);});
+    try{
+      const saved=localStorage.getItem('ukoro_presets');
+      if(saved){const p=JSON.parse(saved);setPresets(Array.isArray(p)?p:[]);}
+    } catch(e){showToast('Data preset rusak, direset','error');localStorage.removeItem('ukoro_presets');}
   },[]);
 
   const saveToLS=useCallback(list=>{
-    localStorage.setItem('ukoro_presets',JSON.stringify(list));
+    try{
+      localStorage.setItem('ukoro_presets',JSON.stringify(list));
+      return true;
+    } catch(e){
+      showToast('Gagal menyimpan — storage penuh?','error');
+      return false;
+    }
   },[]);
 
-  /* ── toggle chip ── */
   const toggle=(cat,id)=>setSel(p=>{
     const arr=p[cat];
     if(cat==='wirama') return {...p,[cat]:arr.includes(id)?[]:[id]};
     return {...p,[cat]:arr.includes(id)?arr.filter(x=>x!==id):[...arr,id]};
   });
 
-  /* ── build style prompt ── */
   const buildStyle=useCallback(()=>{
     if(!D) return '';
     const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
@@ -169,18 +202,14 @@ function App(){
     return parts.join(', ');
   },[D,sel,mode]);
 
-  /* ── build structure ── */
   const buildStruct=useCallback(()=>{
     if(!D||!timeline.length) return '';
     const subMap=getAllSub(D);
     let cursor=0;
     const lines=[];
     timeline.forEach(item=>{
-      const ts=toMMSS(cursor);
-      lines.push(`[${item.label} - ${ts}]`);
-      item.activeSub.forEach(sid=>{
-        if(subMap[sid]) lines.push(subMap[sid].tag);
-      });
+      lines.push(`[${item.label} - ${toMMSS(cursor)}]`);
+      item.activeSub.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});
       lines.push('');
       cursor+=item.durasi;
     });
@@ -188,119 +217,131 @@ function App(){
     return lines.join('\n');
   },[D,timeline]);
 
-  /* ── add section to timeline ── */
   const addSection=sec=>{
     const count=timeline.filter(x=>x.secId===sec.id).length;
     const label=count>0?`${sec.label} ${count+1}`:sec.label;
     setTimeline(p=>[...p,{
-      uid: Date.now()+Math.random(),
-      secId: sec.id,
-      label,
-      durasi: sec.durasi_default,
-      durasi_pilihan: sec.durasi_pilihan,
-      sub_tersedia: sec.sub_tersedia,
-      activeSub: [...(sec.sub_default||[])]
+      uid:Date.now()+Math.random(),
+      secId:sec.id,label,
+      durasi:sec.durasi_default,
+      durasi_pilihan:sec.durasi_pilihan,
+      sub_tersedia:sec.sub_tersedia,
+      activeSub:[...(sec.sub_default||[])]
     }]);
   };
 
-  /* ── reorder ── */
   const moveItem=(idx,dir)=>setTimeline(p=>{
-    const a=[...p];
-    const to=idx+dir;
-    if(to<0||to>=a.length) return a;
-    [a[idx],a[to]]=[a[to],a[idx]];
-    return a;
+    const a=[...p];const to=idx+dir;
+    if(to<0||to>=a.length)return a;
+    [a[idx],a[to]]=[a[to],a[idx]];return a;
   });
 
-  /* ── delete ── */
   const delItem=uid=>setTimeline(p=>p.filter(x=>x.uid!==uid));
-
-  /* ── set durasi ── */
   const setDurasi=(uid,d)=>setTimeline(p=>p.map(x=>x.uid===uid?{...x,durasi:d}:x));
-
-  /* ── toggle sub ── */
   const toggleSub=(uid,sid)=>setTimeline(p=>p.map(x=>{
-    if(x.uid!==uid) return x;
+    if(x.uid!==uid)return x;
     const a=x.activeSub.includes(sid)?x.activeSub.filter(s=>s!==sid):[...x.activeSub,sid];
     return {...x,activeSub:a};
   }));
 
-  /* ── copy ── */
-  const doCopy=(text,which)=>{
-    navigator.clipboard.writeText(text).then(()=>{
-      if(which==='style'){setCopiedStyle(true);setTimeout(()=>setCopiedStyle(false),2000);}
-      else{setCopiedStruct(true);setTimeout(()=>setCopiedStruct(false),2000);}
-    });
-  };
-
-  /* ── save preset ── */
   const doSave=()=>{
-    if(!saveName.trim()) return;
+    if(!saveName.trim()){showToast('Nama preset tidak boleh kosong','error');return;}
+    const styleText=buildStyle();
+    const structText=buildStruct();
+    if(!styleText&&!structText){showToast('Tidak ada konten untuk disimpan','error');return;}
     const preset={
-      id: Date.now(),
-      name: saveName.trim(),
-      cat: saveCat,
-      sel,
-      timeline,
-      mode,
-      createdAt: new Date().toLocaleDateString('id-ID')
+      id:Date.now(),
+      name:saveName.trim(),
+      cat:saveCat,
+      sel,timeline,mode,
+      createdAt:new Date().toLocaleDateString('id-ID')
     };
     const next=[...presets,preset];
-    setPresets(next);
-    saveToLS(next);
-    setSaveModal(false);
-    setSaveName('');
+    const ok=saveToLS(next);
+    if(ok){
+      setPresets(next);
+      setSaveModal(false);
+      setSaveName('');
+      showToast(`✓ Preset "${preset.name}" tersimpan`,'success');
+      setOutTab('presets');
+    }
   };
 
-  /* ── load preset ── */
   const loadPreset=p=>{
-    setSel(p.sel);
-    setTimeline(p.timeline);
-    setMode(p.mode);
+    setSel(p.sel||{ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});
+    setTimeline(p.timeline||[]);
+    setMode(p.mode||'vocal');
     setOutTab('output');
     setLeftTab('style');
+    showToast(`Preset "${p.name}" dimuat`,'info');
   };
 
-  /* ── delete preset ── */
   const delPreset=id=>{
+    const p=presets.find(x=>x.id===id);
     const next=presets.filter(x=>x.id!==id);
-    setPresets(next);
-    saveToLS(next);
+    saveToLS(next);setPresets(next);
+    showToast(`Preset "${p?.name}" dihapus`,'info');
   };
 
-  /* ── export single ── */
+  const buildTextFromPreset=(p,d)=>{
+    if(!d)return'';
+    const find=(cat,id)=>(d[cat]||[]).find(x=>x.id===id);
+    const ps=p.sel||{};
+    const parts=[];
+    if(ps.ragam?.length) parts.push(ps.ragam.map(id=>find('ragam',id)?.label).filter(Boolean).join(', '));
+    if(ps.rasa?.length)  parts.push(ps.rasa.map(id=>find('rasa',id)?.label).filter(Boolean).join(', '));
+    if(p.mode==='instrumental') parts.push('instrumental only, no vocals');
+    else if(ps.swara?.length) parts.push(ps.swara.map(id=>find('swara',id)?.label).filter(Boolean).join(', '));
+    if(ps.wirama?.length){const t=find('wirama',ps.wirama[0]);if(t)parts.push(t.bpm||t.label);}
+    if(ps.piranti?.length) parts.push(ps.piranti.map(id=>find('piranti',id)?.label).filter(Boolean).join(' + '));
+    if(ps.produksi?.length) parts.push(ps.produksi.map(id=>find('produksi',id)?.label).filter(Boolean).join(', '));
+    const style=parts.join(', ');
+    const subMap=getAllSub(d);
+    let cursor=0;
+    const lines=[];
+    (p.timeline||[]).forEach(item=>{
+      lines.push(`[${item.label} - ${toMMSS(cursor)}]`);
+      item.activeSub?.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});
+      lines.push('');
+      cursor+=item.durasi;
+    });
+    if(lines.length) lines.push(`[End - ${toMMSS(cursor)}]`);
+    const struct=lines.join('\n');
+    return `PRESET: ${p.name}\nKATEGORI: ${p.cat}\nTANGGAL: ${p.createdAt}\n\n[STYLE PROMPT]\n${style}\n\n[STRUCTURE]\n${struct}`;
+  };
+
   const exportPreset=p=>{
-    const style=buildStyleFrom(p.sel,p.mode,D);
-    const struct=buildStructFrom(p.timeline,D);
-    const text=`PRESET: ${p.name}\nKATEGORI: ${p.cat}\nTANGGAL: ${p.createdAt}\n\n[STYLE PROMPT]\n${style}\n\n[STRUCTURE]\n${struct}`;
+    const text=buildTextFromPreset(p,D);
     setExportModal({title:p.name,text});
   };
 
-  /* ── export all ── */
   const exportAll=()=>{
-    if(!presets.length) return;
+    if(!presets.length){showToast('Tidak ada preset untuk diekspor','error');return;}
     const lines=presets.map((p,i)=>{
-      const style=buildStyleFrom(p.sel,p.mode,D);
-      const struct=buildStructFrom(p.timeline,D);
-      return `${'='.repeat(50)}\nPRESET #${String(i+1).padStart(2,'0')}: ${p.name}\nKATEGORI: ${p.cat}\n${'='.repeat(50)}\n\n[STYLE PROMPT]\n${style}\n\n[STRUCTURE]\n${struct}`;
+      const text=buildTextFromPreset(p,D);
+      return `${'='.repeat(50)}\nPRESET #${String(i+1).padStart(2,'0')}\n${'='.repeat(50)}\n${text}`;
     }).join('\n\n');
-    const blob=new Blob([lines],{type:'text/plain'});
-    const url=URL.createObjectURL(blob);
-    const a=document.createElement('a');
-    a.href=url;a.download='ukoro-bundle.txt';a.click();
-    URL.revokeObjectURL(url);
+    try{
+      const blob=new Blob([lines],{type:'text/plain'});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;a.download='ukoro-bundle.txt';a.click();
+      URL.revokeObjectURL(url);
+      showToast(`✓ ${presets.length} preset diekspor`,'success');
+    } catch(e){
+      showToast('Gagal ekspor file','error');
+    }
   };
 
   const styleText=buildStyle();
   const structText=buildStruct();
+  const hasContent=!!(styleText||structText);
 
-  if(!D) return <div style={{color:'#555',padding:'40px',textAlign:'center'}}>Loading...</div>;
-
+  if(!D) return <div style={{color:'#555',padding:'40px',textAlign:'center',fontSize:'0.85rem'}}>Memuat data...</div>;
   const subMap=getAllSub(D);
 
   return (
     <div className="app">
-      {/* TOP BAR */}
       <div className="topbar">
         <div className="topbar-left">
           <h1>GAWE UKORO</h1>
@@ -313,45 +354,43 @@ function App(){
       </div>
 
       <div className="body">
-        {/* ══ PANEL KIRI ══ */}
+        {/* PANEL KIRI */}
         <div className="left">
           <div className="tab-bar">
-            <div className={`tab ${leftTab==='style'?'active':''}`} onClick={()=>setLeftTab('style')}>🎸 Style Tags</div>
+            <div className={`tab ${leftTab==='style'?'active':''}`} onClick={()=>setLeftTab('style')}>🎸 Style</div>
             <div className={`tab ${leftTab==='struct'?'active':''}`} onClick={()=>setLeftTab('struct')}>🏗️ Structure</div>
           </div>
-
           <div className="tab-content">
-            {leftTab==='style' && <>
+            {leftTab==='style'&&<>
               <ChipSection title="Genre / Ragam" cat="ragam" color="c-genre" data={D} sel={sel} toggle={toggle} grouped/>
               <ChipSection title="Mood / Rasa" cat="rasa" color="c-mood" data={D} sel={sel} toggle={toggle}/>
-              {mode==='vocal' && <ChipSection title="Vokal / Swara" cat="swara" color="c-vocal" data={D} sel={sel} toggle={toggle}/>}
-              <ChipSection title="Tempo / Wirama" cat="wirama" color="c-tempo" data={D} sel={sel} toggle={toggle} single/>
+              {mode==='vocal'&&<ChipSection title="Vokal / Swara" cat="swara" color="c-vocal" data={D} sel={sel} toggle={toggle}/>}
+              <ChipSection title="Tempo / Wirama" cat="wirama" color="c-tempo" data={D} sel={sel} toggle={toggle}/>
               <ChipSection title="Instrumen / Piranti" cat="piranti" color="c-instr" data={D} sel={sel} toggle={toggle} grouped/>
               <ChipSection title="Produksi" cat="produksi" color="c-prod" data={D} sel={sel} toggle={toggle}/>
             </>}
-
-            {leftTab==='struct' && <>
+            {leftTab==='struct'&&<>
               <div className="lib-title">Library Section — tap untuk tambah</div>
               <div className="lib-chips">
                 {D.struktur_lagu.map(sec=>(
                   <div key={sec.id} className="lib-chip" onClick={()=>addSection(sec)}>{sec.label}</div>
                 ))}
               </div>
-              <div className="lib-title">Timeline</div>
-              {timeline.length===0 && <div style={{color:'#333',fontSize:'0.75rem',padding:'20px 0'}}>Belum ada section. Tap dari library di atas.</div>}
+              <div className="lib-title">Timeline {timeline.length>0&&`(${timeline.length} section)`}</div>
+              {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Belum ada section. Tap dari library di atas.</div>}
               <div className="timeline">
                 {timeline.map((item,idx)=>{
                   let cursor=0;
                   for(let i=0;i<idx;i++) cursor+=timeline[i].durasi;
-                  return (
+                  return(
                     <div key={item.uid} className="tl-item">
                       <div className="tl-header">
                         <span className="tl-name">{item.label}</span>
                         <span className="tl-time">{toMMSS(cursor)}</span>
                         <div className="tl-btns">
-                          <button className="tl-btn" onClick={()=>moveItem(idx,-1)}>▲</button>
-                          <button className="tl-btn" onClick={()=>moveItem(idx,1)}>▼</button>
-                          <button className="tl-btn del" onClick={()=>delItem(item.uid)}>✕</button>
+                          <button className="tl-btn" onClick={()=>moveItem(idx,-1)} title="Naik">▲</button>
+                          <button className="tl-btn" onClick={()=>moveItem(idx,1)} title="Turun">▼</button>
+                          <button className="tl-btn del" onClick={()=>delItem(item.uid)} title="Hapus">✕</button>
                         </div>
                       </div>
                       <div className="tl-body">
@@ -363,9 +402,8 @@ function App(){
                         </div>
                         <div className="sub-chips">
                           {item.sub_tersedia.map(sid=>{
-                            const s=subMap[sid];
-                            if(!s) return null;
-                            return <div key={sid} className={`sub-chip ${item.activeSub.includes(sid)?'on':''}`} onClick={()=>toggleSub(item.uid,sid)}>{s.tag}</div>;
+                            const s=subMap[sid];if(!s)return null;
+                            return<div key={sid} className={`sub-chip ${item.activeSub.includes(sid)?'on':''}`} onClick={()=>toggleSub(item.uid,sid)}>{s.tag}</div>;
                           })}
                         </div>
                       </div>
@@ -377,26 +415,26 @@ function App(){
           </div>
         </div>
 
-        {/* ══ PANEL KANAN ══ */}
+        {/* PANEL KANAN */}
         <div className="right">
           <div className="out-tabs">
             <div className={`out-tab ${outTab==='output'?'active':''}`} onClick={()=>setOutTab('output')}>Output</div>
             <div className={`out-tab ${outTab==='presets'?'active':''}`} onClick={()=>setOutTab('presets')}>
-              Preset {presets.length>0?`(${presets.length})`:''}
+              Preset{presets.length>0?` (${presets.length})`:' '}
             </div>
           </div>
 
           <div className="out-body">
-            {outTab==='output' && <>
-              {!styleText && !structText
-                ? <div className="out-empty">Pilih tag di panel kiri untuk membangun prompt.<br/><br/>🎸 Style Tags → untuk style prompt<br/>🏗️ Structure → untuk struktur lagu</div>
-                : <>
-                  {styleText && <>
+            {outTab==='output'&&<>
+              {!hasContent
+                ?<div className="out-empty">Pilih tag di panel kiri untuk membangun prompt.<br/><br/>🎸 Style → untuk style prompt<br/>🏗️ Structure → untuk struktur lagu</div>
+                :<>
+                  {styleText&&<>
                     <div className="out-title">Style Prompt</div>
                     <div className="out-text">{styleText}</div>
                     <div style={{height:14}}/>
                   </>}
-                  {structText && <>
+                  {structText&&<>
                     <div className="out-title">Structure</div>
                     <div className="out-text">{structText}</div>
                   </>}
@@ -404,63 +442,72 @@ function App(){
               }
             </>}
 
-            {outTab==='presets' && <>
+            {outTab==='presets'&&<>
               {presets.length===0
-                ? <div className="preset-empty">Belum ada preset tersimpan.<br/>Buat prompt lalu tap 💾 Simpan.</div>
-                : <div className="preset-list">
-                    {presets.map(p=>(
-                      <div key={p.id} className="preset-item" onClick={()=>loadPreset(p)}>
-                        <div className="preset-info">
-                          <div className="preset-name">{p.name}</div>
-                          <div className="preset-cat">{p.cat} · {p.createdAt}</div>
-                        </div>
-                        <button className="preset-del" onClick={e=>{e.stopPropagation();delPreset(p.id);}}>✕</button>
-                        <button style={{padding:'4px 8px',background:'#1a3a2a',border:'1px solid #2a2a2a',borderRadius:'6px',color:'#4ade80',fontSize:'0.68rem',cursor:'pointer'}}
-                          onClick={e=>{e.stopPropagation();exportPreset(p);}}>Export</button>
+                ?<div className="preset-empty">Belum ada preset tersimpan.<br/>Buat prompt lalu tap 💾 Simpan.</div>
+                :<div className="preset-list">
+                  {presets.map(p=>(
+                    <div key={p.id} className="preset-item">
+                      <div className="preset-info" onClick={()=>loadPreset(p)}>
+                        <div className="preset-name">{p.name}</div>
+                        <div className="preset-cat">{p.cat} · {p.createdAt}</div>
                       </div>
-                    ))}
-                    <button onClick={exportAll} style={{marginTop:8,padding:'10px',background:'#1a1a1a',border:'1px solid #333',borderRadius:'8px',color:'#a78bfa',fontSize:'0.75rem',cursor:'pointer',fontWeight:600}}>
-                      📦 Export Semua → ukoro-bundle.txt
-                    </button>
-                  </div>
+                      <div className="preset-actions">
+                        <button className="preset-btn load" onClick={()=>loadPreset(p)}>Load</button>
+                        <button className="preset-btn exp" onClick={()=>exportPreset(p)}>Exp</button>
+                        <button className="preset-btn del" onClick={()=>delPreset(p.id)}>✕</button>
+                      </div>
+                    </div>
+                  ))}
+                  <button onClick={exportAll} style={{marginTop:8,padding:'10px',background:'#1a1a1a',border:'1px solid #333',borderRadius:'8px',color:'#a78bfa',fontSize:'0.75rem',cursor:'pointer',fontWeight:600,width:'100%'}}>
+                    📦 Export Semua → ukoro-bundle.txt
+                  </button>
+                </div>
               }
             </>}
           </div>
 
-          {/* ACTION BAR */}
           <div className="action-bar">
-            <button className={`act-btn btn-style ${copiedStyle?'copied':''}`}
-              onClick={()=>doCopy(styleText,'style')} disabled={!styleText}>
-              {copiedStyle?'✓ Style!':'📋 Style'}
+            <button className="act-btn btn-style"
+              onClick={()=>copyText(styleText,'Style Prompt')}
+              disabled={!styleText}>
+              📋 Style
             </button>
-            <button className={`act-btn btn-struct ${copiedStruct?'copied':''}`}
-              onClick={()=>doCopy(structText,'struct')} disabled={!structText}>
-              {copiedStruct?'✓ Struct!':'📋 Struct'}
+            <button className="act-btn btn-struct"
+              onClick={()=>copyText(structText,'Structure')}
+              disabled={!structText}>
+              📋 Struct
             </button>
             <button className="act-btn btn-save"
-              onClick={()=>setSaveModal(true)} disabled={!styleText&&!structText}>
+              onClick={()=>{if(!hasContent){showToast('Buat prompt dulu sebelum menyimpan','error');return;}setSaveModal(true);}}
+              disabled={!hasContent}>
               💾 Simpan
             </button>
-            <button className="act-btn btn-reset"
-              onClick={()=>{setSel({ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});setTimeline([]);}}>
-              ↺
-            </button>
+            <button className="act-btn btn-reset" onClick={()=>{
+              setSel({ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});
+              setTimeline([]);
+              showToast('Reset berhasil','info');
+            }}>↺</button>
           </div>
         </div>
       </div>
 
       {/* SAVE MODAL */}
-      {saveModal && (
+      {saveModal&&(
         <div className="overlay" onClick={()=>setSaveModal(false)}>
           <div className="modal" onClick={e=>e.stopPropagation()}>
             <h3>💾 Simpan Preset</h3>
-            <input placeholder="Nama preset..." value={saveName} onChange={e=>setSaveName(e.target.value)}
-              onKeyDown={e=>e.key==='Enter'&&doSave()} autoFocus/>
+            <input
+              placeholder="Nama preset..."
+              value={saveName}
+              onChange={e=>setSaveName(e.target.value)}
+              onKeyDown={e=>e.key==='Enter'&&doSave()}
+              autoFocus/>
             <select value={saveCat} onChange={e=>setSaveCat(e.target.value)}>
               {D.kategori_preset.map(k=><option key={k} value={k}>{k}</option>)}
             </select>
             <div className="modal-btns">
-              <button className="act-btn btn-ok" onClick={doSave}>Simpan</button>
+              <button className="act-btn btn-ok" onClick={doSave}>✓ Simpan</button>
               <button className="act-btn btn-reset" onClick={()=>setSaveModal(false)}>Batal</button>
             </div>
           </div>
@@ -468,13 +515,15 @@ function App(){
       )}
 
       {/* EXPORT MODAL */}
-      {exportModal && (
+      {exportModal&&(
         <div className="overlay" onClick={()=>setExportModal(null)}>
           <div className="modal" onClick={e=>e.stopPropagation()}>
             <h3>📤 {exportModal.title}</h3>
-            <div className="export-text">{exportModal.text}</div>
+            <div className="export-box">{exportModal.text}</div>
             <div className="modal-btns">
-              <button className="act-btn btn-style" onClick={()=>{navigator.clipboard.writeText(exportModal.text);setExportModal(null);}}>Copy Teks</button>
+              <button className="act-btn btn-style" onClick={()=>{copyText(exportModal.text,'Preset');setExportModal(null);}}>
+                📋 Copy
+              </button>
               <button className="act-btn btn-reset" onClick={()=>setExportModal(null)}>Tutup</button>
             </div>
           </div>
@@ -484,63 +533,31 @@ function App(){
   );
 }
 
-/* ══════════════════ ChipSection ══════════════════ */
-function ChipSection({title,cat,color,data,sel,toggle,grouped,single}){
+function ChipSection({title,cat,color,data,sel,toggle,grouped}){
   const items=data[cat]||[];
   const groups=grouped?[...new Set(items.map(x=>x.grup).filter(Boolean))]:[];
-  return (
+  return(
     <div className="sec">
       <div className="sec-title">{title}</div>
       <div className="chips">
-        {grouped && groups.length>0
-          ? groups.map(g=>(
-              <React.Fragment key={g}>
-                <div className="grup-label">{g}</div>
-                {items.filter(x=>x.grup===g).map(item=>(
-                  <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`}
-                    onClick={()=>toggle(cat,item.id)}>{item.label}</div>
-                ))}
-              </React.Fragment>
-            ))
-          : items.map(item=>(
-              <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`}
-                onClick={()=>toggle(cat,item.id)}>{item.label}</div>
-            ))
+        {grouped&&groups.length>0
+          ?groups.map(g=>(
+            <React.Fragment key={g}>
+              <div className="grup-label">{g}</div>
+              {items.filter(x=>x.grup===g).map(item=>(
+                <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`}
+                  onClick={()=>toggle(cat,item.id)}>{item.label}</div>
+              ))}
+            </React.Fragment>
+          ))
+          :items.map(item=>(
+            <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`}
+              onClick={()=>toggle(cat,item.id)}>{item.label}</div>
+          ))
         }
       </div>
     </div>
   );
-}
-
-/* ══════════════════ pure helpers (untuk export preset) ══════════════════ */
-function buildStyleFrom(sel,mode,D){
-  if(!D) return '';
-  const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
-  const parts=[];
-  if(sel.ragam.length) parts.push(sel.ragam.map(id=>find('ragam',id)?.label).filter(Boolean).join(', '));
-  if(sel.rasa.length)  parts.push(sel.rasa.map(id=>find('rasa',id)?.label).filter(Boolean).join(', '));
-  if(mode==='instrumental') parts.push('instrumental only, no vocals');
-  else if(sel.swara.length) parts.push(sel.swara.map(id=>find('swara',id)?.label).filter(Boolean).join(', '));
-  if(sel.wirama.length){const t=find('wirama',sel.wirama[0]);if(t)parts.push(t.bpm||t.label);}
-  if(sel.piranti.length) parts.push(sel.piranti.map(id=>find('piranti',id)?.label).filter(Boolean).join(' + '));
-  if(sel.produksi.length) parts.push(sel.produksi.map(id=>find('produksi',id)?.label).filter(Boolean).join(', '));
-  return parts.join(', ');
-}
-
-function buildStructFrom(timeline,D){
-  if(!D||!timeline.length) return '';
-  const subMap=getAllSub(D);
-  let cursor=0;
-  const lines=[];
-  timeline.forEach(item=>{
-    const ts=toMMSS(cursor);
-    lines.push(`[${item.label} - ${ts}]`);
-    item.activeSub.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});
-    lines.push('');
-    cursor+=item.durasi;
-  });
-  lines.push(`[End - ${toMMSS(cursor)}]`);
-  return lines.join('\n');
 }
 
 ReactDOM.render(<App/>,document.getElementById('root'));
