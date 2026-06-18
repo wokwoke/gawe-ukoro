@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gawe Ukoro</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#0f0f0f;color:#e0e0e0;font-family:system-ui,sans-serif;min-height:100vh;}
+.app{display:flex;flex-direction:column;min-height:100vh;}
+.header{background:#1a1a2e;padding:16px 20px;border-bottom:1px solid #2a2a4a;}
+.header h1{font-size:1.3rem;color:#a78bfa;letter-spacing:2px;}
+.header p{font-size:0.75rem;color:#666;margin-top:2px;}
+.mode-bar{display:flex;gap:8px;padding:12px 16px;background:#111;border-bottom:1px solid #222;overflow-x:auto;}
+.mode-btn{padding:8px 16px;border-radius:20px;border:1px solid #333;background:#1a1a1a;color:#999;font-size:0.8rem;white-space:nowrap;cursor:pointer;transition:all 0.2s;}
+.mode-btn.active{background:#4f46e5;color:#fff;border-color:#4f46e5;}
+.main{display:flex;flex:1;gap:0;}
+.panel-left{flex:1;overflow-y:auto;padding:16px;}
+.panel-right{width:340px;background:#111;border-left:1px solid #222;display:flex;flex-direction:column;}
+.section{margin-bottom:20px;}
+.section-title{font-size:0.7rem;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #222;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;}
+.chip{padding:6px 12px;border-radius:16px;border:1px solid #333;background:#1a1a1a;color:#aaa;font-size:0.78rem;cursor:pointer;transition:all 0.15s;user-select:none;}
+.chip:active{transform:scale(0.95);}
+.chip.selected{color:#fff;border-color:transparent;}
+.chip.genre.selected{background:#4f46e5;}
+.chip.rasa.selected{background:#dc2626;}
+.chip.swara.selected{background:#059669;}
+.chip.wirama.selected{background:#d97706;}
+.chip.piranti.selected{background:#7c3aed;}
+.chip.produksi.selected{background:#0891b2;}
+.group-label{font-size:0.68rem;color:#555;width:100%;margin-top:4px;margin-bottom:2px;}
+.output-header{padding:14px 16px;border-bottom:1px solid #222;}
+.output-header h3{font-size:0.75rem;color:#666;letter-spacing:1px;text-transform:uppercase;}
+.output-title{padding:10px 16px;background:#1a1a2e;border-bottom:1px solid #222;}
+.output-title span{font-size:0.8rem;color:#a78bfa;font-weight:600;}
+.output-box{flex:1;padding:14px 16px;overflow-y:auto;}
+.output-text{font-size:0.78rem;line-height:1.7;color:#ccc;white-space:pre-wrap;font-family:monospace;}
+.output-empty{color:#444;font-size:0.8rem;text-align:center;margin-top:40px;}
+.btn-row{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #222;}
+.btn{flex:1;padding:10px;border-radius:8px;border:none;font-size:0.8rem;cursor:pointer;font-weight:600;transition:all 0.2s;}
+.btn-copy{background:#4f46e5;color:#fff;}
+.btn-copy:active{background:#3730a3;}
+.btn-reset{background:#1f1f1f;color:#666;border:1px solid #333;}
+.btn-reset:active{background:#2a2a2a;}
+.lyric-area{padding:12px 16px;border-top:1px solid #222;}
+.lyric-area textarea{width:100%;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#ccc;padding:10px;font-size:0.78rem;resize:vertical;min-height:100px;font-family:monospace;}
+.tag-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
+.tag-btn{padding:4px 8px;border-radius:8px;border:1px solid #333;background:#111;color:#888;font-size:0.68rem;cursor:pointer;}
+.tag-btn:active{background:#222;}
+.copied{background:#059669 !important;}
+@media(max-width:700px){
+  .main{flex-direction:column;}
+  .panel-right{width:100%;border-left:none;border-top:1px solid #222;}
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useRef} = React;
+
+function App(){
+  const [data,setData]=useState(null);
+  const [mode,setMode]=useState('simple');
+  const [sel,setSel]=useState({ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});
+  const [lyric,setLyric]=useState('');
+  const [copied,setCopied]=useState(false);
+  const lyricRef=useRef(null);
+
+  useEffect(()=>{
+    fetch('ukoro-data.json')
+      .then(r=>r.json())
+      .then(d=>setData(d))
+      .catch(e=>console.error(e));
+  },[]);
+
+  const toggle=(cat,id)=>{
+    setSel(prev=>{
+      const arr=prev[cat];
+      if(cat==='wirama'){
+        return {...prev,[cat]:arr.includes(id)?[]:[id]};
+      }
+      return {...prev,[cat]:arr.includes(id)?arr.filter(x=>x!==id):[...arr,id]};
+    });
+  };
+
+  const getLabel=(cat,id)=>{
+    if(!data) return id;
+    return (data[cat]||[]).find(x=>x.id===id)?.label||id;
+  };
+
+  const buildPrompt=()=>{
+    if(!data) return '';
+    const parts=[];
+    if(sel.ragam.length) parts.push(sel.ragam.map(id=>getLabel('ragam',id)).join(', '));
+    if(sel.rasa.length) parts.push(sel.rasa.map(id=>getLabel('rasa',id)).join(', '));
+    if(sel.swara.length) parts.push(sel.swara.map(id=>getLabel('swara',id)).join(', '));
+    const tempo=sel.wirama[0];
+    if(tempo){
+      const t=data.wirama.find(x=>x.id===tempo);
+      parts.push(t.bpm?`${t.label}`:`${t.label}`);
+    }
+    if(sel.piranti.length) parts.push(sel.piranti.map(id=>getLabel('piranti',id)).join(' + '));
+    if(sel.produksi.length) parts.push(sel.produksi.map(id=>getLabel('produksi',id)).join(', '));
+    return parts.join(', ');
+  };
+
+  const buildTitle=()=>{
+    const parts=[];
+    if(sel.ragam.length) parts.push(getLabel('ragam',sel.ragam[0]));
+    if(sel.rasa.length) parts.push(getLabel('rasa',sel.rasa[0]));
+    return parts.length?parts.join(' — '):'Untitled';
+  };
+
+  const buildOutput=()=>{
+    const prompt=buildPrompt();
+    if(!prompt) return '';
+    if(mode==='simple') return prompt;
+    if(mode==='instrumental') return `${prompt}, instrumental only, no vocals`;
+    if(mode==='withlyric'){
+      return `[STYLE PROMPT]\n${prompt}\n\n[LYRICS]\n${lyric||'(paste lirik di sini)'}`;
+    }
+    if(mode==='ailyric'){
+      return `${prompt}, write original lyrics, in Indonesian language, with verse-chorus structure`;
+    }
+    return prompt;
+  };
+
+  const insertTag=(tag)=>{
+    const ta=lyricRef.current;
+    if(!ta) return;
+    const start=ta.selectionStart;
+    const end=ta.selectionEnd;
+    const newVal=lyric.substring(0,start)+'\n'+tag+'\n'+lyric.substring(end);
+    setLyric(newVal);
+    setTimeout(()=>{ta.selectionStart=ta.selectionEnd=start+tag.length+2;ta.focus();},10);
+  };
+
+  const handleCopy=()=>{
+    const out=buildOutput();
+    if(!out) return;
+    navigator.clipboard.writeText(out).then(()=>{
+      setCopied(true);
+      setTimeout(()=>setCopied(false),2000);
+    });
+  };
+
+  const handleReset=()=>{
+    setSel({ragam:[],rasa:[],swara:[],wirama:[],piranti:[],produksi:[]});
+    setLyric('');
+  };
+
+  const renderChips=(cat,type)=>{
+    if(!data) return null;
+    const items=data[cat]||[];
+    const groups=[...new Set(items.map(x=>x.group).filter(Boolean))];
+    if(groups.length>0){
+      return groups.map(g=>(
+        <React.Fragment key={g}>
+          <div className="group-label">{g}</div>
+          {items.filter(x=>x.group===g).map(item=>(
+            <div key={item.id}
+              className={`chip ${type} ${sel[cat].includes(item.id)?'selected':''}`}
+              onClick={()=>toggle(cat,item.id)}>
+              {item.label}
+            </div>
+          ))}
+        </React.Fragment>
+      ));
+    }
+    return items.map(item=>(
+      <div key={item.id}
+        className={`chip ${type} ${sel[cat].includes(item.id)?'selected':''}`}
+        onClick={()=>toggle(cat,item.id)}>
+        {item.label}
+      </div>
+    ));
+  };
+
+  const output=buildOutput();
+
+  return (
+    <div className="app">
+      <div className="header">
+        <h1>GAWE UKORO</h1>
+        <p>Music Prompt Builder</p>
+      </div>
+      <div className="mode-bar">
+        {[
+          {id:'simple',label:'🎵 Simple'},
+          {id:'instrumental',label:'🎹 Instrumental'},
+          {id:'ailyric',label:'🤖 AI Lyrics'},
+          {id:'withlyric',label:'✍️ With Lyrics'},
+        ].map(m=>(
+          <button key={m.id}
+            className={`mode-btn ${mode===m.id?'active':''}`}
+            onClick={()=>setMode(m.id)}>
+            {m.label}
+          </button>
+        ))}
+      </div>
+      <div className="main">
+        <div className="panel-left">
+          <div className="section">
+            <div className="section-title">🎸 Genre / Ragam</div>
+            <div className="chips">{renderChips('ragam','genre')}</div>
+          </div>
+          <div className="section">
+            <div className="section-title">💜 Mood / Rasa</div>
+            <div className="chips">{renderChips('rasa','rasa')}</div>
+          </div>
+          <div className="section">
+            <div className="section-title">🎤 Vokal / Swara</div>
+            <div className="chips">{renderChips('swara','swara')}</div>
+          </div>
+          <div className="section">
+            <div className="section-title">🥁 Tempo / Wirama</div>
+            <div className="chips">{renderChips('wirama','wirama')}</div>
+          </div>
+          <div className="section">
+            <div className="section-title">🪗 Instrumen / Piranti</div>
+            <div className="chips">{renderChips('piranti','piranti')}</div>
+          </div>
+          <div className="section">
+            <div className="section-title">🎛️ Produksi</div>
+            <div className="chips">{renderChips('produksi','produksi')}</div>
+          </div>
+        </div>
+
+        <div className="panel-right">
+          <div className="output-header">
+            <h3>Output Prompt</h3>
+          </div>
+          <div className="output-title">
+            <span>{buildTitle()}</span>
+          </div>
+          <div className="output-box">
+            {output
+              ? <div className="output-text">{output}</div>
+              : <div className="output-empty">Pilih tag di kiri untuk mulai membangun prompt</div>
+            }
+          </div>
+          {mode==='withlyric' && (
+            <div className="lyric-area">
+              <div className="tag-btns">
+                {data && data.struktur.map(s=>(
+                  <button key={s.id} className="tag-btn" onClick={()=>insertTag(s.tag)}>{s.tag}</button>
+                ))}
+                {data && data.dinamika.map(s=>(
+                  <button key={s.id} className="tag-btn" onClick={()=>insertTag(s.tag)}>{s.tag}</button>
+                ))}
+              </div>
+              <textarea
+                ref={lyricRef}
+                value={lyric}
+                onChange={e=>setLyric(e.target.value)}
+                placeholder="Ketik atau paste lirik di sini...&#10;Tap tag di atas untuk sisipkan struktur"
+              />
+            </div>
+          )}
+          <div className="btn-row">
+            <button className={`btn btn-copy ${copied?'copied':''}`} onClick={handleCopy}>
+              {copied?'✓ Tersalin!':'📋 Copy Prompt'}
+            </button>
+            <button className="btn btn-reset" onClick={handleReset}>Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.render(<App/>,document.getElementById('root'));
+</script>
+</body>
+</html>
