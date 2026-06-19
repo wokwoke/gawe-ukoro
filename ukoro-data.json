@@ -165,132 +165,308 @@
   ],
   "struktur_lagu": [
     {
-      "id": "intro", "label": "Intro", "kategori": "pembuka",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20,30],
-      "sub_default": ["sub_fade_in","sub_lowpass"],
-      "sub_tersedia": ["sub_atmospheric_pad","sub_vinyl","sub_lowpass","sub_fade_in","sub_reverb","sub_pianissimo","sub_swell","sub_kendang_in","sub_gong_resonance"]
+      "id": "intro",
+      "label": "Intro",
+      "kategori": "pembuka",
+      "durasi_min": 5,
+      "durasi_max": 15,
+      "durasi_default": 10,
+      "durasi_pilihan": [5,8,10,15],
+      "durasi_warning": "Intro ideal 5-15 detik",
+      "logic_gate": "lofi_ambient_wajib_fadein",
+      "sub_default": ["sub_fade_in"],
+      "sub_tersedia": [
+        "sub_atmospheric_pad","sub_vinyl","sub_lowpass",
+        "sub_fade_in","sub_reverb","sub_pianissimo",
+        "sub_swell","sub_kendang_in","sub_gong_resonance",
+        "sub_count_in"
+      ]
     },
     {
-      "id": "buildup", "label": "Build-up", "kategori": "transisi",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20],
+      "id": "buildup",
+      "label": "Build-up",
+      "kategori": "transisi",
+      "durasi_min": 8,
+      "durasi_max": 16,
+      "durasi_default": 15,
+      "durasi_pilihan": [8,10,15,16],
+      "durasi_warning": "Build-up minimal 8 detik agar Crescendo terdengar",
+      "logic_gate": "harus_diakhiri_energi_lebih_tinggi",
       "sub_default": ["sub_crescendo","sub_snare_roll"],
-      "sub_tersedia": ["sub_crescendo","sub_snare_roll","sub_rising_energy","sub_modulation","sub_sidechain","sub_staccato"]
+      "sub_tersedia": [
+        "sub_crescendo","sub_snare_roll","sub_rising_energy",
+        "sub_modulation","sub_sidechain","sub_staccato",
+        "sub_subbass_riser"
+      ]
     },
     {
-      "id": "verse", "label": "Verse", "kategori": "utama",
-      "durasi_default": 30, "durasi_pilihan": [15,30,45],
+      "id": "verse",
+      "label": "Verse",
+      "kategori": "utama",
+      "durasi_min": 15,
+      "durasi_max": 30,
+      "durasi_default": 30,
+      "durasi_pilihan": [15,20,25,30],
+      "durasi_warning": "Verse ideal 15-30 detik",
+      "logic_gate": "volume_vokal_prioritas",
       "sub_default": [],
-      "sub_tersedia": ["sub_vocal_chops","sub_whisper","sub_low_energy","sub_reverb","sub_legato","sub_cengkok"]
+      "sub_tersedia": [
+        "sub_vocal_chops","sub_whisper","sub_low_energy",
+        "sub_reverb","sub_legato","sub_cengkok",
+        "sub_rhythmic_plucks","sub_palm_muted"
+      ]
     },
     {
-      "id": "prechorus", "label": "Pre-Chorus", "kategori": "transisi",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20],
+      "id": "prechorus",
+      "label": "Pre-Chorus",
+      "kategori": "transisi",
+      "durasi_min": 8,
+      "durasi_max": 16,
+      "durasi_default": 15,
+      "durasi_pilihan": [8,10,15,16],
+      "durasi_warning": "Pre-Chorus ideal 8-16 detik",
+      "logic_gate": "harus_naik_ke_chorus",
       "sub_default": ["sub_crescendo","sub_rising_energy"],
-      "sub_tersedia": ["sub_crescendo","sub_rising_energy","sub_swell","sub_snare_roll","sub_sidechain"]
+      "sub_tersedia": [
+        "sub_crescendo","sub_rising_energy","sub_swell",
+        "sub_snare_roll","sub_sidechain","sub_subbass_riser"
+      ]
     },
     {
-      "id": "chorus", "label": "Chorus", "kategori": "utama",
-      "durasi_default": 30, "durasi_pilihan": [15,30,45,60],
+      "id": "chorus",
+      "label": "Chorus",
+      "kategori": "utama",
+      "durasi_min": 20,
+      "durasi_max": 40,
+      "durasi_default": 30,
+      "durasi_pilihan": [20,25,30,40],
+      "durasi_warning": "Chorus ideal 20-40 detik",
+      "logic_gate": "max_energy_zone",
       "sub_default": ["sub_fortissimo","sub_max_energy"],
-      "sub_tersedia": ["sub_fortissimo","sub_max_energy","sub_beat_drop","sub_808_kick","sub_driving_perc","sub_sidechain","sub_gamelan_full","sub_senggakan"]
+      "sub_tersedia": [
+        "sub_fortissimo","sub_max_energy","sub_beat_drop",
+        "sub_808_kick","sub_driving_perc","sub_sidechain",
+        "sub_gamelan_full","sub_anthemic","sub_wall_of_sound"
+      ]
     },
     {
-      "id": "drop", "label": "Drop", "kategori": "utama",
-      "durasi_default": 30, "durasi_pilihan": [15,30,45,60],
+      "id": "drop",
+      "label": "Drop",
+      "kategori": "utama",
+      "durasi_min": 20,
+      "durasi_max": 40,
+      "durasi_default": 30,
+      "durasi_pilihan": [20,25,30,40],
+      "durasi_warning": "Drop ideal 20-40 detik",
+      "logic_gate": "harus_didahului_buildup",
       "sub_default": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy"],
-      "sub_tersedia": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy","sub_driving_perc","sub_sidechain","sub_glitch_vocal"]
+      "sub_tersedia": [
+        "sub_fortissimo","sub_beat_drop","sub_808_kick",
+        "sub_max_energy","sub_driving_perc","sub_sidechain",
+        "sub_wall_of_sound","sub_anthemic"
+      ]
     },
     {
-      "id": "postchourus", "label": "Post-Chorus", "kategori": "transisi",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20,30],
-      "sub_default": ["sub_glitch_vocal","sub_half_time"],
-      "sub_tersedia": ["sub_glitch_vocal","sub_half_time","sub_adlib","sub_echo_vocal","sub_senggakan"]
+      "id": "postchourus",
+      "label": "Post-Chorus",
+      "kategori": "transisi",
+      "durasi_min": 8,
+      "durasi_max": 15,
+      "durasi_default": 15,
+      "durasi_pilihan": [8,10,12,15],
+      "durasi_warning": "Post-Chorus ideal 8-15 detik",
+      "logic_gate": "tempat_terbaik_senggakan",
+      "sub_default": ["sub_half_time"],
+      "sub_tersedia": [
+        "sub_glitch_vocal","sub_half_time","sub_adlib",
+        "sub_echo_vocal","sub_senggakan","sub_vocal_chops"
+      ]
     },
     {
-      "id": "breakdown", "label": "Breakdown", "kategori": "transisi",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20],
+      "id": "breakdown",
+      "label": "Breakdown",
+      "kategori": "transisi",
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [10,12,15,20],
+      "durasi_warning": "Breakdown ideal 10-20 detik",
+      "logic_gate": "hilangkan_drum_total",
       "sub_default": ["sub_beat_cut","sub_pianissimo","sub_reverb"],
-      "sub_tersedia": ["sub_beat_cut","sub_pianissimo","sub_reverb","sub_whisper","sub_lowpass","sub_only_bass"]
+      "sub_tersedia": [
+        "sub_beat_cut","sub_pianissimo","sub_reverb",
+        "sub_whisper","sub_lowpass","sub_only_bass"
+      ]
     },
     {
-      "id": "bridge", "label": "Bridge", "kategori": "transisi",
-      "durasi_default": 20, "durasi_pilihan": [15,20,30],
+      "id": "bridge",
+      "label": "Bridge",
+      "kategori": "transisi",
+      "durasi_min": 15,
+      "durasi_max": 25,
+      "durasi_default": 20,
+      "durasi_pilihan": [15,20,25],
+      "durasi_warning": "Bridge ideal 15-25 detik",
+      "logic_gate": "perubahan_emosi_sebelum_chorus_terakhir",
       "sub_default": ["sub_modulation"],
-      "sub_tersedia": ["sub_modulation","sub_rising_energy","sub_swell","sub_beat_drop","sub_key_change"]
+      "sub_tersedia": [
+        "sub_modulation","sub_rising_energy","sub_swell",
+        "sub_key_change","sub_atmospheric_pad","sub_gong_resonance"
+      ]
     },
     {
-      "id": "interlude", "label": "Interlude / Instrumental", "kategori": "transisi",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20,30],
+      "id": "interlude",
+      "label": "Interlude / Instrumental",
+      "kategori": "transisi",
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [10,15,20],
+      "durasi_warning": "Interlude ideal 10-20 detik",
+      "logic_gate": null,
       "sub_default": [],
-      "sub_tersedia": ["sub_reverb","sub_legato","sub_atmospheric_pad","sub_gamelan_full","sub_gong_resonance"]
+      "sub_tersedia": [
+        "sub_reverb","sub_legato","sub_atmospheric_pad",
+        "sub_gamelan_full","sub_gong_resonance","sub_rhythmic_plucks"
+      ]
     },
     {
-      "id": "solo", "label": "Solo", "kategori": "utama",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20,30],
+      "id": "solo",
+      "label": "Solo",
+      "kategori": "utama",
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [10,15,20],
+      "durasi_warning": "Solo ideal 10-20 detik — WAJIB pilih 1 instrumen spesifik",
+      "logic_gate": "wajib_pilih_instrumen_spesifik",
       "sub_default": [],
-      "sub_tersedia": ["sub_fortissimo","sub_legato","sub_reverb","sub_modulation"]
+      "sub_tersedia": [
+        "sub_guitar_solo","sub_synth_solo","sub_kendang_solo",
+        "sub_fortissimo","sub_legato","sub_reverb","sub_modulation"
+      ]
     },
     {
-      "id": "outro", "label": "Outro", "kategori": "penutup",
-      "durasi_default": 15, "durasi_pilihan": [10,15,20,30],
-      "sub_default": ["sub_echo_vocal","sub_fade_out"],
-      "sub_tersedia": ["sub_echo_vocal","sub_fade_out","sub_sudden_stop","sub_reverb","sub_pianissimo","sub_gong_hit","sub_final_climax"]
+      "id": "outro",
+      "label": "Outro",
+      "kategori": "penutup",
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [10,12,15,20],
+      "durasi_warning": "Outro ideal 10-20 detik",
+      "logic_gate": "sudden_stop_potong_di_detik_terakhir",
+      "sub_default": ["sub_echo_vocal","sub_atm_fade"],
+      "sub_tersedia": [
+        "sub_echo_vocal","sub_atm_fade","sub_gong_hit",
+        "sub_sudden_stop","sub_reverb","sub_pianissimo","sub_fade_out"
+      ]
     }
   ],
   "sub_instruksi": {
     "dinamika": [
-      { "id": "sub_fortissimo",     "tag": "[Fortissimo]"               },
-      { "id": "sub_pianissimo",     "tag": "[Pianissimo]"               },
-      { "id": "sub_crescendo",      "tag": "[Crescendo]"                },
-      { "id": "sub_decrescendo",    "tag": "[Decrescendo]"              },
-      { "id": "sub_swell",          "tag": "[Swell]"                    },
-      { "id": "sub_staccato",       "tag": "[Staccato]"                 },
-      { "id": "sub_legato",         "tag": "[Legato]"                   }
+      { "id": "sub_fortissimo",    "tag": "[Fortissimo]",              "flag": "normal" },
+      { "id": "sub_pianissimo",    "tag": "[Pianissimo]",              "flag": "normal" },
+      { "id": "sub_crescendo",     "tag": "[Crescendo]",               "flag": "normal" },
+      { "id": "sub_decrescendo",   "tag": "[Decrescendo]",             "flag": "normal" },
+      { "id": "sub_swell",         "tag": "[Swell]",                   "flag": "normal" },
+      { "id": "sub_staccato",      "tag": "[Staccato]",                "flag": "normal" },
+      { "id": "sub_legato",        "tag": "[Legato]",                  "flag": "normal" }
     ],
     "energi": [
-      { "id": "sub_max_energy",     "tag": "[Maximum Energy]"           },
-      { "id": "sub_low_energy",     "tag": "[Low Energy]"               },
-      { "id": "sub_rising_energy",  "tag": "[Rising Energy]"            },
-      { "id": "sub_half_time",      "tag": "[Half-time Drum Pattern]"   },
-      { "id": "sub_driving_perc",   "tag": "[Driving Percussion]"       }
+      { "id": "sub_max_energy",    "tag": "[Maximum Energy]",          "flag": "normal" },
+      { "id": "sub_low_energy",    "tag": "[Low Energy]",              "flag": "normal" },
+      { "id": "sub_rising_energy", "tag": "[Rising Energy]",           "flag": "normal" },
+      { "id": "sub_half_time",     "tag": "[Half-time Drum Pattern]",  "flag": "normal" },
+      { "id": "sub_driving_perc",  "tag": "[Driving Percussion]",      "flag": "normal" },
+      { "id": "sub_anthemic",      "tag": "[Anthemic Energy]",         "flag": "normal" },
+      { "id": "sub_wall_of_sound", "tag": "[Wall of Sound]",           "flag": "normal" }
     ],
     "vokal": [
-      { "id": "sub_vocal_chops",    "tag": "[Memphis Vocal Chops]"      },
-      { "id": "sub_glitch_vocal",   "tag": "[Glitch Vocals]"            },
-      { "id": "sub_whisper",        "tag": "[Only Whispering Vocals]"   },
-      { "id": "sub_adlib",          "tag": "[Ad-lib / Senggakan]"       },
-      { "id": "sub_echo_vocal",     "tag": "[Echoing Vocals]"           },
-      { "id": "sub_cengkok",        "tag": "[Cengkok Vocal Ornament]"   }
+      { "id": "sub_vocal_chops",   "tag": "[Memphis Vocal Chops]",     "flag": "normal" },
+      { "id": "sub_glitch_vocal",  "tag": "[Glitch Vocals]",           "flag": "warn",
+        "warn_msg": "Jika Drop sudah ada Heavy 808 Bass, Glitch Vocals bisa clipping" },
+      { "id": "sub_whisper",       "tag": "[Only Whispering Vocals]",  "flag": "normal" },
+      { "id": "sub_adlib",         "tag": "[Ad-lib / Senggakan]",      "flag": "normal" },
+      { "id": "sub_echo_vocal",    "tag": "[Echoing Vocals]",          "flag": "normal" },
+      { "id": "sub_cengkok",       "tag": "[Cengkok Vocal Ornament]",  "flag": "normal" },
+      { "id": "sub_senggakan",     "tag": "[Senggakan Ad-libs]",       "flag": "warn",
+        "warn_msg": "Senggakan paling bagus di Post-Chorus, bukan Chorus penuh" }
     ],
     "instrumen": [
-      { "id": "sub_beat_cut",       "tag": "[Sudden Beat Cut]"          },
-      { "id": "sub_beat_drop",      "tag": "[Beat Drop]"                },
-      { "id": "sub_snare_roll",     "tag": "[Rapid-fire Snare Rolls]"   },
-      { "id": "sub_808_kick",       "tag": "[Heavy 808 Bass Kick]"      },
-      { "id": "sub_only_bass",      "tag": "[Only Bass Remains]"        },
-      { "id": "sub_lowpass",        "tag": "[Low-pass Filtered]"        },
-      { "id": "sub_atmospheric_pad","tag": "[Atmospheric Pad]"          },
-      { "id": "sub_modulation",     "tag": "[Modulation]"               },
-      { "id": "sub_key_change",     "tag": "[Key Change]"               }
+      { "id": "sub_beat_cut",       "tag": "[Sudden Beat Cut]",         "flag": "normal" },
+      { "id": "sub_beat_drop",      "tag": "[Beat Drop]",               "flag": "normal" },
+      { "id": "sub_snare_roll",     "tag": "[Rapid-fire Snare Rolls]",  "flag": "normal" },
+      { "id": "sub_808_kick",       "tag": "[Heavy 808 Bass Kick]",     "flag": "normal" },
+      { "id": "sub_only_bass",      "tag": "[Only Bass Remains]",       "flag": "normal" },
+      { "id": "sub_lowpass",        "tag": "[Low-pass Filtered]",       "flag": "normal" },
+      { "id": "sub_atmospheric_pad","tag": "[Atmospheric Pad]",         "flag": "normal" },
+      { "id": "sub_modulation",     "tag": "[Modulation]",              "flag": "warn",
+        "warn_msg": "Modulation di Solo bisa membuat melodi terdengar salah nada" },
+      { "id": "sub_key_change",     "tag": "[Key Change]",              "flag": "warn",
+        "warn_msg": "Key Change mendadak bisa membuat vokal AI terdengar sumbang" },
+      { "id": "sub_rhythmic_plucks","tag": "[Rhythmic Plucks]",         "flag": "normal" },
+      { "id": "sub_palm_muted",     "tag": "[Palm Muted Guitar]",       "flag": "normal" },
+      { "id": "sub_count_in",       "tag": "[Count-in: 1, 2, 3, 4...]","flag": "normal" },
+      { "id": "sub_subbass_riser",  "tag": "[Sub-bass Riser]",          "flag": "normal" },
+      { "id": "sub_guitar_solo",    "tag": "[Guitar Solo]",             "flag": "normal" },
+      { "id": "sub_synth_solo",     "tag": "[Synth Solo]",              "flag": "normal" },
+      { "id": "sub_kendang_solo",   "tag": "[Kendang Solo]",            "flag": "normal" }
     ],
     "efek": [
-      { "id": "sub_reverb",         "tag": "[Spacious Reverb]"          },
-      { "id": "sub_sidechain",      "tag": "[Sidechained Compression]"  },
-      { "id": "sub_fade_in",        "tag": "[Fading In...]"             },
-      { "id": "sub_fade_out",       "tag": "[Fading Echo]"              },
-      { "id": "sub_sudden_stop",    "tag": "[Sudden Stop on Last Beat]" },
-      { "id": "sub_vinyl",          "tag": "[Vinyl Crackle]"            },
-      { "id": "sub_final_climax",   "tag": "[Final Climax]"             }
+      { "id": "sub_reverb",         "tag": "[Spacious Reverb]",         "flag": "normal" },
+      { "id": "sub_sidechain",      "tag": "[Sidechained Compression]", "flag": "normal" },
+      { "id": "sub_fade_in",        "tag": "[Fading In...]",            "flag": "normal" },
+      { "id": "sub_fade_out",       "tag": "[Fading Echo]",             "flag": "normal" },
+      { "id": "sub_sudden_stop",    "tag": "[Sudden Stop on Last Beat]","flag": "normal" },
+      { "id": "sub_vinyl",          "tag": "[Vinyl Crackle]",           "flag": "normal" },
+      { "id": "sub_final_climax",   "tag": "[Final Climax]",            "flag": "red",
+        "warn_msg": "RED FLAG: Final Climax di Outro kontradiktif — pindahkan ke akhir Chorus terakhir" },
+      { "id": "sub_atm_fade",       "tag": "[Atmospheric Fade]",        "flag": "normal" }
     ],
     "lokal": [
-      { "id": "sub_kendang_in",     "tag": "[Kendang enters]"           },
-      { "id": "sub_gamelan_full",   "tag": "[Full Gamelan Ensemble]"    },
-      { "id": "sub_gong_resonance", "tag": "[Gong Resonance]"           },
-      { "id": "sub_gong_hit",       "tag": "[Final Gong Hit]"           },
-      { "id": "sub_senggakan",      "tag": "[Senggakan Ad-libs]"        },
-      { "id": "sub_kecak",          "tag": "[Kecak Polyrhythm]"         }
+      { "id": "sub_kendang_in",     "tag": "[Kendang enters]",          "flag": "normal" },
+      { "id": "sub_gamelan_full",   "tag": "[Full Gamelan Ensemble]",   "flag": "warn",
+        "warn_msg": "Gamelan di Chorus modern bisa muddy — pastikan ada ruang frekuensi" },
+      { "id": "sub_gong_resonance", "tag": "[Gong Resonance]",          "flag": "normal" },
+      { "id": "sub_gong_hit",       "tag": "[Final Gong Hit]",          "flag": "normal" },
+      { "id": "sub_senggakan",      "tag": "[Senggakan Ad-libs]",       "flag": "warn",
+        "warn_msg": "Senggakan paling bagus di Post-Chorus atau Interlude" },
+      { "id": "sub_kecak",          "tag": "[Kecak Polyrhythm]",        "flag": "normal" }
     ]
   },
+  "conflict_rules": [
+    {
+      "id": "pianissimo_vs_energy",
+      "trigger": "sub_pianissimo",
+      "locks": ["sub_max_energy","sub_fortissimo","sub_808_kick","sub_anthemic","sub_wall_of_sound"],
+      "msg": "Pianissimo tidak bisa digabung dengan Maximum Energy / Fortissimo"
+    },
+    {
+      "id": "final_climax_outro",
+      "trigger": "sub_final_climax",
+      "warn_sections": ["outro"],
+      "msg": "Final Climax sebaiknya di Chorus terakhir, bukan Outro"
+    },
+    {
+      "id": "senggakan_chorus",
+      "trigger": "sub_senggakan",
+      "warn_sections": ["chorus","drop"],
+      "msg": "Senggakan akan tenggelam di Chorus penuh — pindah ke Post-Chorus"
+    },
+    {
+      "id": "modulation_solo",
+      "trigger": "sub_modulation",
+      "warn_sections": ["solo"],
+      "msg": "Modulation di Solo bisa membuat melodi terdengar salah nada"
+    },
+    {
+      "id": "glitch_808",
+      "trigger": "sub_glitch_vocal",
+      "warn_with": ["sub_808_kick","sub_max_energy"],
+      "msg": "Glitch Vocals + Heavy 808 bisa clipping — pastikan ada Sidechain"
+    }
+  ],
   "kompatibilitas": {
     "koplo": {
       "auto_rasa":    ["gembira","euphoric","playful","uplifting"],
@@ -446,7 +622,7 @@
       "warn_piranti": [],
       "hide_rasa":    ["somber","syahdu","magis","gembira"],
       "hide_swara":   ["growl","senggakan","melismatic","spokenword"],
-      "hide_piranti": ["gamelanfusion","kendangjawa","suling","rebana"]
+      "hide_piranti": ["kendangjawa","suling","rebana","saron"]
     },
     "dubstep": {
       "auto_rasa":    ["aggressive","dark","anxious","triumphant"],
