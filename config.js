@@ -1,5 +1,2 @@
-cd ~/gawe-ukoro
-cat > config.js << 'EOF'
 const SUPABASE_URL = 'https://acdtjtvqitbcvqlqttcd.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_n4uOhif1lGGCBoDaK4Njcw_iRVHu08r';
-EOF
+const SUPABASE_KEY = 'EOFeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFjZHRqdHZxaXRiY3ZxbHF0dGNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MTExNzksImV4cCI6MjA5NzM4NzE3OX0.Ngtnt5JG8K79eOmjjhS15oF-OrIBPAiCUC-qsTsIw9E';
