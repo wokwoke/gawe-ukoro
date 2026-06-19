@@ -12,22 +12,25 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-height:100vh;font-size:15px;}
 .app{display:flex;flex-direction:column;height:100vh;overflow:hidden;}
-.topbar{background:#12122a;padding:10px 16px;border-bottom:1px solid #2a2a4a;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.topbar-left h1{font-size:1.1rem;color:#a78bfa;letter-spacing:3px;font-weight:700;}
-.topbar-left p{font-size:0.65rem;color:#555;letter-spacing:1px;}
-.mode-toggle{display:flex;gap:6px;}
-.mode-btn{padding:6px 14px;border-radius:20px;border:1px solid #333;background:#1a1a1a;color:#777;font-size:0.72rem;cursor:pointer;}
+.topbar{background:#12122a;padding:8px 14px;border-bottom:1px solid #2a2a4a;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:8px;}
+.topbar-left h1{font-size:1rem;color:#a78bfa;letter-spacing:3px;font-weight:700;}
+.topbar-left p{font-size:0.6rem;color:#555;letter-spacing:1px;}
+.topbar-right{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.mode-btn{padding:5px 12px;border-radius:20px;border:1px solid #333;background:#1a1a1a;color:#777;font-size:0.68rem;cursor:pointer;}
 .mode-btn.active{background:#4f46e5;color:#fff;border-color:#4f46e5;}
+.curated-toggle{display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:20px;border:1px solid #333;background:#1a1a1a;cursor:pointer;font-size:0.65rem;color:#777;}
+.curated-toggle.on{border-color:#f59e0b;color:#f59e0b;background:#1a1500;}
 .body{display:flex;flex:1;overflow:hidden;}
 .left{width:52%;overflow-y:auto;border-right:1px solid #1e1e1e;}
-.tab-bar{display:flex;background:#111;border-bottom:1px solid #1e1e1e;flex-shrink:0;position:sticky;top:0;z-index:10;}
+.tab-bar{display:flex;background:#111;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:10;}
 .tab{flex:1;padding:10px 0;text-align:center;font-size:0.68rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
 .tab.active{color:#a78bfa;border-bottom-color:#a78bfa;}
 .tab-content{padding:14px;}
 .sec{margin-bottom:18px;}
 .sec-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .chips{display:flex;flex-wrap:wrap;gap:5px;}
-.chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#999;font-size:0.73rem;cursor:pointer;transition:all 0.15s;user-select:none;-webkit-user-select:none;}
+/* CHIP STATES */
+.chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#999;font-size:0.73rem;cursor:pointer;transition:all 0.15s;user-select:none;-webkit-user-select:none;position:relative;}
 .chip.on{color:#fff;border-color:transparent;}
 .chip.on.c-genre{background:#4338ca;}
 .chip.on.c-mood{background:#b91c1c;}
@@ -35,7 +38,17 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .chip.on.c-tempo{background:#b45309;}
 .chip.on.c-instr{background:#6d28d9;}
 .chip.on.c-prod{background:#0e7490;}
+/* curated states */
+.chip.auto-on{border-color:#f59e0b !important;box-shadow:0 0 0 1px #f59e0b;}
+.chip.warn{opacity:0.55;border-color:#b45309;}
+.chip.warn::after{content:'⚠';font-size:0.55rem;position:absolute;top:-4px;right:-4px;background:#b45309;border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;color:#fff;}
+.chip.hidden-chip{display:none;}
+.chip.c-genre.auto-on.on{background:#4338ca;}
 .grup-label{width:100%;font-size:0.62rem;color:#444;margin-top:6px;margin-bottom:2px;}
+/* curated info bar */
+.curated-bar{background:#1a1500;border:1px solid #f59e0b33;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-size:0.65rem;color:#a07020;line-height:1.6;}
+.curated-bar strong{color:#f59e0b;}
+/* structure */
 .lib-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .lib-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
 .lib-chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#888;font-size:0.73rem;cursor:pointer;}
@@ -56,6 +69,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .sub-chips{display:flex;flex-wrap:wrap;gap:4px;}
 .sub-chip{padding:4px 9px;border-radius:10px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.67rem;cursor:pointer;}
 .sub-chip.on{background:#1e3a5f;color:#93c5fd;border-color:#1e3a5f;}
+/* right panel */
 .right{width:48%;display:flex;flex-direction:column;overflow:hidden;}
 .out-tabs{display:flex;background:#111;border-bottom:1px solid #1e1e1e;}
 .out-tab{flex:1;padding:9px 0;text-align:center;font-size:0.68rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
@@ -72,19 +86,19 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .btn-save{background:#b45309;color:#fff;}
 .btn-reset{background:#1a1a1a;color:#666;border:1px solid #252525;}
 .btn-ok{background:#059669;color:#fff;}
-/* PRESET */
+/* preset */
 .preset-list{display:flex;flex-direction:column;gap:8px;}
 .preset-item{background:#161616;border:1px solid #252525;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:8px;}
 .preset-info{flex:1;cursor:pointer;min-width:0;}
 .preset-name{font-size:0.78rem;color:#e0e0e0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .preset-cat{font-size:0.63rem;color:#555;margin-top:2px;}
 .preset-actions{display:flex;gap:4px;flex-shrink:0;}
-.preset-btn{padding:5px 8px;background:none;border:1px solid #2a2a2a;border-radius:6px;font-size:0.65rem;cursor:pointer;white-space:nowrap;}
+.preset-btn{padding:5px 8px;background:none;border:1px solid #2a2a2a;border-radius:6px;font-size:0.65rem;cursor:pointer;}
 .preset-btn.load{color:#a78bfa;}
 .preset-btn.exp{color:#4ade80;}
 .preset-btn.del{color:#ef4444;}
 .preset-empty{color:#333;font-size:0.78rem;text-align:center;padding:40px 20px;line-height:2;}
-/* REFERENSI */
+/* referensi */
 .ref-filter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
 .ref-filter-btn{padding:5px 12px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#777;font-size:0.68rem;cursor:pointer;}
 .ref-filter-btn.on{background:#4338ca;color:#fff;border-color:#4338ca;}
@@ -103,7 +117,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .ref-btn.cp{background:#4338ca;color:#fff;}
 .ref-btn.cs{background:#047857;color:#fff;}
 .ref-loading{color:#444;font-size:0.75rem;text-align:center;padding:30px;}
-/* MODAL */
+/* modal */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
 .modal{background:#161616;border:1px solid #2a2a2a;border-radius:14px;padding:20px;width:100%;max-width:420px;}
 .modal h3{font-size:0.9rem;color:#a78bfa;margin-bottom:16px;}
@@ -112,7 +126,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .modal select{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:16px;outline:none;}
 .modal-btns{display:flex;gap:8px;}
 .export-box{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:12px;font-size:0.7rem;color:#aaa;font-family:monospace;white-space:pre-wrap;max-height:240px;overflow-y:auto;margin-bottom:12px;line-height:1.6;}
-/* TOAST */
+/* toast */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1e1e1e;border:1px solid #333;color:#e0e0e0;padding:10px 20px;border-radius:20px;font-size:0.78rem;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 .toast.success{border-color:#059669;color:#4ade80;}
@@ -129,88 +143,78 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 <div id="root"></div>
 <div class="toast" id="toast"></div>
 <script type="text/babel">
-const {useState,useEffect,useCallback,useRef}=React;
+const {useState,useEffect,useCallback}=React;
 
-/* ── utils ── */
 const toMMSS=s=>{const m=Math.floor(s/60);return `${m}:${String(s%60).padStart(2,'0')}`;};
 const getAllSub=data=>{const m={};Object.values(data.sub_instruksi||{}).flat().forEach(x=>{m[x.id]=x;});return m;};
 
-/* ── toast ── */
 const showToast=(msg,type='info',dur=2500)=>{
-  const el=document.getElementById('toast');
-  if(!el)return;
-  el.textContent=msg;
-  el.className=`toast ${type} show`;
-  clearTimeout(el._t);
-  el._t=setTimeout(()=>{el.className='toast';},dur);
+  const el=document.getElementById('toast');if(!el)return;
+  el.textContent=msg;el.className=`toast ${type} show`;
+  clearTimeout(el._t);el._t=setTimeout(()=>{el.className='toast';},dur);
 };
 
-/* ── clipboard ── */
 const copyText=async(text,label)=>{
   if(!text){showToast('Tidak ada konten','error');return;}
   try{
-    if(navigator.clipboard&&window.isSecureContext){
-      await navigator.clipboard.writeText(text);
-    } else {
-      const ta=document.createElement('textarea');
-      ta.value=text;
+    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);}
+    else{
+      const ta=document.createElement('textarea');ta.value=text;
       ta.style.cssText='position:fixed;left:-9999px;top:-9999px;opacity:0;';
-      document.body.appendChild(ta);
-      ta.focus();ta.select();
-      const ok=document.execCommand('copy');
-      document.body.removeChild(ta);
-      if(!ok)throw new Error('execCommand failed');
+      document.body.appendChild(ta);ta.focus();ta.select();
+      const ok=document.execCommand('copy');document.body.removeChild(ta);
+      if(!ok)throw new Error();
     }
     showToast(`✓ ${label} tersalin!`,'success');
-  } catch(e){
-    showToast('Gagal menyalin — coba long-press teks','error',4000);
-  }
+  }catch(e){showToast('Gagal menyalin — coba long-press teks','error',4000);}
 };
 
-/* ── supabase ── */
 const sbFetch=async(table,params='')=>{
-  const url=`${SUPABASE_URL}/rest/v1/${table}?${params}`;
-  const res=await fetch(url,{
-    headers:{
-      'apikey':SUPABASE_KEY,
-      'Authorization':`Bearer ${SUPABASE_KEY}`,
-      'Content-Type':'application/json'
-    }
+  const res=await fetch(`${SUPABASE_URL}/rest/v1/${table}?${params}`,{
+    headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}
   });
-  if(!res.ok)throw new Error(`Supabase error: ${res.status}`);
+  if(!res.ok)throw new Error(`${res.status}`);
   return res.json();
 };
-
 const sbInsert=async(table,data)=>{
   const res=await fetch(`${SUPABASE_URL}/rest/v1/${table}`,{
     method:'POST',
-    headers:{
-      'apikey':SUPABASE_KEY,
-      'Authorization':`Bearer ${SUPABASE_KEY}`,
-      'Content-Type':'application/json',
-      'Prefer':'return=representation'
-    },
+    headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`,'Content-Type':'application/json','Prefer':'return=representation'},
     body:JSON.stringify(data)
   });
   if(!res.ok){const e=await res.text();throw new Error(e);}
   return res.json();
 };
-
 const sbDelete=async(table,id)=>{
   const res=await fetch(`${SUPABASE_URL}/rest/v1/${table}?id=eq.${id}`,{
     method:'DELETE',
-    headers:{
-      'apikey':SUPABASE_KEY,
-      'Authorization':`Bearer ${SUPABASE_KEY}`
-    }
+    headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}
   });
-  if(!res.ok)throw new Error(`Delete error: ${res.status}`);
+  if(!res.ok)throw new Error(`${res.status}`);
+};
+
+/* ── curated helpers ── */
+const getCompat=(D,selectedGenre)=>{
+  if(!D||!selectedGenre)return null;
+  return D.kompatibilitas?.[selectedGenre]||null;
+};
+
+const getChipState=(compat,curatedOn,cat,id,isSelected)=>{
+  if(!curatedOn||!compat)return'normal';
+  const autoKey=`auto_${cat}`;
+  const warnKey=`warn_${cat}`;
+  const hideKey=`hide_${cat}`;
+  if(compat[hideKey]?.includes(id))return'hide';
+  if(compat[autoKey]?.includes(id))return isSelected?'auto-on-selected':'auto-on';
+  if(compat[warnKey]?.includes(id))return'warn';
+  return'normal';
 };
 
 /* ══════════════════ APP ══════════════════ */
 function App(){
   const [D,setD]=useState(null);
   const [mode,setMode]=useState('vocal');
+  const [curatedOn,setCuratedOn]=useState(true);
   const [leftTab,setLeftTab]=useState('style');
   const [outTab,setOutTab]=useState('output');
   const [presetTab,setPresetTab]=useState('saya');
@@ -226,29 +230,14 @@ function App(){
   const [saveCat,setSaveCat]=useState('');
   const [exportModal,setExportModal]=useState(null);
 
-  /* load kamus */
   useEffect(()=>{
-    fetch('ukoro-data.json')
-      .then(r=>{if(!r.ok)throw new Error();return r.json();})
-      .then(d=>{setD(d);setSaveCat(d.kategori_preset[0]);})
+    fetch('ukoro-data.json').then(r=>r.json()).then(d=>{setD(d);setSaveCat(d.kategori_preset[0]);})
       .catch(()=>showToast('Gagal memuat kamus','error'));
-  },[]);
-
-  /* load preset gawe ukoro dari supabase */
-  useEffect(()=>{
     sbFetch('preset_gawe_ukoro','order=created_at.desc')
       .then(data=>setPresets(Array.isArray(data)?data:[]))
-      .catch(()=>{
-        /* fallback localStorage */
-        try{
-          const s=localStorage.getItem('ukoro_presets');
-          if(s)setPresets(JSON.parse(s));
-        }catch(e){}
-        showToast('Mode offline: data dari lokal','info');
-      });
+      .catch(()=>showToast('Mode offline','info'));
   },[]);
 
-  /* load referensi dari supabase */
   const loadReferensi=useCallback(()=>{
     setRefLoading(true);
     sbFetch('preset_referensi','aktif=eq.true&order=id.asc')
@@ -257,19 +246,47 @@ function App(){
   },[]);
 
   useEffect(()=>{
-    if(outTab==='presets'&&presetTab==='referensi'&&referensi.length===0){
-      loadReferensi();
-    }
+    if(outTab==='presets'&&presetTab==='referensi'&&referensi.length===0)loadReferensi();
   },[outTab,presetTab]);
 
-  /* toggle chip */
-  const toggle=(cat,id)=>setSel(p=>{
-    const arr=p[cat];
-    if(cat==='wirama')return{...p,[cat]:arr.includes(id)?[]:[id]};
-    return{...p,[cat]:arr.includes(id)?arr.filter(x=>x!==id):[...arr,id]};
-  });
+  /* curated: saat genre dipilih, auto-centang rekomendasi */
+  const handleGenreToggle=useCallback((id)=>{
+    setSel(p=>{
+      const arr=p.ragam;
+      const isRemoving=arr.includes(id);
+      const newRagam=arr.includes(id)?arr.filter(x=>x!==id):[...arr,id];
+      if(!curatedOn||!D)return{...p,ragam:newRagam};
+      const compat=D.kompatibilitas?.[id];
+      if(!compat||isRemoving)return{...p,ragam:newRagam};
+      /* auto-apply rekomendasi */
+      const newSel={...p,ragam:newRagam};
+      ['rasa','swara','piranti','produksi'].forEach(cat=>{
+        const autoKey=`auto_${cat}`;
+        const hideKey=`hide_${cat}`;
+        const autoIds=compat[autoKey]||[];
+        const hideIds=compat[hideKey]||[];
+        const current=newSel[cat]||[];
+        const filtered=current.filter(x=>!hideIds.includes(x));
+        const merged=[...new Set([...filtered,...autoIds])];
+        newSel[cat]=merged;
+      });
+      return newSel;
+    });
+  },[D,curatedOn]);
 
-  /* build style */
+  const toggle=(cat,id)=>{
+    if(cat==='ragam'){handleGenreToggle(id);return;}
+    setSel(p=>{
+      const arr=p[cat];
+      if(cat==='wirama')return{...p,[cat]:arr.includes(id)?[]:[id]};
+      return{...p,[cat]:arr.includes(id)?arr.filter(x=>x!==id):[...arr,id]};
+    });
+  };
+
+  /* ambil genre pertama yang dipilih untuk compat */
+  const activeGenre=sel.ragam[0]||null;
+  const compat=getCompat(D,activeGenre);
+
   const buildStyle=useCallback(()=>{
     if(!D)return'';
     const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
@@ -284,7 +301,6 @@ function App(){
     return parts.join(', ');
   },[D,sel,mode]);
 
-  /* build struct */
   const buildStruct=useCallback(()=>{
     if(!D||!timeline.length)return'';
     const subMap=getAllSub(D);
@@ -298,7 +314,6 @@ function App(){
     return lines.join('\n');
   },[D,timeline]);
 
-  /* build struct dari referensi */
   const buildRefStruct=(struktur)=>{
     if(!struktur)return'';
     try{
@@ -306,90 +321,50 @@ function App(){
       return arr.map(s=>{
         const lines=[`[${s.label} - ${s.timestamp}]`];
         (s.sub||[]).forEach(x=>lines.push(`[${x}]`));
-        lines.push('');
-        return lines.join('\n');
+        lines.push('');return lines.join('\n');
       }).join('')+'[End]';
     }catch(e){return'';}
   };
 
-  /* timeline ops */
   const addSection=sec=>{
     const count=timeline.filter(x=>x.secId===sec.id).length;
     const label=count>0?`${sec.label} ${count+1}`:sec.label;
-    setTimeline(p=>[...p,{
-      uid:Date.now()+Math.random(),secId:sec.id,label,
-      durasi:sec.durasi_default,durasi_pilihan:sec.durasi_pilihan,
-      sub_tersedia:sec.sub_tersedia,activeSub:[...(sec.sub_default||[])]
-    }]);
+    setTimeline(p=>[...p,{uid:Date.now()+Math.random(),secId:sec.id,label,durasi:sec.durasi_default,durasi_pilihan:sec.durasi_pilihan,sub_tersedia:sec.sub_tersedia,activeSub:[...(sec.sub_default||[])]}]);
   };
-  const moveItem=(idx,dir)=>setTimeline(p=>{
-    const a=[...p];const to=idx+dir;
-    if(to<0||to>=a.length)return a;
-    [a[idx],a[to]]=[a[to],a[idx]];return a;
-  });
+  const moveItem=(idx,dir)=>setTimeline(p=>{const a=[...p];const to=idx+dir;if(to<0||to>=a.length)return a;[a[idx],a[to]]=[a[to],a[idx]];return a;});
   const delItem=uid=>setTimeline(p=>p.filter(x=>x.uid!==uid));
   const setDurasi=(uid,d)=>setTimeline(p=>p.map(x=>x.uid===uid?{...x,durasi:d}:x));
-  const toggleSub=(uid,sid)=>setTimeline(p=>p.map(x=>{
-    if(x.uid!==uid)return x;
-    const a=x.activeSub.includes(sid)?x.activeSub.filter(s=>s!==sid):[...x.activeSub,sid];
-    return{...x,activeSub:a};
-  }));
+  const toggleSub=(uid,sid)=>setTimeline(p=>p.map(x=>{if(x.uid!==uid)return x;const a=x.activeSub.includes(sid)?x.activeSub.filter(s=>s!==sid):[...x.activeSub,sid];return{...x,activeSub:a};}));
 
-  /* save preset ke supabase */
   const doSave=async()=>{
-    if(!saveName.trim()){showToast('Nama preset tidak boleh kosong','error');return;}
-    const styleText=buildStyle();
-    const structText=buildStruct();
+    if(!saveName.trim()){showToast('Nama tidak boleh kosong','error');return;}
+    const styleText=buildStyle();const structText=buildStruct();
     if(!styleText&&!structText){showToast('Tidak ada konten','error');return;}
     try{
-      const data=await sbInsert('preset_gawe_ukoro',{
-        nama:saveName.trim(),
-        kategori:saveCat,
-        mode,
-        sel_data:sel,
-        timeline:timeline,
-        dibuat:new Date().toLocaleDateString('id-ID')
-      });
-      setPresets(p=>[data[0]||{id:Date.now(),nama:saveName,kategori:saveCat},...p]);
-      setSaveModal(false);setSaveName('');
+      const data=await sbInsert('preset_gawe_ukoro',{nama:saveName.trim(),kategori:saveCat,mode,sel_data:sel,timeline,dibuat:new Date().toLocaleDateString('id-ID')});
+      setPresets(p=>[data[0],...p]);setSaveModal(false);setSaveName('');
       showToast(`✓ "${saveName}" tersimpan`,'success');
       setOutTab('presets');setPresetTab('saya');
-    }catch(e){
-      showToast('Gagal simpan ke server — coba lagi','error');
-      console.error(e);
-    }
+    }catch(e){showToast('Gagal simpan ke server','error');}
   };
 
-  /* load preset */
   const loadPreset=p=>{
     const s=p.sel_data||{};
-    setSel({
-      ragam:s.ragam||[],rasa:s.rasa||[],swara:s.swara||[],
-      wirama:s.wirama||[],piranti:s.piranti||[],produksi:s.produksi||[]
-    });
-    setTimeline(p.timeline||[]);
-    setMode(p.mode||'vocal');
+    setSel({ragam:s.ragam||[],rasa:s.rasa||[],swara:s.swara||[],wirama:s.wirama||[],piranti:s.piranti||[],produksi:s.produksi||[]});
+    setTimeline(p.timeline||[]);setMode(p.mode||'vocal');
     setOutTab('output');setLeftTab('style');
-    showToast(`Preset "${p.nama}" dimuat`,'info');
+    showToast(`"${p.nama}" dimuat`,'info');
   };
 
-  /* delete preset */
   const delPreset=async(id,nama)=>{
-    try{
-      await sbDelete('preset_gawe_ukoro',id);
-      setPresets(p=>p.filter(x=>x.id!==id));
-      showToast(`"${nama}" dihapus`,'info');
-    }catch(e){
-      showToast('Gagal hapus','error');
-    }
+    try{await sbDelete('preset_gawe_ukoro',id);setPresets(p=>p.filter(x=>x.id!==id));showToast(`"${nama}" dihapus`,'info');}
+    catch(e){showToast('Gagal hapus','error');}
   };
 
-  /* export */
   const buildExportText=(p)=>{
     if(!D)return'';
     const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
-    const s=p.sel_data||{};
-    const parts=[];
+    const s=p.sel_data||{};const parts=[];
     if(s.ragam?.length)parts.push(s.ragam.map(id=>find('ragam',id)?.label).filter(Boolean).join(', '));
     if(s.rasa?.length)parts.push(s.rasa.map(id=>find('rasa',id)?.label).filter(Boolean).join(', '));
     if(p.mode==='instrumental')parts.push('instrumental only, no vocals');
@@ -397,14 +372,8 @@ function App(){
     if(s.wirama?.length){const t=find('wirama',s.wirama[0]);if(t)parts.push(t.bpm||t.label);}
     if(s.piranti?.length)parts.push(s.piranti.map(id=>find('piranti',id)?.label).filter(Boolean).join(' + '));
     if(s.produksi?.length)parts.push(s.produksi.map(id=>find('produksi',id)?.label).filter(Boolean).join(', '));
-    const style=parts.join(', ');
-    const subMap=getAllSub(D);
-    let cursor=0;const lines=[];
-    (p.timeline||[]).forEach(item=>{
-      lines.push(`[${item.label} - ${toMMSS(cursor)}]`);
-      item.activeSub?.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});
-      lines.push('');cursor+=item.durasi;
-    });
+    const style=parts.join(', ');const subMap=getAllSub(D);let cursor=0;const lines=[];
+    (p.timeline||[]).forEach(item=>{lines.push(`[${item.label} - ${toMMSS(cursor)}]`);item.activeSub?.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});lines.push('');cursor+=item.durasi;});
     if(lines.length)lines.push(`[End - ${toMMSS(cursor)}]`);
     return`PRESET: ${p.nama}\nKATEGORI: ${p.kategori}\nTANGGAL: ${p.dibuat}\n\n[STYLE PROMPT]\n${style}\n\n[STRUCTURE]\n${lines.join('\n')}`;
   };
@@ -412,26 +381,19 @@ function App(){
   const exportAll=()=>{
     if(!presets.length){showToast('Tidak ada preset','error');return;}
     const lines=presets.map((p,i)=>`${'='.repeat(50)}\nPRESET #${String(i+1).padStart(2,'0')}\n${'='.repeat(50)}\n${buildExportText(p)}`).join('\n\n');
-    try{
-      const blob=new Blob([lines],{type:'text/plain'});
-      const url=URL.createObjectURL(blob);
-      const a=document.createElement('a');
-      a.href=url;a.download='ukoro-bundle.txt';a.click();
-      URL.revokeObjectURL(url);
-      showToast(`✓ ${presets.length} preset diekspor`,'success');
-    }catch(e){showToast('Gagal ekspor','error');}
+    try{const blob=new Blob([lines],{type:'text/plain'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='ukoro-bundle.txt';a.click();URL.revokeObjectURL(url);showToast(`✓ ${presets.length} preset diekspor`,'success');}
+    catch(e){showToast('Gagal ekspor','error');}
   };
 
-  /* ref filter */
   const refCategories=['Semua',...[...new Set(referensi.map(r=>r.kategori_bundle).filter(Boolean))]];
   const filteredRef=refFilter==='Semua'?referensi:referensi.filter(r=>r.kategori_bundle===refFilter);
-
-  const styleText=buildStyle();
-  const structText=buildStruct();
-  const hasContent=!!(styleText||structText);
+  const styleText=buildStyle();const structText=buildStruct();const hasContent=!!(styleText||structText);
 
   if(!D)return<div style={{color:'#555',padding:'40px',textAlign:'center',fontSize:'0.85rem'}}>Memuat data...</div>;
   const subMap=getAllSub(D);
+
+  /* curated info */
+  const curatedGenreName=activeGenre?(D.ragam.find(x=>x.id===activeGenre)?.label||''):'';
 
   return(
     <div className="app">
@@ -440,14 +402,16 @@ function App(){
           <h1>GAWE UKORO</h1>
           <p>MUSIC PROMPT BUILDER</p>
         </div>
-        <div className="mode-toggle">
-          <button className={`mode-btn ${mode==='vocal'?'active':''}`} onClick={()=>setMode('vocal')}>🎤 Vocal</button>
-          <button className={`mode-btn ${mode==='instrumental'?'active':''}`} onClick={()=>setMode('instrumental')}>🎹 Instru</button>
+        <div className="topbar-right">
+          <button className={`mode-btn ${mode==='vocal'?'active':''}`} onClick={()=>setMode('vocal')}>🎤</button>
+          <button className={`mode-btn ${mode==='instrumental'?'active':''}`} onClick={()=>setMode('instrumental')}>🎹</button>
+          <div className={`curated-toggle ${curatedOn?'on':''}`} onClick={()=>setCuratedOn(p=>!p)}>
+            {curatedOn?'✦':'○'} Curated
+          </div>
         </div>
       </div>
 
       <div className="body">
-        {/* PANEL KIRI */}
         <div className="left">
           <div className="tab-bar">
             <div className={`tab ${leftTab==='style'?'active':''}`} onClick={()=>setLeftTab('style')}>🎸 Style</div>
@@ -455,26 +419,32 @@ function App(){
           </div>
           <div className="tab-content">
             {leftTab==='style'&&<>
-              <ChipSection title="Genre / Ragam" cat="ragam" color="c-genre" data={D} sel={sel} toggle={toggle} grouped/>
-              <ChipSection title="Mood / Rasa" cat="rasa" color="c-mood" data={D} sel={sel} toggle={toggle}/>
-              {mode==='vocal'&&<ChipSection title="Vokal / Swara" cat="swara" color="c-vocal" data={D} sel={sel} toggle={toggle}/>}
-              <ChipSection title="Tempo / Wirama" cat="wirama" color="c-tempo" data={D} sel={sel} toggle={toggle}/>
-              <ChipSection title="Instrumen / Piranti" cat="piranti" color="c-instr" data={D} sel={sel} toggle={toggle} grouped/>
-              <ChipSection title="Produksi" cat="produksi" color="c-prod" data={D} sel={sel} toggle={toggle}/>
+              {curatedOn&&activeGenre&&compat&&(
+                <div className="curated-bar">
+                  <strong>✦ Curated: {curatedGenreName}</strong><br/>
+                  Tag direkomendasikan otomatis dicentang. ⚠️ = kurang cocok. Tag tersembunyi = tidak kompatibel.
+                  <br/><span style={{color:'#666'}}>Matikan Curated untuk akses penuh.</span>
+                </div>
+              )}
+              <CuratedChipSection title="Genre / Ragam" cat="ragam" color="c-genre" data={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null}/>
+              <CuratedChipSection title="Mood / Rasa" cat="rasa" color="c-mood" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
+              {mode==='vocal'&&<CuratedChipSection title="Vokal / Swara" cat="swara" color="c-vocal" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>}
+              <CuratedChipSection title="Tempo / Wirama" cat="wirama" color="c-tempo" data={D} sel={sel} toggle={toggle} curatedOn={false} compat={null}/>
+              <CuratedChipSection title="Instrumen / Piranti" cat="piranti" color="c-instr" data={D} sel={sel} toggle={toggle} grouped curatedOn={curatedOn} compat={compat}/>
+              <CuratedChipSection title="Produksi" cat="produksi" color="c-prod" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
             </>}
             {leftTab==='struct'&&<>
-              <div className="lib-title">Library Section — tap untuk tambah</div>
+              <div className="lib-title">Library — tap untuk tambah</div>
               <div className="lib-chips">
                 {D.struktur_lagu.map(sec=>(
                   <div key={sec.id} className="lib-chip" onClick={()=>addSection(sec)}>{sec.label}</div>
                 ))}
               </div>
-              <div className="lib-title">Timeline {timeline.length>0&&`(${timeline.length} section)`}</div>
-              {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Belum ada section. Tap library di atas.</div>}
+              <div className="lib-title">Timeline {timeline.length>0&&`(${timeline.length})`}</div>
+              {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Tap section di atas untuk tambah.</div>}
               <div className="timeline">
                 {timeline.map((item,idx)=>{
-                  let cursor=0;
-                  for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
+                  let cursor=0;for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
                   return(
                     <div key={item.uid} className="tl-item">
                       <div className="tl-header">
@@ -494,10 +464,7 @@ function App(){
                           ))}
                         </div>
                         <div className="sub-chips">
-                          {item.sub_tersedia.map(sid=>{
-                            const s=subMap[sid];if(!s)return null;
-                            return<div key={sid} className={`sub-chip ${item.activeSub.includes(sid)?'on':''}`} onClick={()=>toggleSub(item.uid,sid)}>{s.tag}</div>;
-                          })}
+                          {item.sub_tersedia.map(sid=>{const s=subMap[sid];if(!s)return null;return<div key={sid} className={`sub-chip ${item.activeSub.includes(sid)?'on':''}`} onClick={()=>toggleSub(item.uid,sid)}>{s.tag}</div>;})}
                         </div>
                       </div>
                     </div>
@@ -508,48 +475,26 @@ function App(){
           </div>
         </div>
 
-        {/* PANEL KANAN */}
         <div className="right">
           <div className="out-tabs">
             <div className={`out-tab ${outTab==='output'?'active':''}`} onClick={()=>setOutTab('output')}>Output</div>
-            <div className={`out-tab ${outTab==='presets'?'active':''}`} onClick={()=>setOutTab('presets')}>
-              Preset{presets.length>0?` (${presets.length})`:' '}
-            </div>
+            <div className={`out-tab ${outTab==='presets'?'active':''}`} onClick={()=>setOutTab('presets')}>Preset{presets.length>0?` (${presets.length})`:''}</div>
           </div>
-
           <div className="out-body">
             {outTab==='output'&&<>
               {!hasContent
-                ?<div className="out-empty">Pilih tag di panel kiri untuk membangun prompt.<br/><br/>🎸 Style → style prompt<br/>🏗️ Structure → struktur lagu</div>
+                ?<div className="out-empty">Pilih tag di panel kiri.<br/><br/>🎸 Style → style prompt<br/>🏗️ Structure → struktur lagu</div>
                 :<>
-                  {styleText&&<>
-                    <div className="out-title">Style Prompt</div>
-                    <div className="out-text">{styleText}</div>
-                    <div style={{height:14}}/>
-                  </>}
-                  {structText&&<>
-                    <div className="out-title">Structure</div>
-                    <div className="out-text">{structText}</div>
-                  </>}
+                  {styleText&&<><div className="out-title">Style Prompt</div><div className="out-text">{styleText}</div><div style={{height:14}}/></>}
+                  {structText&&<><div className="out-title">Structure</div><div className="out-text">{structText}</div></>}
                 </>
               }
             </>}
-
             {outTab==='presets'&&<>
-              {/* sub-tab */}
               <div style={{display:'flex',gap:'8px',marginBottom:'14px'}}>
-                <button
-                  onClick={()=>setPresetTab('saya')}
-                  style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='saya'?'#4338ca':'#1a1a1a',color:presetTab==='saya'?'#fff':'#666'}}>
-                  🎛️ Preset Saya
-                </button>
-                <button
-                  onClick={()=>{setPresetTab('referensi');if(referensi.length===0)loadReferensi();}}
-                  style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='referensi'?'#1e3a5f':'#1a1a1a',color:presetTab==='referensi'?'#93c5fd':'#666'}}>
-                  🎸 Referensi Lagu
-                </button>
+                <button onClick={()=>setPresetTab('saya')} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='saya'?'#4338ca':'#1a1a1a',color:presetTab==='saya'?'#fff':'#666'}}>🎛️ Preset Saya</button>
+                <button onClick={()=>{setPresetTab('referensi');if(referensi.length===0)loadReferensi();}} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='referensi'?'#1e3a5f':'#1a1a1a',color:presetTab==='referensi'?'#93c5fd':'#666'}}>🎸 Referensi</button>
               </div>
-
               {presetTab==='saya'&&<>
                 {presets.length===0
                   ?<div className="preset-empty">Belum ada preset.<br/>Buat prompt lalu tap 💾 Simpan.</div>
@@ -567,61 +512,51 @@ function App(){
                         </div>
                       </div>
                     ))}
-                    <button onClick={exportAll} style={{marginTop:8,padding:'10px',background:'#1a1a1a',border:'1px solid #333',borderRadius:'8px',color:'#a78bfa',fontSize:'0.75rem',cursor:'pointer',fontWeight:600,width:'100%'}}>
-                      📦 Export Semua → ukoro-bundle.txt
-                    </button>
+                    <button onClick={exportAll} style={{marginTop:8,padding:'10px',background:'#1a1a1a',border:'1px solid #333',borderRadius:'8px',color:'#a78bfa',fontSize:'0.75rem',cursor:'pointer',fontWeight:600,width:'100%'}}>📦 Export Semua</button>
                   </div>
                 }
               </>}
-
               {presetTab==='referensi'&&<>
-                {refLoading
-                  ?<div className="ref-loading">Memuat referensi...</div>
-                  :<>
-                    <div className="ref-filter">
-                      {refCategories.map(c=>(
-                        <button key={c} className={`ref-filter-btn ${refFilter===c?'on':''}`} onClick={()=>setRefFilter(c)}>{c}</button>
-                      ))}
-                    </div>
-                    {filteredRef.length===0
-                      ?<div className="preset-empty">Belum ada preset referensi.</div>
-                      :<div className="ref-list">
-                        {filteredRef.map(r=>{
-                          const isOpen=expandedRef===r.id;
-                          const struct=buildRefStruct(r.struktur);
-                          return(
-                            <div key={r.id} className="ref-item">
-                              <div className="ref-header" onClick={()=>setExpandedRef(isOpen?null:r.id)}>
-                                <div className="ref-name">{r.nama_preset}</div>
-                                <div className="ref-sub">{r.inspirasi_lagu} — {r.artis} · {r.genre_label} · {r.bpm} BPM {isOpen?'▲':'▼'}</div>
-                              </div>
-                              {isOpen&&<div className="ref-body">
-                                <div className="ref-meta">
-                                  <div><span>Vibe:</span> {r.vibe}</div>
-                                  <div><span>Vocal:</span> {r.vocal_style}</div>
-                                  <div><span>Target:</span> {r.target}</div>
-                                  {r.karakteristik&&<div style={{marginTop:6,color:'#666',fontSize:'0.65rem',lineHeight:1.7}}>{r.karakteristik}</div>}
-                                </div>
-                                <div className="out-title">Sound Prompt</div>
-                                <div className="ref-prompt">{r.sound_prompt}</div>
-                                <div className="out-title">Structure</div>
-                                <div className="ref-struct">{struct}</div>
-                                <div className="ref-btns">
-                                  <button className="ref-btn cp" onClick={()=>copyText(r.sound_prompt,'Sound Prompt')}>📋 Copy Prompt</button>
-                                  <button className="ref-btn cs" onClick={()=>copyText(struct,'Structure')}>📋 Copy Struct</button>
-                                </div>
-                              </div>}
+                {refLoading?<div className="ref-loading">Memuat...</div>:<>
+                  <div className="ref-filter">
+                    {refCategories.map(c=><button key={c} className={`ref-filter-btn ${refFilter===c?'on':''}`} onClick={()=>setRefFilter(c)}>{c}</button>)}
+                  </div>
+                  {filteredRef.length===0?<div className="preset-empty">Belum ada preset referensi.</div>
+                    :<div className="ref-list">
+                      {filteredRef.map(r=>{
+                        const isOpen=expandedRef===r.id;
+                        const struct=buildRefStruct(r.struktur);
+                        return(
+                          <div key={r.id} className="ref-item">
+                            <div className="ref-header" onClick={()=>setExpandedRef(isOpen?null:r.id)}>
+                              <div className="ref-name">{r.nama_preset}</div>
+                              <div className="ref-sub">{r.inspirasi_lagu} — {r.artis} · {r.genre_label} · {r.bpm} BPM {isOpen?'▲':'▼'}</div>
                             </div>
-                          );
-                        })}
-                      </div>
-                    }
-                  </>
-                }
+                            {isOpen&&<div className="ref-body">
+                              <div className="ref-meta">
+                                <div><span>Vibe:</span> {r.vibe}</div>
+                                <div><span>Vocal:</span> {r.vocal_style}</div>
+                                <div><span>Target:</span> {r.target}</div>
+                                {r.karakteristik&&<div style={{marginTop:6,color:'#666',fontSize:'0.65rem',lineHeight:1.7}}>{r.karakteristik}</div>}
+                              </div>
+                              <div className="out-title">Sound Prompt</div>
+                              <div className="ref-prompt">{r.sound_prompt}</div>
+                              <div className="out-title">Structure</div>
+                              <div className="ref-struct">{struct}</div>
+                              <div className="ref-btns">
+                                <button className="ref-btn cp" onClick={()=>copyText(r.sound_prompt,'Sound Prompt')}>📋 Copy Prompt</button>
+                                <button className="ref-btn cs" onClick={()=>copyText(struct,'Structure')}>📋 Copy Struct</button>
+                              </div>
+                            </div>}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  }
+                </>}
               </>}
             </>}
           </div>
-
           <div className="action-bar">
             <button className="act-btn btn-style" onClick={()=>copyText(styleText,'Style Prompt')} disabled={!styleText}>📋 Style</button>
             <button className="act-btn btn-struct" onClick={()=>copyText(structText,'Structure')} disabled={!structText}>📋 Struct</button>
@@ -646,7 +581,6 @@ function App(){
           </div>
         </div>
       )}
-
       {exportModal&&(
         <div className="overlay" onClick={()=>setExportModal(null)}>
           <div className="modal" onClick={e=>e.stopPropagation()}>
@@ -663,9 +597,36 @@ function App(){
   );
 }
 
-function ChipSection({title,cat,color,data,sel,toggle,grouped}){
+/* ══ CuratedChipSection ══ */
+function CuratedChipSection({title,cat,color,data,sel,toggle,grouped,curatedOn,compat}){
   const items=data[cat]||[];
   const groups=grouped?[...new Set(items.map(x=>x.grup).filter(Boolean))]:[];
+
+  const renderChip=(item)=>{
+    const isSelected=sel[cat].includes(item.id);
+    let state='normal';
+    if(curatedOn&&compat){
+      const autoKey=`auto_${cat}`;
+      const warnKey=`warn_${cat}`;
+      const hideKey=`hide_${cat}`;
+      if(compat[hideKey]?.includes(item.id))state='hide';
+      else if(compat[autoKey]?.includes(item.id))state='auto';
+      else if(compat[warnKey]?.includes(item.id))state='warn';
+    }
+    if(state==='hide')return null;
+    const cls=[
+      'chip',color,
+      isSelected?'on':'',
+      state==='auto'&&isSelected?'auto-on':'',
+      state==='warn'?'warn':''
+    ].filter(Boolean).join(' ');
+    return(
+      <div key={item.id} className={cls} onClick={()=>toggle(cat,item.id)}>
+        {item.label}
+      </div>
+    );
+  };
+
   return(
     <div className="sec">
       <div className="sec-title">{title}</div>
@@ -674,14 +635,10 @@ function ChipSection({title,cat,color,data,sel,toggle,grouped}){
           ?groups.map(g=>(
             <React.Fragment key={g}>
               <div className="grup-label">{g}</div>
-              {items.filter(x=>x.grup===g).map(item=>(
-                <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`} onClick={()=>toggle(cat,item.id)}>{item.label}</div>
-              ))}
+              {items.filter(x=>x.grup===g).map(renderChip)}
             </React.Fragment>
           ))
-          :items.map(item=>(
-            <div key={item.id} className={`chip ${color} ${sel[cat].includes(item.id)?'on':''}`} onClick={()=>toggle(cat,item.id)}>{item.label}</div>
-          ))
+          :items.map(renderChip)
         }
       </div>
     </div>
