@@ -29,7 +29,6 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .sec{margin-bottom:18px;}
 .sec-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .chips{display:flex;flex-wrap:wrap;gap:5px;}
-/* CHIP STATES */
 .chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#999;font-size:0.73rem;cursor:pointer;transition:all 0.15s;user-select:none;-webkit-user-select:none;position:relative;}
 .chip.on{color:#fff;border-color:transparent;}
 .chip.on.c-genre{background:#4338ca;}
@@ -38,26 +37,39 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .chip.on.c-tempo{background:#b45309;}
 .chip.on.c-instr{background:#6d28d9;}
 .chip.on.c-prod{background:#0e7490;}
-/* curated states */
 .chip.auto-on{border-color:#f59e0b !important;box-shadow:0 0 0 1px #f59e0b;}
-.chip.warn{opacity:0.55;border-color:#b45309;}
-.chip.warn::after{content:'⚠';font-size:0.55rem;position:absolute;top:-4px;right:-4px;background:#b45309;border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;color:#fff;}
+.chip.warn{opacity:0.6;border-color:#b45309;}
+.chip.warn::after{content:'⚠';font-size:0.55rem;position:absolute;top:-4px;right:-4px;background:#b45309;border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;color:#fff;line-height:14px;text-align:center;}
 .chip.hidden-chip{display:none;}
-.chip.c-genre.auto-on.on{background:#4338ca;}
 .grup-label{width:100%;font-size:0.62rem;color:#444;margin-top:6px;margin-bottom:2px;}
-/* curated info bar */
 .curated-bar{background:#1a1500;border:1px solid #f59e0b33;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-size:0.65rem;color:#a07020;line-height:1.6;}
 .curated-bar strong{color:#f59e0b;}
-/* structure */
+/* STRUCTURE */
 .lib-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
-.lib-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
+.lib-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
 .lib-chip{padding:7px 13px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#888;font-size:0.73rem;cursor:pointer;}
 .lib-chip:active{background:#252525;}
+/* DURATION COUNTER */
+.dur-counter{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:10px 12px;margin-bottom:12px;}
+.dur-counter-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.dur-counter-label{font-size:0.65rem;color:#555;}
+.dur-counter-val{font-size:0.8rem;font-weight:700;}
+.dur-counter-val.ok{color:#4ade80;}
+.dur-counter-val.warn{color:#f59e0b;}
+.dur-counter-val.over{color:#ef4444;}
+.dur-bar-bg{height:6px;background:#1e1e1e;border-radius:3px;overflow:hidden;}
+.dur-bar-fill{height:100%;border-radius:3px;transition:width 0.3s,background 0.3s;}
+/* TIMELINE */
 .timeline{display:flex;flex-direction:column;gap:6px;}
 .tl-item{background:#161616;border:1px solid #252525;border-radius:10px;overflow:hidden;}
+.tl-item.tl-warn{border-color:#b4530966;}
+.tl-item.tl-red{border-color:#dc262666;}
 .tl-header{display:flex;align-items:center;padding:8px 10px;gap:8px;background:#1a1a2e;}
 .tl-name{font-size:0.78rem;color:#a78bfa;font-weight:600;flex:1;}
-.tl-time{font-size:0.68rem;color:#555;margin-right:4px;}
+.tl-time{font-size:0.68rem;color:#555;margin-right:2px;}
+.tl-dur-badge{font-size:0.62rem;padding:2px 6px;border-radius:8px;background:#1e1e1e;color:#555;margin-right:4px;}
+.tl-dur-badge.ok{background:#14290a;color:#4ade80;}
+.tl-dur-badge.warn{background:#2a1800;color:#f59e0b;}
 .tl-btns{display:flex;gap:4px;}
 .tl-btn{width:28px;height:28px;border-radius:6px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .tl-btn.del{color:#ef4444;}
@@ -66,10 +78,18 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .dur-label{font-size:0.65rem;color:#555;}
 .dur-btn{padding:4px 10px;border-radius:8px;border:1px solid #2a2a2a;background:#111;color:#777;font-size:0.68rem;cursor:pointer;}
 .dur-btn.on{background:#4338ca;color:#fff;border-color:#4338ca;}
+.dur-warning{font-size:0.62rem;color:#f59e0b;margin-bottom:6px;padding:4px 8px;background:#1a1200;border-radius:6px;}
+/* SUB CHIPS */
 .sub-chips{display:flex;flex-wrap:wrap;gap:4px;}
-.sub-chip{padding:4px 9px;border-radius:10px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.67rem;cursor:pointer;}
+.sub-chip{padding:4px 9px;border-radius:10px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.67rem;cursor:pointer;position:relative;}
 .sub-chip.on{background:#1e3a5f;color:#93c5fd;border-color:#1e3a5f;}
-/* right panel */
+.sub-chip.flag-warn{border-color:#b4530966;}
+.sub-chip.flag-warn::after{content:'⚠';font-size:0.5rem;position:absolute;top:-3px;right:-3px;background:#b45309;border-radius:50%;width:12px;height:12px;display:flex;align-items:center;justify-content:center;color:#fff;line-height:12px;text-align:center;}
+.sub-chip.flag-red{border-color:#dc262666;color:#888;}
+.sub-chip.flag-red::after{content:'🔴';font-size:0.5rem;position:absolute;top:-3px;right:-3px;}
+.sub-chip.locked{opacity:0.3;cursor:not-allowed;pointer-events:none;}
+.conflict-msg{font-size:0.62rem;color:#ef4444;margin-top:6px;padding:4px 8px;background:#1a0505;border-radius:6px;border:1px solid #dc262633;}
+/* RIGHT */
 .right{width:48%;display:flex;flex-direction:column;overflow:hidden;}
 .out-tabs{display:flex;background:#111;border-bottom:1px solid #1e1e1e;}
 .out-tab{flex:1;padding:9px 0;text-align:center;font-size:0.68rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
@@ -86,7 +106,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .btn-save{background:#b45309;color:#fff;}
 .btn-reset{background:#1a1a1a;color:#666;border:1px solid #252525;}
 .btn-ok{background:#059669;color:#fff;}
-/* preset */
+/* PRESET */
 .preset-list{display:flex;flex-direction:column;gap:8px;}
 .preset-item{background:#161616;border:1px solid #252525;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:8px;}
 .preset-info{flex:1;cursor:pointer;min-width:0;}
@@ -98,7 +118,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .preset-btn.exp{color:#4ade80;}
 .preset-btn.del{color:#ef4444;}
 .preset-empty{color:#333;font-size:0.78rem;text-align:center;padding:40px 20px;line-height:2;}
-/* referensi */
+/* REFERENSI */
 .ref-filter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
 .ref-filter-btn{padding:5px 12px;border-radius:14px;border:1px solid #2a2a2a;background:#181818;color:#777;font-size:0.68rem;cursor:pointer;}
 .ref-filter-btn.on{background:#4338ca;color:#fff;border-color:#4338ca;}
@@ -117,7 +137,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .ref-btn.cp{background:#4338ca;color:#fff;}
 .ref-btn.cs{background:#047857;color:#fff;}
 .ref-loading{color:#444;font-size:0.75rem;text-align:center;padding:30px;}
-/* modal */
+/* MODAL */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
 .modal{background:#161616;border:1px solid #2a2a2a;border-radius:14px;padding:20px;width:100%;max-width:420px;}
 .modal h3{font-size:0.9rem;color:#a78bfa;margin-bottom:16px;}
@@ -126,12 +146,13 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .modal select{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.82rem;margin-bottom:16px;outline:none;}
 .modal-btns{display:flex;gap:8px;}
 .export-box{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:12px;font-size:0.7rem;color:#aaa;font-family:monospace;white-space:pre-wrap;max-height:240px;overflow-y:auto;margin-bottom:12px;line-height:1.6;}
-/* toast */
+/* TOAST */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1e1e1e;border:1px solid #333;color:#e0e0e0;padding:10px 20px;border-radius:20px;font-size:0.78rem;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 .toast.success{border-color:#059669;color:#4ade80;}
 .toast.error{border-color:#dc2626;color:#f87171;}
 .toast.info{border-color:#4f46e5;color:#a78bfa;}
+.toast.warn{border-color:#f59e0b;color:#f59e0b;}
 @media(max-width:680px){
   .body{flex-direction:column;}
   .left{width:100%;height:55vh;border-right:none;border-bottom:1px solid #1e1e1e;}
@@ -145,15 +166,24 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 <script type="text/babel">
 const {useState,useEffect,useCallback}=React;
 
+/* ── utils ── */
 const toMMSS=s=>{const m=Math.floor(s/60);return `${m}:${String(s%60).padStart(2,'0')}`;};
-const getAllSub=data=>{const m={};Object.values(data.sub_instruksi||{}).flat().forEach(x=>{m[x.id]=x;});return m;};
+const MAX_DUR=180;
 
+const getAllSub=data=>{
+  const m={};
+  Object.values(data.sub_instruksi||{}).flat().forEach(x=>{m[x.id]=x;});
+  return m;
+};
+
+/* ── toast ── */
 const showToast=(msg,type='info',dur=2500)=>{
   const el=document.getElementById('toast');if(!el)return;
   el.textContent=msg;el.className=`toast ${type} show`;
   clearTimeout(el._t);el._t=setTimeout(()=>{el.className='toast';},dur);
 };
 
+/* ── clipboard ── */
 const copyText=async(text,label)=>{
   if(!text){showToast('Tidak ada konten','error');return;}
   try{
@@ -166,9 +196,10 @@ const copyText=async(text,label)=>{
       if(!ok)throw new Error();
     }
     showToast(`✓ ${label} tersalin!`,'success');
-  }catch(e){showToast('Gagal menyalin — coba long-press teks','error',4000);}
+  }catch(e){showToast('Gagal menyalin','error',4000);}
 };
 
+/* ── supabase ── */
 const sbFetch=async(table,params='')=>{
   const res=await fetch(`${SUPABASE_URL}/rest/v1/${table}?${params}`,{
     headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}
@@ -193,22 +224,47 @@ const sbDelete=async(table,id)=>{
   if(!res.ok)throw new Error(`${res.status}`);
 };
 
-/* ── curated helpers ── */
-const getCompat=(D,selectedGenre)=>{
-  if(!D||!selectedGenre)return null;
-  return D.kompatibilitas?.[selectedGenre]||null;
+/* ── logic gate helpers ── */
+const getLockedSubs=(activeSubs,conflictRules)=>{
+  const locked=new Set();
+  if(!conflictRules)return locked;
+  conflictRules.forEach(rule=>{
+    if(activeSubs.includes(rule.trigger)&&rule.locks){
+      rule.locks.forEach(l=>locked.add(l));
+    }
+  });
+  return locked;
 };
 
-const getChipState=(compat,curatedOn,cat,id,isSelected)=>{
-  if(!curatedOn||!compat)return'normal';
-  const autoKey=`auto_${cat}`;
-  const warnKey=`warn_${cat}`;
-  const hideKey=`hide_${cat}`;
-  if(compat[hideKey]?.includes(id))return'hide';
-  if(compat[autoKey]?.includes(id))return isSelected?'auto-on-selected':'auto-on';
-  if(compat[warnKey]?.includes(id))return'warn';
-  return'normal';
+const getConflictMsgs=(activeSubs,sectionId,conflictRules)=>{
+  const msgs=[];
+  if(!conflictRules)return msgs;
+  conflictRules.forEach(rule=>{
+    if(!activeSubs.includes(rule.trigger))return;
+    if(rule.locks){
+      const hasConflict=rule.locks.some(l=>activeSubs.includes(l));
+      if(hasConflict)msgs.push(rule.msg);
+    }
+    if(rule.warn_sections&&rule.warn_sections.includes(sectionId)){
+      msgs.push(rule.msg);
+    }
+    if(rule.warn_with){
+      const hasWarn=rule.warn_with.some(w=>activeSubs.includes(w));
+      if(hasWarn)msgs.push(rule.msg);
+    }
+  });
+  return[...new Set(msgs)];
 };
+
+const hasLokalInstrumen=(piranti)=>{
+  const lokalIds=['kendangjawa','kendangbali','kendangsunda','suling','sulingbali',
+    'kecapi','sasando','saron','bonang','gongageng','cengceng','rebana',
+    'talempong','kolintang','sampek','tifa'];
+  return piranti.some(p=>lokalIds.includes(p));
+};
+
+/* ── curated ── */
+const getCompat=(D,genreId)=>D?.kompatibilitas?.[genreId]||null;
 
 /* ══════════════════ APP ══════════════════ */
 function App(){
@@ -249,26 +305,22 @@ function App(){
     if(outTab==='presets'&&presetTab==='referensi'&&referensi.length===0)loadReferensi();
   },[outTab,presetTab]);
 
-  /* curated: saat genre dipilih, auto-centang rekomendasi */
+  /* genre toggle dengan auto-centang */
   const handleGenreToggle=useCallback((id)=>{
     setSel(p=>{
       const arr=p.ragam;
       const isRemoving=arr.includes(id);
-      const newRagam=arr.includes(id)?arr.filter(x=>x!==id):[...arr,id];
-      if(!curatedOn||!D)return{...p,ragam:newRagam};
+      const newRagam=isRemoving?arr.filter(x=>x!==id):[...arr,id];
+      if(!curatedOn||!D||isRemoving)return{...p,ragam:newRagam};
       const compat=D.kompatibilitas?.[id];
-      if(!compat||isRemoving)return{...p,ragam:newRagam};
-      /* auto-apply rekomendasi */
+      if(!compat)return{...p,ragam:newRagam};
       const newSel={...p,ragam:newRagam};
       ['rasa','swara','piranti','produksi'].forEach(cat=>{
-        const autoKey=`auto_${cat}`;
-        const hideKey=`hide_${cat}`;
-        const autoIds=compat[autoKey]||[];
-        const hideIds=compat[hideKey]||[];
+        const autoIds=compat[`auto_${cat}`]||[];
+        const hideIds=compat[`hide_${cat}`]||[];
         const current=newSel[cat]||[];
         const filtered=current.filter(x=>!hideIds.includes(x));
-        const merged=[...new Set([...filtered,...autoIds])];
-        newSel[cat]=merged;
+        newSel[cat]=[...new Set([...filtered,...autoIds])];
       });
       return newSel;
     });
@@ -283,10 +335,16 @@ function App(){
     });
   };
 
-  /* ambil genre pertama yang dipilih untuk compat */
   const activeGenre=sel.ragam[0]||null;
   const compat=getCompat(D,activeGenre);
 
+  /* total durasi */
+  const totalDur=timeline.reduce((s,i)=>s+i.durasi,0);
+  const durPct=Math.min((totalDur/MAX_DUR)*100,100);
+  const durColor=totalDur>MAX_DUR?'#ef4444':totalDur>150?'#f59e0b':'#4ade80';
+  const durClass=totalDur>MAX_DUR?'over':totalDur>150?'warn':'ok';
+
+  /* build style */
   const buildStyle=useCallback(()=>{
     if(!D)return'';
     const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
@@ -301,6 +359,7 @@ function App(){
     return parts.join(', ');
   },[D,sel,mode]);
 
+  /* build struct */
   const buildStruct=useCallback(()=>{
     if(!D||!timeline.length)return'';
     const subMap=getAllSub(D);
@@ -326,23 +385,70 @@ function App(){
     }catch(e){return'';}
   };
 
+  /* timeline ops */
   const addSection=sec=>{
+    if(totalDur>=MAX_DUR){showToast('Total durasi sudah 3:00 menit — hapus section dulu','error');return;}
     const count=timeline.filter(x=>x.secId===sec.id).length;
     const label=count>0?`${sec.label} ${count+1}`:sec.label;
-    setTimeline(p=>[...p,{uid:Date.now()+Math.random(),secId:sec.id,label,durasi:sec.durasi_default,durasi_pilihan:sec.durasi_pilihan,sub_tersedia:sec.sub_tersedia,activeSub:[...(sec.sub_default||[])]}]);
+    setTimeline(p=>[...p,{
+      uid:Date.now()+Math.random(),secId:sec.id,label,
+      durasi:sec.durasi_default,
+      durasi_pilihan:sec.durasi_pilihan,
+      durasi_min:sec.durasi_min,
+      durasi_max:sec.durasi_max,
+      durasi_warning:sec.durasi_warning,
+      logic_gate:sec.logic_gate,
+      sub_tersedia:sec.sub_tersedia,
+      activeSub:[...(sec.sub_default||[])]
+    }]);
   };
-  const moveItem=(idx,dir)=>setTimeline(p=>{const a=[...p];const to=idx+dir;if(to<0||to>=a.length)return a;[a[idx],a[to]]=[a[to],a[idx]];return a;});
-  const delItem=uid=>setTimeline(p=>p.filter(x=>x.uid!==uid));
-  const setDurasi=(uid,d)=>setTimeline(p=>p.map(x=>x.uid===uid?{...x,durasi:d}:x));
-  const toggleSub=(uid,sid)=>setTimeline(p=>p.map(x=>{if(x.uid!==uid)return x;const a=x.activeSub.includes(sid)?x.activeSub.filter(s=>s!==sid):[...x.activeSub,sid];return{...x,activeSub:a};}));
 
+  const moveItem=(idx,dir)=>setTimeline(p=>{
+    const a=[...p];const to=idx+dir;
+    if(to<0||to>=a.length)return a;
+    [a[idx],a[to]]=[a[to],a[idx]];return a;
+  });
+  const delItem=uid=>setTimeline(p=>p.filter(x=>x.uid!==uid));
+  const setDurasi=(uid,d)=>{
+    const item=timeline.find(x=>x.uid===uid);
+    if(!item)return;
+    const diff=d-item.durasi;
+    if(totalDur+diff>MAX_DUR){showToast(`Batas 3:00 menit tercapai — tidak bisa tambah durasi`,'error');return;}
+    setTimeline(p=>p.map(x=>x.uid===uid?{...x,durasi:d}:x));
+  };
+
+  const toggleSub=(uid,sid,subMap,conflictRules)=>{
+    const item=timeline.find(x=>x.uid===uid);
+    if(!item)return;
+    const isAdding=!item.activeSub.includes(sid);
+    if(isAdding){
+      const locked=getLockedSubs(item.activeSub,conflictRules);
+      if(locked.has(sid)){showToast('Tag ini dikunci karena konflik dengan pilihan lain','error');return;}
+      const sub=subMap[sid];
+      if(sub?.flag==='warn')showToast(`⚠️ ${sub.warn_msg||'Perhatikan kombinasi ini'}`, 'warn',4000);
+      if(sub?.flag==='red'){showToast(`🔴 RED FLAG: ${sub.warn_msg||'Kombinasi berisiko tinggi'}`, 'error',5000);}
+    }
+    const msgs=isAdding?getConflictMsgs([...item.activeSub,sid],item.secId,conflictRules):[];
+    msgs.forEach(m=>setTimeout(()=>showToast(`⚠️ ${m}`,'warn',4000),300));
+    setTimeline(p=>p.map(x=>{
+      if(x.uid!==uid)return x;
+      const a=x.activeSub.includes(sid)?x.activeSub.filter(s=>s!==sid):[...x.activeSub,sid];
+      return{...x,activeSub:a};
+    }));
+  };
+
+  /* save */
   const doSave=async()=>{
     if(!saveName.trim()){showToast('Nama tidak boleh kosong','error');return;}
     const styleText=buildStyle();const structText=buildStruct();
     if(!styleText&&!structText){showToast('Tidak ada konten','error');return;}
     try{
-      const data=await sbInsert('preset_gawe_ukoro',{nama:saveName.trim(),kategori:saveCat,mode,sel_data:sel,timeline,dibuat:new Date().toLocaleDateString('id-ID')});
-      setPresets(p=>[data[0],...p]);setSaveModal(false);setSaveName('');
+      const data=await sbInsert('preset_gawe_ukoro',{
+        nama:saveName.trim(),kategori:saveCat,mode,
+        sel_data:sel,timeline,dibuat:new Date().toLocaleDateString('id-ID')
+      });
+      setPresets(p=>[data[0],...p]);
+      setSaveModal(false);setSaveName('');
       showToast(`✓ "${saveName}" tersimpan`,'success');
       setOutTab('presets');setPresetTab('saya');
     }catch(e){showToast('Gagal simpan ke server','error');}
@@ -372,8 +478,13 @@ function App(){
     if(s.wirama?.length){const t=find('wirama',s.wirama[0]);if(t)parts.push(t.bpm||t.label);}
     if(s.piranti?.length)parts.push(s.piranti.map(id=>find('piranti',id)?.label).filter(Boolean).join(' + '));
     if(s.produksi?.length)parts.push(s.produksi.map(id=>find('produksi',id)?.label).filter(Boolean).join(', '));
-    const style=parts.join(', ');const subMap=getAllSub(D);let cursor=0;const lines=[];
-    (p.timeline||[]).forEach(item=>{lines.push(`[${item.label} - ${toMMSS(cursor)}]`);item.activeSub?.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});lines.push('');cursor+=item.durasi;});
+    const style=parts.join(', ');
+    const subMap=getAllSub(D);let cursor=0;const lines=[];
+    (p.timeline||[]).forEach(item=>{
+      lines.push(`[${item.label} - ${toMMSS(cursor)}]`);
+      item.activeSub?.forEach(sid=>{if(subMap[sid])lines.push(subMap[sid].tag);});
+      lines.push('');cursor+=item.durasi;
+    });
     if(lines.length)lines.push(`[End - ${toMMSS(cursor)}]`);
     return`PRESET: ${p.nama}\nKATEGORI: ${p.kategori}\nTANGGAL: ${p.dibuat}\n\n[STYLE PROMPT]\n${style}\n\n[STRUCTURE]\n${lines.join('\n')}`;
   };
@@ -381,18 +492,25 @@ function App(){
   const exportAll=()=>{
     if(!presets.length){showToast('Tidak ada preset','error');return;}
     const lines=presets.map((p,i)=>`${'='.repeat(50)}\nPRESET #${String(i+1).padStart(2,'0')}\n${'='.repeat(50)}\n${buildExportText(p)}`).join('\n\n');
-    try{const blob=new Blob([lines],{type:'text/plain'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='ukoro-bundle.txt';a.click();URL.revokeObjectURL(url);showToast(`✓ ${presets.length} preset diekspor`,'success');}
-    catch(e){showToast('Gagal ekspor','error');}
+    try{
+      const blob=new Blob([lines],{type:'text/plain'});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;a.download='ukoro-bundle.txt';a.click();
+      URL.revokeObjectURL(url);
+      showToast(`✓ ${presets.length} preset diekspor`,'success');
+    }catch(e){showToast('Gagal ekspor','error');}
   };
 
   const refCategories=['Semua',...[...new Set(referensi.map(r=>r.kategori_bundle).filter(Boolean))]];
   const filteredRef=refFilter==='Semua'?referensi:referensi.filter(r=>r.kategori_bundle===refFilter);
   const styleText=buildStyle();const structText=buildStruct();const hasContent=!!(styleText||structText);
+  const hasLokal=hasLokalInstrumen(sel.piranti);
 
   if(!D)return<div style={{color:'#555',padding:'40px',textAlign:'center',fontSize:'0.85rem'}}>Memuat data...</div>;
-  const subMap=getAllSub(D);
 
-  /* curated info */
+  const subMap=getAllSub(D);
+  const conflictRules=D.conflict_rules||[];
   const curatedGenreName=activeGenre?(D.ragam.find(x=>x.id===activeGenre)?.label||''):'';
 
   return(
@@ -405,51 +523,79 @@ function App(){
         <div className="topbar-right">
           <button className={`mode-btn ${mode==='vocal'?'active':''}`} onClick={()=>setMode('vocal')}>🎤</button>
           <button className={`mode-btn ${mode==='instrumental'?'active':''}`} onClick={()=>setMode('instrumental')}>🎹</button>
-          <div className={`curated-toggle ${curatedOn?'on':''}`} onClick={()=>setCuratedOn(p=>!p)}>
+          <div className={`curated-toggle ${curatedOn?'on':''}`} onClick={()=>{setCuratedOn(p=>!p);showToast(curatedOn?'Curated OFF — akses penuh':'Curated ON — panduan aktif','info');}}>
             {curatedOn?'✦':'○'} Curated
           </div>
         </div>
       </div>
 
       <div className="body">
+        {/* PANEL KIRI */}
         <div className="left">
           <div className="tab-bar">
             <div className={`tab ${leftTab==='style'?'active':''}`} onClick={()=>setLeftTab('style')}>🎸 Style</div>
             <div className={`tab ${leftTab==='struct'?'active':''}`} onClick={()=>setLeftTab('struct')}>🏗️ Structure</div>
           </div>
           <div className="tab-content">
+
             {leftTab==='style'&&<>
               {curatedOn&&activeGenre&&compat&&(
                 <div className="curated-bar">
                   <strong>✦ Curated: {curatedGenreName}</strong><br/>
-                  Tag direkomendasikan otomatis dicentang. ⚠️ = kurang cocok. Tag tersembunyi = tidak kompatibel.
-                  <br/><span style={{color:'#666'}}>Matikan Curated untuk akses penuh.</span>
+                  ✓ dicentang otomatis · ⚠️ kurang cocok · tersembunyi = tidak kompatibel
+                  <br/><span style={{color:'#555',fontSize:'0.62rem'}}>Ketuk Curated untuk akses penuh</span>
                 </div>
               )}
-              <CuratedChipSection title="Genre / Ragam" cat="ragam" color="c-genre" data={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null}/>
-              <CuratedChipSection title="Mood / Rasa" cat="rasa" color="c-mood" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
-              {mode==='vocal'&&<CuratedChipSection title="Vokal / Swara" cat="swara" color="c-vocal" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>}
-              <CuratedChipSection title="Tempo / Wirama" cat="wirama" color="c-tempo" data={D} sel={sel} toggle={toggle} curatedOn={false} compat={null}/>
-              <CuratedChipSection title="Instrumen / Piranti" cat="piranti" color="c-instr" data={D} sel={sel} toggle={toggle} grouped curatedOn={curatedOn} compat={compat}/>
-              <CuratedChipSection title="Produksi" cat="produksi" color="c-prod" data={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
+              <CuratedSection title="Genre / Ragam" cat="ragam" color="c-genre" D={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null}/>
+              <CuratedSection title="Mood / Rasa" cat="rasa" color="c-mood" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
+              {mode==='vocal'&&<CuratedSection title="Vokal / Swara" cat="swara" color="c-vocal" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>}
+              <CuratedSection title="Tempo / Wirama" cat="wirama" color="c-tempo" D={D} sel={sel} toggle={toggle} curatedOn={false} compat={null}/>
+              <CuratedSection title="Instrumen / Piranti" cat="piranti" color="c-instr" D={D} sel={sel} toggle={toggle} grouped curatedOn={curatedOn} compat={compat}/>
+              <CuratedSection title="Produksi" cat="produksi" color="c-prod" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
             </>}
+
             {leftTab==='struct'&&<>
-              <div className="lib-title">Library — tap untuk tambah</div>
+              <div className="lib-title">Library — tap untuk tambah ke timeline</div>
               <div className="lib-chips">
                 {D.struktur_lagu.map(sec=>(
                   <div key={sec.id} className="lib-chip" onClick={()=>addSection(sec)}>{sec.label}</div>
                 ))}
               </div>
-              <div className="lib-title">Timeline {timeline.length>0&&`(${timeline.length})`}</div>
-              {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Tap section di atas untuk tambah.</div>}
+
+              {/* DURATION COUNTER */}
+              <div className="dur-counter">
+                <div className="dur-counter-top">
+                  <span className="dur-counter-label">Total Durasi ({timeline.length} section)</span>
+                  <span className={`dur-counter-val ${durClass}`}>
+                    {toMMSS(totalDur)} / 3:00
+                    {totalDur>MAX_DUR&&' ⚠️ OVER'}
+                  </span>
+                </div>
+                <div className="dur-bar-bg">
+                  <div className="dur-bar-fill" style={{width:`${durPct}%`,background:durColor}}/>
+                </div>
+              </div>
+
+              {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Tap section di atas untuk mulai.</div>}
               <div className="timeline">
                 {timeline.map((item,idx)=>{
-                  let cursor=0;for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
+                  let cursor=0;
+                  for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
+                  const locked=getLockedSubs(item.activeSub,conflictRules);
+                  const conflicts=getConflictMsgs(item.activeSub,item.secId,conflictRules);
+                  const durOk=item.durasi>=item.durasi_min&&item.durasi<=item.durasi_max;
+                  /* hide lokal tags jika tidak ada instrumen lokal */
+                  const lokalSubIds=['sub_kendang_in','sub_gamelan_full','sub_gong_resonance','sub_gong_hit','sub_senggakan','sub_kecak','sub_kendang_solo'];
+                  const visibleSubs=item.sub_tersedia.filter(sid=>{
+                    if(!hasLokal&&lokalSubIds.includes(sid))return false;
+                    return true;
+                  });
                   return(
-                    <div key={item.uid} className="tl-item">
+                    <div key={item.uid} className={`tl-item ${conflicts.length>0?'tl-warn':''}`}>
                       <div className="tl-header">
                         <span className="tl-name">{item.label}</span>
                         <span className="tl-time">{toMMSS(cursor)}</span>
+                        <span className={`tl-dur-badge ${durOk?'ok':'warn'}`}>{item.durasi}s</span>
                         <div className="tl-btns">
                           <button className="tl-btn" onClick={()=>moveItem(idx,-1)}>▲</button>
                           <button className="tl-btn" onClick={()=>moveItem(idx,1)}>▼</button>
@@ -457,6 +603,7 @@ function App(){
                         </div>
                       </div>
                       <div className="tl-body">
+                        {!durOk&&<div className="dur-warning">⚠️ {item.durasi_warning}</div>}
                         <div className="dur-row">
                           <span className="dur-label">Durasi:</span>
                           {item.durasi_pilihan.map(d=>(
@@ -464,8 +611,24 @@ function App(){
                           ))}
                         </div>
                         <div className="sub-chips">
-                          {item.sub_tersedia.map(sid=>{const s=subMap[sid];if(!s)return null;return<div key={sid} className={`sub-chip ${item.activeSub.includes(sid)?'on':''}`} onClick={()=>toggleSub(item.uid,sid)}>{s.tag}</div>;})}
+                          {visibleSubs.map(sid=>{
+                            const s=subMap[sid];if(!s)return null;
+                            const isOn=item.activeSub.includes(sid);
+                            const isLocked=locked.has(sid);
+                            const flagCls=s.flag==='warn'?'flag-warn':s.flag==='red'?'flag-red':'';
+                            return(
+                              <div key={sid}
+                                className={`sub-chip ${isOn?'on':''} ${flagCls} ${isLocked?'locked':''}`}
+                                onClick={()=>toggleSub(item.uid,sid,subMap,conflictRules)}
+                                title={s.warn_msg||s.tag}>
+                                {s.tag}
+                              </div>
+                            );
+                          })}
                         </div>
+                        {conflicts.map((msg,i)=>(
+                          <div key={i} className="conflict-msg">⚠️ {msg}</div>
+                        ))}
                       </div>
                     </div>
                   );
@@ -475,10 +638,13 @@ function App(){
           </div>
         </div>
 
+        {/* PANEL KANAN */}
         <div className="right">
           <div className="out-tabs">
             <div className={`out-tab ${outTab==='output'?'active':''}`} onClick={()=>setOutTab('output')}>Output</div>
-            <div className={`out-tab ${outTab==='presets'?'active':''}`} onClick={()=>setOutTab('presets')}>Preset{presets.length>0?` (${presets.length})`:''}</div>
+            <div className={`out-tab ${outTab==='presets'?'active':''}`} onClick={()=>setOutTab('presets')}>
+              Preset{presets.length>0?` (${presets.length})`:' '}
+            </div>
           </div>
           <div className="out-body">
             {outTab==='output'&&<>
@@ -490,11 +656,13 @@ function App(){
                 </>
               }
             </>}
+
             {outTab==='presets'&&<>
               <div style={{display:'flex',gap:'8px',marginBottom:'14px'}}>
                 <button onClick={()=>setPresetTab('saya')} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='saya'?'#4338ca':'#1a1a1a',color:presetTab==='saya'?'#fff':'#666'}}>🎛️ Preset Saya</button>
                 <button onClick={()=>{setPresetTab('referensi');if(referensi.length===0)loadReferensi();}} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='referensi'?'#1e3a5f':'#1a1a1a',color:presetTab==='referensi'?'#93c5fd':'#666'}}>🎸 Referensi</button>
               </div>
+
               {presetTab==='saya'&&<>
                 {presets.length===0
                   ?<div className="preset-empty">Belum ada preset.<br/>Buat prompt lalu tap 💾 Simpan.</div>
@@ -516,12 +684,14 @@ function App(){
                   </div>
                 }
               </>}
+
               {presetTab==='referensi'&&<>
                 {refLoading?<div className="ref-loading">Memuat...</div>:<>
                   <div className="ref-filter">
                     {refCategories.map(c=><button key={c} className={`ref-filter-btn ${refFilter===c?'on':''}`} onClick={()=>setRefFilter(c)}>{c}</button>)}
                   </div>
-                  {filteredRef.length===0?<div className="preset-empty">Belum ada preset referensi.</div>
+                  {filteredRef.length===0
+                    ?<div className="preset-empty">Belum ada preset referensi.</div>
                     :<div className="ref-list">
                       {filteredRef.map(r=>{
                         const isOpen=expandedRef===r.id;
@@ -557,6 +727,7 @@ function App(){
               </>}
             </>}
           </div>
+
           <div className="action-bar">
             <button className="act-btn btn-style" onClick={()=>copyText(styleText,'Style Prompt')} disabled={!styleText}>📋 Style</button>
             <button className="act-btn btn-struct" onClick={()=>copyText(structText,'Structure')} disabled={!structText}>📋 Struct</button>
@@ -581,6 +752,7 @@ function App(){
           </div>
         </div>
       )}
+
       {exportModal&&(
         <div className="overlay" onClick={()=>setExportModal(null)}>
           <div className="modal" onClick={e=>e.stopPropagation()}>
@@ -597,31 +769,29 @@ function App(){
   );
 }
 
-/* ══ CuratedChipSection ══ */
-function CuratedChipSection({title,cat,color,data,sel,toggle,grouped,curatedOn,compat}){
-  const items=data[cat]||[];
+/* ══ CuratedSection ══ */
+function CuratedSection({title,cat,color,D,sel,toggle,grouped,curatedOn,compat}){
+  const items=D[cat]||[];
   const groups=grouped?[...new Set(items.map(x=>x.grup).filter(Boolean))]:[];
 
   const renderChip=(item)=>{
-    const isSelected=sel[cat].includes(item.id);
+    const isOn=sel[cat].includes(item.id);
     let state='normal';
     if(curatedOn&&compat){
-      const autoKey=`auto_${cat}`;
-      const warnKey=`warn_${cat}`;
-      const hideKey=`hide_${cat}`;
-      if(compat[hideKey]?.includes(item.id))state='hide';
-      else if(compat[autoKey]?.includes(item.id))state='auto';
-      else if(compat[warnKey]?.includes(item.id))state='warn';
+      if(compat[`hide_${cat}`]?.includes(item.id))state='hide';
+      else if(compat[`auto_${cat}`]?.includes(item.id))state='auto';
+      else if(compat[`warn_${cat}`]?.includes(item.id))state='warn';
     }
     if(state==='hide')return null;
-    const cls=[
-      'chip',color,
-      isSelected?'on':'',
-      state==='auto'&&isSelected?'auto-on':'',
-      state==='warn'?'warn':''
-    ].filter(Boolean).join(' ');
     return(
-      <div key={item.id} className={cls} onClick={()=>toggle(cat,item.id)}>
+      <div key={item.id}
+        className={[
+          'chip',color,
+          isOn?'on':'',
+          state==='auto'&&isOn?'auto-on':'',
+          state==='warn'?'warn':''
+        ].filter(Boolean).join(' ')}
+        onClick={()=>toggle(cat,item.id)}>
         {item.label}
       </div>
     );
