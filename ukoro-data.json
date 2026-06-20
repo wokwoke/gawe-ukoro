@@ -30,6 +30,7 @@
     { "id": "grunge",        "label": "Grunge",             "grup": "Rock" },
     { "id": "heavymetal",    "label": "Heavy Metal",        "grup": "Rock" },
     { "id": "punkrock",      "label": "Punk Rock",          "grup": "Rock" },
+    { "id": "numetal",       "label": "Nu Metal",           "grup": "Rock" },
     { "id": "deephouse",     "label": "Deep House",         "grup": "EDM" },
     { "id": "techno",        "label": "Techno",             "grup": "EDM" },
     { "id": "trance",        "label": "Trance",             "grup": "EDM" },
@@ -48,6 +49,7 @@
     { "id": "gospel",        "label": "Gospel",             "grup": "Jazz" },
     { "id": "cinematic",     "label": "Cinematic",          "grup": "Orchestral" },
     { "id": "neoclassical",  "label": "Neoclassical",       "grup": "Orchestral" },
+    { "id": "progrock",      "label": "Progressive Rock",   "grup": "Orchestral" },
     { "id": "dangdut",       "label": "Dangdut",            "grup": "Lokal" },
     { "id": "koplo",         "label": "Dangdut Koplo",      "grup": "Lokal" },
     { "id": "jedagujedug",   "label": "Jedag-Jedug",        "grup": "Lokal" },
@@ -105,6 +107,11 @@
     { "id": "slow",       "label": "Slow Ballad",          "bpm": "60-80 BPM"   },
     { "id": "midtempo",   "label": "Mid Tempo",            "bpm": "90-110 BPM"  },
     { "id": "fast",       "label": "Fast Paced",           "bpm": "120-140 BPM" },
+    { "id": "bpm76",      "label": "76 BPM",               "bpm": "76 BPM"      },
+    { "id": "bpm90",      "label": "90 BPM",               "bpm": "90 BPM"      },
+    { "id": "bpm96",      "label": "96 BPM",               "bpm": "96 BPM"      },
+    { "id": "bpm100",     "label": "100 BPM",              "bpm": "100 BPM"     },
+    { "id": "bpm110",     "label": "110 BPM",              "bpm": "110 BPM"     },
     { "id": "bpm126",     "label": "126 BPM",              "bpm": "126 BPM"     },
     { "id": "bpm128",     "label": "128 BPM",              "bpm": "128 BPM"     },
     { "id": "bpm130",     "label": "130 BPM",              "bpm": "130 BPM"     },
@@ -113,8 +120,22 @@
     { "id": "fourfloor",  "label": "Four-on-the-Floor",    "bpm": ""            },
     { "id": "syncopated", "label": "Syncopated / Groovy",  "bpm": ""            },
     { "id": "shuffle",    "label": "Shuffle / Swing",      "bpm": ""            },
+    { "id": "waltz68",    "label": "Waltz 6/8",            "bpm": ""            },
     { "id": "koploBeat",  "label": "Koplo Beat",           "bpm": "130 BPM"     },
     { "id": "jedagBeat",  "label": "Jedag-Jedug Rhythm",   "bpm": "128 BPM"     }
+  ],
+  "tangga_nada": [
+    { "id": "major",          "label": "Major",           "grup": "Major Feel",  "desc": "Ceria, Terang, Resolved"          },
+    { "id": "lydian",         "label": "Lydian",          "grup": "Major Feel",  "desc": "Megah, Mengambang, Magical"       },
+    { "id": "mixolydian",     "label": "Mixolydian",      "grup": "Major Feel",  "desc": "Rock, Bluesy, Open"               },
+    { "id": "naturalminor",   "label": "Natural Minor",   "grup": "Minor Feel",  "desc": "Sedih, Gelap, Emotional"         },
+    { "id": "harmonicminor",  "label": "Harmonic Minor",  "grup": "Minor Feel",  "desc": "Dramatis, Timur Tengah"          },
+    { "id": "dorian",         "label": "Dorian",          "grup": "Minor Feel",  "desc": "Jazz, Funk, Tidak terlalu gelap" },
+    { "id": "phrygian",       "label": "Phrygian",        "grup": "Modal/Etnik", "desc": "Spanyol, Flamenco, Metal gelap"  },
+    { "id": "pentatonic",     "label": "Pentatonic",      "grup": "Modal/Etnik", "desc": "Asia, Folk, Blues"               },
+    { "id": "slendro",        "label": "Slendro",         "grup": "Modal/Etnik", "desc": "Gamelan Jawa, Magis"             },
+    { "id": "pelog",          "label": "Pelog",           "grup": "Modal/Etnik", "desc": "Gamelan Bali, Mistis"            },
+    { "id": "hijaz",          "label": "Hijaz",           "grup": "Modal/Etnik", "desc": "Arab, Qasidah, Timur Tengah"     }
   ],
   "piranti": [
     { "id": "grandpiano",     "label": "Grand Piano",             "grup": "Keys"       },
@@ -161,206 +182,131 @@
     { "id": "organic",    "label": "Acoustic / Organic / Unplugged"},
     { "id": "electronic", "label": "Synthesized / Electronic"      },
     { "id": "sidechain",  "label": "Sidechained Compression"       },
-    { "id": "gated",      "label": "Gated Reverb Drums"            }
+    { "id": "gated",      "label": "Gated Reverb Drums"            },
+    { "id": "stadium",    "label": "Stadium Reverb"                },
+    { "id": "smallroom",  "label": "Small Room / Intimate"         },
+    { "id": "cathedral",  "label": "Cathedral / Hall Reverb"       }
   ],
   "struktur_lagu": [
     {
-      "id": "intro",
-      "label": "Intro",
-      "kategori": "pembuka",
-      "durasi_min": 5,
-      "durasi_max": 15,
-      "durasi_default": 10,
+      "id": "intro", "label": "Intro", "kategori": "pembuka",
+      "energy_level": 2,
+      "durasi_min": 5, "durasi_max": 15, "durasi_default": 10,
       "durasi_pilihan": [5,8,10,15],
       "durasi_warning": "Intro ideal 5-15 detik",
       "logic_gate": "lofi_ambient_wajib_fadein",
       "sub_default": ["sub_fade_in"],
-      "sub_tersedia": [
-        "sub_atmospheric_pad","sub_vinyl","sub_lowpass",
-        "sub_fade_in","sub_reverb","sub_pianissimo",
-        "sub_swell","sub_kendang_in","sub_gong_resonance",
-        "sub_count_in"
-      ]
+      "sub_tersedia": ["sub_atmospheric_pad","sub_vinyl","sub_lowpass","sub_fade_in","sub_reverb","sub_pianissimo","sub_swell","sub_kendang_in","sub_gong_resonance","sub_count_in"]
     },
     {
-      "id": "buildup",
-      "label": "Build-up",
-      "kategori": "transisi",
-      "durasi_min": 8,
-      "durasi_max": 16,
-      "durasi_default": 15,
+      "id": "buildup", "label": "Build-up", "kategori": "transisi",
+      "energy_level": 3,
+      "durasi_min": 8, "durasi_max": 16, "durasi_default": 15,
       "durasi_pilihan": [8,10,15,16],
       "durasi_warning": "Build-up minimal 8 detik agar Crescendo terdengar",
       "logic_gate": "harus_diakhiri_energi_lebih_tinggi",
       "sub_default": ["sub_crescendo","sub_snare_roll"],
-      "sub_tersedia": [
-        "sub_crescendo","sub_snare_roll","sub_rising_energy",
-        "sub_modulation","sub_sidechain","sub_staccato",
-        "sub_subbass_riser"
-      ]
+      "sub_tersedia": ["sub_crescendo","sub_snare_roll","sub_rising_energy","sub_modulation","sub_sidechain","sub_staccato","sub_subbass_riser"]
     },
     {
-      "id": "verse",
-      "label": "Verse",
-      "kategori": "utama",
-      "durasi_min": 15,
-      "durasi_max": 30,
-      "durasi_default": 30,
+      "id": "verse", "label": "Verse", "kategori": "utama",
+      "energy_level": 2,
+      "durasi_min": 15, "durasi_max": 30, "durasi_default": 30,
       "durasi_pilihan": [15,20,25,30],
       "durasi_warning": "Verse ideal 15-30 detik",
       "logic_gate": "volume_vokal_prioritas",
       "sub_default": [],
-      "sub_tersedia": [
-        "sub_vocal_chops","sub_whisper","sub_low_energy",
-        "sub_reverb","sub_legato","sub_cengkok",
-        "sub_rhythmic_plucks","sub_palm_muted"
-      ]
+      "sub_tersedia": ["sub_vocal_chops","sub_whisper","sub_low_energy","sub_reverb","sub_legato","sub_cengkok","sub_rhythmic_plucks","sub_palm_muted"]
     },
     {
-      "id": "prechorus",
-      "label": "Pre-Chorus",
-      "kategori": "transisi",
-      "durasi_min": 8,
-      "durasi_max": 16,
-      "durasi_default": 15,
+      "id": "prechorus", "label": "Pre-Chorus", "kategori": "transisi",
+      "energy_level": 3,
+      "durasi_min": 8, "durasi_max": 16, "durasi_default": 15,
       "durasi_pilihan": [8,10,15,16],
       "durasi_warning": "Pre-Chorus ideal 8-16 detik",
       "logic_gate": "harus_naik_ke_chorus",
       "sub_default": ["sub_crescendo","sub_rising_energy"],
-      "sub_tersedia": [
-        "sub_crescendo","sub_rising_energy","sub_swell",
-        "sub_snare_roll","sub_sidechain","sub_subbass_riser"
-      ]
+      "sub_tersedia": ["sub_crescendo","sub_rising_energy","sub_swell","sub_snare_roll","sub_sidechain","sub_subbass_riser"]
     },
     {
-      "id": "chorus",
-      "label": "Chorus",
-      "kategori": "utama",
-      "durasi_min": 20,
-      "durasi_max": 40,
-      "durasi_default": 30,
+      "id": "chorus", "label": "Chorus", "kategori": "utama",
+      "energy_level": 5,
+      "durasi_min": 20, "durasi_max": 40, "durasi_default": 30,
       "durasi_pilihan": [20,25,30,40],
       "durasi_warning": "Chorus ideal 20-40 detik",
       "logic_gate": "max_energy_zone",
       "sub_default": ["sub_fortissimo","sub_max_energy"],
-      "sub_tersedia": [
-        "sub_fortissimo","sub_max_energy","sub_beat_drop",
-        "sub_808_kick","sub_driving_perc","sub_sidechain",
-        "sub_gamelan_full","sub_anthemic","sub_wall_of_sound"
-      ]
+      "sub_tersedia": ["sub_fortissimo","sub_max_energy","sub_beat_drop","sub_808_kick","sub_driving_perc","sub_sidechain","sub_gamelan_full","sub_anthemic","sub_wall_of_sound"]
     },
     {
-      "id": "drop",
-      "label": "Drop",
-      "kategori": "utama",
-      "durasi_min": 20,
-      "durasi_max": 40,
-      "durasi_default": 30,
+      "id": "drop", "label": "Drop", "kategori": "utama",
+      "energy_level": 5,
+      "durasi_min": 20, "durasi_max": 40, "durasi_default": 30,
       "durasi_pilihan": [20,25,30,40],
       "durasi_warning": "Drop ideal 20-40 detik",
       "logic_gate": "harus_didahului_buildup",
       "sub_default": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy"],
-      "sub_tersedia": [
-        "sub_fortissimo","sub_beat_drop","sub_808_kick",
-        "sub_max_energy","sub_driving_perc","sub_sidechain",
-        "sub_wall_of_sound","sub_anthemic"
-      ]
+      "sub_tersedia": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy","sub_driving_perc","sub_sidechain","sub_wall_of_sound","sub_anthemic"]
     },
     {
-      "id": "postchourus",
-      "label": "Post-Chorus",
-      "kategori": "transisi",
-      "durasi_min": 8,
-      "durasi_max": 15,
-      "durasi_default": 15,
+      "id": "postchourus", "label": "Post-Chorus", "kategori": "transisi",
+      "energy_level": 3,
+      "durasi_min": 8, "durasi_max": 15, "durasi_default": 15,
       "durasi_pilihan": [8,10,12,15],
       "durasi_warning": "Post-Chorus ideal 8-15 detik",
       "logic_gate": "tempat_terbaik_senggakan",
       "sub_default": ["sub_half_time"],
-      "sub_tersedia": [
-        "sub_glitch_vocal","sub_half_time","sub_adlib",
-        "sub_echo_vocal","sub_senggakan","sub_vocal_chops"
-      ]
+      "sub_tersedia": ["sub_glitch_vocal","sub_half_time","sub_adlib","sub_echo_vocal","sub_senggakan","sub_vocal_chops"]
     },
     {
-      "id": "breakdown",
-      "label": "Breakdown",
-      "kategori": "transisi",
-      "durasi_min": 10,
-      "durasi_max": 20,
-      "durasi_default": 15,
+      "id": "breakdown", "label": "Breakdown", "kategori": "transisi",
+      "energy_level": 1,
+      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
       "durasi_pilihan": [10,12,15,20],
       "durasi_warning": "Breakdown ideal 10-20 detik",
       "logic_gate": "hilangkan_drum_total",
       "sub_default": ["sub_beat_cut","sub_pianissimo","sub_reverb"],
-      "sub_tersedia": [
-        "sub_beat_cut","sub_pianissimo","sub_reverb",
-        "sub_whisper","sub_lowpass","sub_only_bass"
-      ]
+      "sub_tersedia": ["sub_beat_cut","sub_pianissimo","sub_reverb","sub_whisper","sub_lowpass","sub_only_bass"]
     },
     {
-      "id": "bridge",
-      "label": "Bridge",
-      "kategori": "transisi",
-      "durasi_min": 15,
-      "durasi_max": 25,
-      "durasi_default": 20,
+      "id": "bridge", "label": "Bridge", "kategori": "transisi",
+      "energy_level": 3,
+      "durasi_min": 15, "durasi_max": 25, "durasi_default": 20,
       "durasi_pilihan": [15,20,25],
       "durasi_warning": "Bridge ideal 15-25 detik",
       "logic_gate": "perubahan_emosi_sebelum_chorus_terakhir",
       "sub_default": ["sub_modulation"],
-      "sub_tersedia": [
-        "sub_modulation","sub_rising_energy","sub_swell",
-        "sub_key_change","sub_atmospheric_pad","sub_gong_resonance"
-      ]
+      "sub_tersedia": ["sub_modulation","sub_rising_energy","sub_swell","sub_key_change","sub_atmospheric_pad","sub_gong_resonance"]
     },
     {
-      "id": "interlude",
-      "label": "Interlude / Instrumental",
-      "kategori": "transisi",
-      "durasi_min": 10,
-      "durasi_max": 20,
-      "durasi_default": 15,
+      "id": "interlude", "label": "Interlude / Instrumental", "kategori": "transisi",
+      "energy_level": 2,
+      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
       "durasi_pilihan": [10,15,20],
       "durasi_warning": "Interlude ideal 10-20 detik",
       "logic_gate": null,
       "sub_default": [],
-      "sub_tersedia": [
-        "sub_reverb","sub_legato","sub_atmospheric_pad",
-        "sub_gamelan_full","sub_gong_resonance","sub_rhythmic_plucks"
-      ]
+      "sub_tersedia": ["sub_reverb","sub_legato","sub_atmospheric_pad","sub_gamelan_full","sub_gong_resonance","sub_rhythmic_plucks"]
     },
     {
-      "id": "solo",
-      "label": "Solo",
-      "kategori": "utama",
-      "durasi_min": 10,
-      "durasi_max": 20,
-      "durasi_default": 15,
+      "id": "solo", "label": "Solo", "kategori": "utama",
+      "energy_level": 4,
+      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
       "durasi_pilihan": [10,15,20],
       "durasi_warning": "Solo ideal 10-20 detik — WAJIB pilih 1 instrumen spesifik",
       "logic_gate": "wajib_pilih_instrumen_spesifik",
       "sub_default": [],
-      "sub_tersedia": [
-        "sub_guitar_solo","sub_synth_solo","sub_kendang_solo",
-        "sub_fortissimo","sub_legato","sub_reverb","sub_modulation"
-      ]
+      "sub_tersedia": ["sub_guitar_solo","sub_synth_solo","sub_kendang_solo","sub_fortissimo","sub_legato","sub_reverb","sub_modulation"]
     },
     {
-      "id": "outro",
-      "label": "Outro",
-      "kategori": "penutup",
-      "durasi_min": 10,
-      "durasi_max": 20,
-      "durasi_default": 15,
+      "id": "outro", "label": "Outro", "kategori": "penutup",
+      "energy_level": 1,
+      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
       "durasi_pilihan": [10,12,15,20],
       "durasi_warning": "Outro ideal 10-20 detik",
       "logic_gate": "sudden_stop_potong_di_detik_terakhir",
       "sub_default": ["sub_echo_vocal","sub_atm_fade"],
-      "sub_tersedia": [
-        "sub_echo_vocal","sub_atm_fade","sub_gong_hit",
-        "sub_sudden_stop","sub_reverb","sub_pianissimo","sub_fade_out"
-      ]
+      "sub_tersedia": ["sub_echo_vocal","sub_atm_fade","sub_gong_hit","sub_sudden_stop","sub_reverb","sub_pianissimo","sub_fade_out"]
     }
   ],
   "sub_instruksi": {
@@ -474,8 +420,7 @@
       "auto_piranti": ["kendangjawa","bass808"],
       "auto_produksi":["hifi","sidechain"],
       "warn_rasa":    ["melancholic","nostalgic","galau"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["eerie","somber","dark","anxious","magis"],
       "hide_swara":   ["operatic","growl","choir","spokenword"],
       "hide_piranti": ["stringsection","brasssection","grandpiano","sasando","saron","bonang","gongageng"]
@@ -486,8 +431,7 @@
       "auto_piranti": ["kendangjawa","suling","acousticguitar"],
       "auto_produksi":["organic"],
       "warn_rasa":    ["aggressive","dark"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["eerie","anxious","triumphant"],
       "hide_swara":   ["growl","vocalchops","operatic"],
       "hide_piranti": ["bass808","drummachine","fuzzguitar","cowbell"]
@@ -498,8 +442,7 @@
       "auto_piranti": ["kendangjawa","bass808","arpsynth","padsynth"],
       "auto_produksi":["hifi","sidechain","electronic"],
       "warn_rasa":    ["melancholic","galau"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["dreamy","somber","magis","syahdu"],
       "hide_swara":   ["operatic","growl","spokenword"],
       "hide_piranti": ["sasando","saron","bonang","grandpiano","stringsection"]
@@ -510,8 +453,7 @@
       "auto_piranti": ["saron","bonang","gongageng","kendangjawa","padsynth"],
       "auto_produksi":["reverberant","ambient","cinematic"],
       "warn_rasa":    ["euphoric","aggressive"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["playful","gembira"],
       "hide_swara":   ["growl","vocalchops","senggakan"],
       "hide_piranti": ["bass808","fuzzguitar","drummachine","cowbell"]
@@ -522,8 +464,7 @@
       "auto_piranti": ["acousticguitar","rhodes","stringsection"],
       "auto_produksi":["organic","lofi"],
       "warn_rasa":    ["uplifting","playful"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["aggressive","euphoric","dark","eerie"],
       "hide_swara":   ["growl","autotuned","vocalchops","senggakan"],
       "hide_piranti": ["bass808","fuzzguitar","drummachine","cowbell","arpsynth"]
@@ -534,8 +475,7 @@
       "auto_piranti": ["kendangjawa","rhodes","suling","acousticguitar"],
       "auto_produksi":["organic","hifi"],
       "warn_rasa":    ["aggressive","eerie","dark"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["anxious","somber"],
       "hide_swara":   ["growl","vocalchops","operatic"],
       "hide_piranti": ["bass808","fuzzguitar","cowbell","arpsynth"]
@@ -546,8 +486,7 @@
       "auto_piranti": ["kendangsunda","kecapi","suling","gongageng"],
       "auto_produksi":["organic","hifi"],
       "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["somber","eerie","dark","aggressive"],
       "hide_swara":   ["growl","autotuned","vocalchops"],
       "hide_piranti": ["bass808","electricguitar","fuzzguitar","drummachine"]
@@ -558,8 +497,7 @@
       "auto_piranti": ["acousticguitar","kecapi","suling","sasando"],
       "auto_produksi":["organic","lofi","reverberant"],
       "warn_rasa":    ["aggressive","euphoric"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["gembira","dark","anxious"],
       "hide_swara":   ["growl","senggakan","vocalchops"],
       "hide_piranti": ["bass808","fuzzguitar","cowbell","drummachine"]
@@ -570,8 +508,7 @@
       "auto_piranti": ["rebana","suling","acousticguitar"],
       "auto_produksi":["organic","hifi"],
       "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["dark","eerie","aggressive","sensual"],
       "hide_swara":   ["growl","vocalchops","autotuned"],
       "hide_piranti": ["bass808","fuzzguitar","cowbell","drummachine"]
@@ -582,8 +519,7 @@
       "auto_piranti": ["bass808","cowbell","drummachine","padsynth"],
       "auto_produksi":["lofi","distorted","electronic","sidechain"],
       "warn_rasa":    ["melancholic","dark"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["uplifting","gembira","syahdu","dreamy","heroik"],
       "hide_swara":   ["operatic","tenor","melismatic","senggakan","choir"],
       "hide_piranti": ["grandpiano","saron","rebana","sasando","kendangjawa","stringsection"]
@@ -594,8 +530,7 @@
       "auto_piranti": ["bass808","padsynth","rhodes","drummachine"],
       "auto_produksi":["hifi","sidechain","electronic"],
       "warn_rasa":    ["aggressive","angry"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["triumphant","heroik","gembira"],
       "hide_swara":   ["growl","senggakan","operatic","melismatic"],
       "hide_piranti": ["saron","kendangjawa","rebana","fuzzguitar"]
@@ -606,8 +541,7 @@
       "auto_piranti": ["arpsynth","padsynth","drummachine","electricguitar"],
       "auto_produksi":["electronic","reverberant","lofi"],
       "warn_rasa":    ["gembira","playful"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["heroik","triumphant","syahdu"],
       "hide_swara":   ["growl","senggakan","melismatic"],
       "hide_piranti": ["kendangjawa","saron","rebana","acousticdrums"]
@@ -618,8 +552,7 @@
       "auto_piranti": ["arpsynth","padsynth","drummachine","bass808"],
       "auto_produksi":["hifi","sidechain","electronic"],
       "warn_rasa":    ["melancholic","dark"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["somber","syahdu","magis","gembira"],
       "hide_swara":   ["growl","senggakan","melismatic","spokenword"],
       "hide_piranti": ["kendangjawa","suling","rebana","saron"]
@@ -630,8 +563,7 @@
       "auto_piranti": ["bass808","arpsynth","drummachine","padsynth"],
       "auto_produksi":["distorted","electronic","hifi","sidechain"],
       "warn_rasa":    ["melancholic","euphoric"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["syahdu","dreamy","sensual","gembira"],
       "hide_swara":   ["operatic","melismatic","senggakan"],
       "hide_piranti": ["saron","kendangjawa","sasando","grandpiano","stringsection"]
@@ -642,8 +574,7 @@
       "auto_piranti": ["bass808","drummachine","padsynth","arpsynth"],
       "auto_produksi":["hifi","electronic","sidechain"],
       "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["gembira","syahdu","heroik","playful"],
       "hide_swara":   ["operatic","melismatic","senggakan","choir"],
       "hide_piranti": ["saron","kendangjawa","rebana","grandpiano","stringsection"]
@@ -654,11 +585,32 @@
       "auto_piranti": ["electricguitar","slapbass","acousticdrums"],
       "auto_produksi":["distorted","reverberant","lofi"],
       "warn_rasa":    ["aggressive","somber"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["gembira","euphoric","playful","syahdu"],
       "hide_swara":   ["growl","operatic","senggakan","melismatic"],
       "hide_piranti": ["saron","kendangjawa","bass808","padsynth","cowbell"]
+    },
+    "numetal": {
+      "auto_rasa":    ["aggressive","angry","anxious","dark"],
+      "auto_swara":   ["malesolo","raspy","growl","spokenword"],
+      "auto_piranti": ["fuzzguitar","slapbass","acousticdrums","arpsynth"],
+      "auto_produksi":["distorted","hifi","electronic"],
+      "warn_rasa":    ["melancholic","triumphant"],
+      "warn_swara":   [], "warn_piranti": [],
+      "hide_rasa":    ["gembira","dreamy","syahdu","sensual"],
+      "hide_swara":   ["soprano","melismatic","senggakan","operatic"],
+      "hide_piranti": ["sasando","suling","kecapi","rebana","stringsection"]
+    },
+    "progrock": {
+      "auto_rasa":    ["triumphant","heroik","anxious","dreamy"],
+      "auto_swara":   ["tenor","operatic","choir","malesolo"],
+      "auto_piranti": ["grandpiano","electricguitar","stringsection","acousticdrums"],
+      "auto_produksi":["cinematic","hifi","reverberant"],
+      "warn_rasa":    ["playful","gembira"],
+      "warn_swara":   [], "warn_piranti": [],
+      "hide_rasa":    ["syahdu","sensual","galau"],
+      "hide_swara":   ["senggakan","vocalchops","autotuned"],
+      "hide_piranti": ["bass808","kendangjawa","rebana","cowbell","drummachine"]
     },
     "heavymetal": {
       "auto_rasa":    ["aggressive","angry","dark","triumphant"],
@@ -666,8 +618,7 @@
       "auto_piranti": ["fuzzguitar","slapbass","acousticdrums"],
       "auto_produksi":["distorted","hifi"],
       "warn_rasa":    ["anxious","eerie"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["dreamy","syahdu","relaxed","gembira","sensual"],
       "hide_swara":   ["soprano","melismatic","senggakan","breathy","operatic"],
       "hide_piranti": ["sasando","suling","kecapi","grandpiano","rebana","stringsection"]
@@ -678,8 +629,7 @@
       "auto_piranti": ["fuzzguitar","slapbass","acousticdrums"],
       "auto_produksi":["distorted","lofi","organic"],
       "warn_rasa":    ["aggressive","nostalgic"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["euphoric","gembira","uplifting","heroik"],
       "hide_swara":   ["operatic","autotuned","senggakan","melismatic"],
       "hide_piranti": ["saron","kendangjawa","bass808","padsynth","arpsynth"]
@@ -690,8 +640,7 @@
       "auto_piranti": ["electricguitar","grandpiano","slapbass","acousticdrums"],
       "auto_produksi":["hifi","organic","reverberant"],
       "warn_rasa":    ["eerie","somber","melancholic"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["syahdu","magis","sensual"],
       "hide_swara":   ["growl","senggakan","melismatic","operatic"],
       "hide_piranti": ["saron","kendangjawa","bass808","drummachine","cowbell"]
@@ -702,8 +651,7 @@
       "auto_piranti": ["grandpiano","acousticguitar","bass808","padsynth"],
       "auto_produksi":["hifi","electronic","sidechain"],
       "warn_rasa":    ["eerie","dark"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["somber","magis"],
       "hide_swara":   ["growl","operatic"],
       "hide_piranti": ["saron","gongageng","tifa","sampek","rebana"]
@@ -714,8 +662,7 @@
       "auto_piranti": ["acousticguitar","grandpiano","stringsection"],
       "auto_produksi":["organic","lofi","reverberant"],
       "warn_rasa":    ["uplifting","playful"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["aggressive","euphoric","gembira","dark"],
       "hide_swara":   ["growl","autotuned","senggakan","vocalchops"],
       "hide_piranti": ["bass808","drummachine","fuzzguitar","cowbell","arpsynth"]
@@ -726,8 +673,7 @@
       "auto_piranti": ["rhodes","walkingbass","acousticdrums","brasssection"],
       "auto_produksi":["hifi","organic","reverberant"],
       "warn_rasa":    ["melancholic","uplifting"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["aggressive","gembira","anxious","dark"],
       "hide_swara":   ["growl","senggakan","autotuned","vocalchops"],
       "hide_piranti": ["bass808","fuzzguitar","saron","kendangjawa","cowbell"]
@@ -738,8 +684,7 @@
       "auto_piranti": ["acousticguitar","rhodes","walkingbass"],
       "auto_produksi":["organic","lofi"],
       "warn_rasa":    ["melancholic","uplifting"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["aggressive","gembira","dark","eerie"],
       "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
       "hide_piranti": ["bass808","fuzzguitar","drummachine","saron","cowbell"]
@@ -748,10 +693,9 @@
       "auto_rasa":    ["triumphant","heroik","dreamy","melancholic","anxious","eerie"],
       "auto_swara":   ["soprano","choir","operatic","novocal"],
       "auto_piranti": ["stringsection","brasssection","grandpiano","padsynth"],
-      "auto_produksi":["cinematic","reverberant","hifi"],
+      "auto_produksi":["cinematic","reverberant","hifi","stadium"],
       "warn_rasa":    ["playful","uplifting"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["gembira","euphoric"],
       "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
       "hide_piranti": ["bass808","kendangjawa","cowbell","drummachine","fuzzguitar"]
@@ -762,8 +706,7 @@
       "auto_piranti": ["grandpiano","stringsection","padsynth"],
       "auto_produksi":["cinematic","reverberant","hifi","organic"],
       "warn_rasa":    ["playful","uplifting"],
-      "warn_swara":   [],
-      "warn_piranti": [],
+      "warn_swara":   [], "warn_piranti": [],
       "hide_rasa":    ["gembira","aggressive","euphoric"],
       "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
       "hide_piranti": ["bass808","kendangjawa","cowbell","drummachine","fuzzguitar"]
