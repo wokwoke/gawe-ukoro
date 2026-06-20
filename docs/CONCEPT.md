@@ -3,7 +3,7 @@
 ## Identitas Karya
 - **Nama Sistem**: Gawe Ukoro Music Prompt Builder
 - **Arti**: "Membuat Kalimat" dalam Bahasa Jawa
-- **Pencipta**: [NAMA LENGKAP KAMU]
+- **Pencipta**: COSMAS RUDY SETIAWAN
 - **Mulai Dikembangkan**: Juni 2026
 - **Platform**: github.com/wokwoke/gawe-ukoro
 

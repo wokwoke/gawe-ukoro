@@ -23,7 +23,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .body{display:flex;flex:1;overflow:hidden;}
 .left{width:52%;overflow-y:auto;border-right:1px solid #1e1e1e;}
 .tab-bar{display:flex;background:#111;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:10;}
-.tab{flex:1;padding:10px 0;text-align:center;font-size:0.68rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
+.tab{flex:1;padding:10px 0;text-align:center;font-size:0.65rem;color:#555;cursor:pointer;border-bottom:2px solid transparent;}
 .tab.active{color:#a78bfa;border-bottom-color:#a78bfa;}
 .tab-content{padding:14px;}
 .sec{margin-bottom:18px;}
@@ -44,12 +44,30 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .grup-label{width:100%;font-size:0.62rem;color:#444;margin-top:6px;margin-bottom:2px;}
 .curated-bar{background:#1a1500;border:1px solid #f59e0b33;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-size:0.65rem;color:#a07020;line-height:1.6;}
 .curated-bar strong{color:#f59e0b;}
-/* EMPTY STATE TEMPLATE BTN */
+/* EMPTY STATE */
 .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center;gap:14px;}
 .empty-title{font-size:0.85rem;color:#444;}
 .empty-sub{font-size:0.72rem;color:#333;line-height:1.6;}
 .btn-template-big{padding:14px 28px;background:#1a1500;border:2px solid #f59e0b;border-radius:12px;color:#f59e0b;font-size:0.85rem;font-weight:700;cursor:pointer;letter-spacing:1px;}
-.btn-template-big:active{background:#2a2000;}
+/* KAMUS */
+.kamus-search{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:8px;color:#e0e0e0;padding:10px 12px;font-size:0.8rem;margin-bottom:12px;outline:none;}
+.kamus-search:focus{border-color:#4f46e5;}
+.kamus-filter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
+.kamus-filter-btn{padding:4px 10px;border-radius:12px;border:1px solid #2a2a2a;background:#181818;color:#777;font-size:0.65rem;cursor:pointer;}
+.kamus-filter-btn.on{background:#4338ca;color:#fff;border-color:#4338ca;}
+.kamus-list{display:flex;flex-direction:column;gap:6px;}
+.kamus-item{background:#161616;border:1px solid #252525;border-radius:10px;overflow:hidden;}
+.kamus-header{padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.kamus-istilah{font-size:0.8rem;color:#e0e0e0;font-weight:600;}
+.kamus-kat{font-size:0.62rem;color:#555;margin-top:2px;}
+.kamus-singkat{font-size:0.7rem;color:#777;margin-top:2px;}
+.kamus-body{padding:10px 12px;border-top:1px solid #1e1e1e;background:#111;}
+.kamus-panjang{font-size:0.72rem;color:#aaa;line-height:1.7;margin-bottom:8px;}
+.kamus-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.kamus-tag-group{font-size:0.65rem;color:#555;}
+.kamus-tag-group span{color:#4ade80;}
+.kamus-tag-group.hindari span{color:#f87171;}
+.kamus-empty{color:#333;font-size:0.75rem;text-align:center;padding:30px;}
 /* STRUCTURE */
 .lib-title{font-size:0.65rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .lib-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
@@ -84,7 +102,6 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .tl-dur-badge.warn{background:#2a1800;color:#f59e0b;}
 .tl-energy{display:flex;gap:1px;margin-right:4px;}
 .tl-energy-dot{width:5px;height:5px;border-radius:50%;background:#1e1e1e;}
-.tl-energy-dot.on{background:#a78bfa;}
 .tl-btns{display:flex;gap:4px;}
 .tl-btn{width:28px;height:28px;border-radius:6px;border:1px solid #2a2a2a;background:#111;color:#666;font-size:0.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .tl-btn.del{color:#ef4444;}
@@ -179,6 +196,20 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 .tpl-reach.lokal{background:#1a1500;color:#f59e0b;}
 .tpl-reach.global{background:#0d2040;color:#93c5fd;}
 .tpl-reach.niche{background:#1a0a2e;color:#c084fc;}
+/* TOOLTIP BOTTOM SHEET */
+.tooltip-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:150;display:flex;align-items:flex-end;justify-content:center;}
+.tooltip-sheet{background:#161616;border:1px solid #2a2a2a;border-radius:16px 16px 0 0;padding:20px;width:100%;max-width:540px;max-height:70vh;overflow-y:auto;animation:slideUp 0.25s ease;}
+@keyframes slideUp{from{transform:translateY(100%);}to{transform:translateY(0);}}
+.tooltip-handle{width:36px;height:4px;background:#333;border-radius:2px;margin:0 auto 16px;}
+.tooltip-istilah{font-size:1rem;color:#e0e0e0;font-weight:700;margin-bottom:4px;}
+.tooltip-kat{font-size:0.65rem;color:#a78bfa;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
+.tooltip-singkat{font-size:0.82rem;color:#f59e0b;margin-bottom:10px;font-style:italic;}
+.tooltip-panjang{font-size:0.78rem;color:#aaa;line-height:1.8;margin-bottom:14px;}
+.tooltip-tags{display:flex;flex-direction:column;gap:6px;}
+.tooltip-tag-row{font-size:0.72rem;}
+.tooltip-tag-row .label{color:#555;margin-right:6px;}
+.tooltip-tag-row .val.green{color:#4ade80;}
+.tooltip-tag-row .val.red{color:#f87171;}
 /* TOAST */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1e1e1e;border:1px solid #333;color:#e0e0e0;padding:10px 20px;border-radius:20px;font-size:0.78rem;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
@@ -197,7 +228,7 @@ body{background:#0d0d0d;color:#e0e0e0;font-family:system-ui,sans-serif;min-heigh
 <div id="root"></div>
 <div class="toast" id="toast"></div>
 <script type="text/babel">
-const {useState,useEffect,useCallback}=React;
+const {useState,useEffect,useCallback,useRef}=React;
 const toMMSS=s=>{const m=Math.floor(s/60);return `${m}:${String(s%60).padStart(2,'0')}`;};
 const MAX_DUR=180;
 const ENERGY_COLORS=['','#1e3a5f','#1e3a5f','#b45309','#7c3aed','#dc2626'];
@@ -257,9 +288,7 @@ const getLockedSubs=(activeSubs,conflictRules)=>{
   const locked=new Set();
   if(!conflictRules)return locked;
   conflictRules.forEach(rule=>{
-    if(activeSubs.includes(rule.trigger)&&rule.locks){
-      rule.locks.forEach(l=>locked.add(l));
-    }
+    if(activeSubs.includes(rule.trigger)&&rule.locks)rule.locks.forEach(l=>locked.add(l));
   });
   return locked;
 };
@@ -269,46 +298,19 @@ const getConflictMsgs=(activeSubs,sectionId,conflictRules)=>{
   if(!conflictRules)return msgs;
   conflictRules.forEach(rule=>{
     if(!activeSubs.includes(rule.trigger))return;
-    if(rule.locks){const hasConflict=rule.locks.some(l=>activeSubs.includes(l));if(hasConflict)msgs.push(rule.msg);}
+    if(rule.locks){const h=rule.locks.some(l=>activeSubs.includes(l));if(h)msgs.push(rule.msg);}
     if(rule.warn_sections&&rule.warn_sections.includes(sectionId))msgs.push(rule.msg);
-    if(rule.warn_with){const hasWarn=rule.warn_with.some(w=>activeSubs.includes(w));if(hasWarn)msgs.push(rule.msg);}
+    if(rule.warn_with){const h=rule.warn_with.some(w=>activeSubs.includes(w));if(h)msgs.push(rule.msg);}
   });
   return[...new Set(msgs)];
 };
 
 const hasLokalInstrumen=(piranti)=>{
-  const lokalIds=['kendangjawa','kendangbali','kendangsunda','suling','sulingbali','kecapi','sasando','saron','bonang','gongageng','cengceng','rebana','talempong','kolintang','sampek','tifa'];
-  return piranti.some(p=>lokalIds.includes(p));
+  const ids=['kendangjawa','kendangbali','kendangsunda','suling','sulingbali','kecapi','sasando','saron','bonang','gongageng','cengceng','rebana','talempong','kolintang','sampek','tifa'];
+  return piranti.some(p=>ids.includes(p));
 };
 
 const getCompat=(D,genreId)=>D?.kompatibilitas?.[genreId]||null;
-
-/* ── Smart Narrative Builder ── */
-const buildNarrative=(D,sel,mode)=>{
-  if(!D)return'';
-  const find=(cat,id)=>(D[cat]||[]).find(x=>x.id===id);
-  const genres=sel.ragam.map(id=>find('ragam',id)?.label).filter(Boolean);
-  const moods=sel.rasa.map(id=>find('rasa',id)?.label).filter(Boolean);
-  const vocals=mode==='instrumental'?['instrumental, no vocals']:sel.swara.map(id=>find('swara',id)?.label).filter(Boolean);
-  const tempo=sel.wirama.length?find('wirama',sel.wirama[0]):null;
-  const instrs=sel.piranti.map(id=>find('piranti',id)?.label).filter(Boolean);
-  const prods=sel.produksi.map(id=>find('produksi',id)?.label).filter(Boolean);
-  const scales=sel.tangga_nada?.map(id=>find('tangga_nada',id)?.label).filter(Boolean)||[];
-
-  const parts=[];
-  if(genres.length)parts.push(genres.join(', '));
-  if(tempo)parts.push(tempo.bpm||tempo.label);
-  if(scales.length)parts.push(`${scales.join('/')} scale`);
-  if(moods.length){
-    const moodAdj=moods.map(m=>m.toLowerCase()).join(', ');
-    parts.push(`${moodAdj} atmosphere`);
-  }
-  if(instrs.length)parts.push(instrs.join(', '));
-  if(vocals.length&&mode!=='instrumental')parts.push(vocals.join(', '));
-  if(prods.length)parts.push(prods.join(', ').toLowerCase()+' production');
-
-  return parts.join(', ');
-};
 
 /* ══ APP ══ */
 function App(){
@@ -333,6 +335,11 @@ function App(){
   const [templates,setTemplates]=useState([]);
   const [tplFilter,setTplFilter]=useState('Semua');
   const [tplLoading,setTplLoading]=useState(false);
+  const [tooltip,setTooltip]=useState(null);
+  const [kamusSearch,setKamusSearch]=useState('');
+  const [kamusFilter,setKamusFilter]=useState('Semua');
+  const [expandedKamus,setExpandedKamus]=useState(null);
+  const longPressTimer=useRef(null);
 
   useEffect(()=>{
     fetch('ukoro-data.json').then(r=>r.json()).then(d=>{setD(d);setSaveCat(d.kategori_preset[0]);})
@@ -361,33 +368,36 @@ function App(){
     if(outTab==='presets'&&presetTab==='referensi'&&referensi.length===0)loadReferensi();
   },[outTab,presetTab]);
 
+  /* tooltip long press */
+  const startLongPress=useCallback((item,cat)=>{
+    longPressTimer.current=setTimeout(()=>{
+      if(!D?.kamus)return;
+      const entry=D.kamus.find(k=>k.id===item.id||k.istilah===item.label);
+      if(entry)setTooltip(entry);
+    },500);
+  },[D]);
+
+  const endLongPress=useCallback(()=>{
+    clearTimeout(longPressTimer.current);
+  },[]);
+
   /* apply template */
   const applyTemplate=useCallback((tpl)=>{
     try{
       const s=tpl.sel_data||{};
-      setSel({
-        ragam:s.ragam||[],rasa:s.rasa||[],swara:s.swara||[],
-        wirama:s.wirama||[],piranti:s.piranti||[],
-        produksi:s.produksi||[],tangga_nada:s.tangga_nada||[]
-      });
+      setSel({ragam:s.ragam||[],rasa:s.rasa||[],swara:s.swara||[],wirama:s.wirama||[],piranti:s.piranti||[],produksi:s.produksi||[],tangga_nada:s.tangga_nada||[]});
       const tl=(tpl.timeline||[]).map((item,i)=>({
-        ...item,
-        uid:Date.now()+i+Math.random(),
+        ...item,uid:Date.now()+i+Math.random(),
         durasi_pilihan:item.durasi_pilihan||[10,15,20,30],
-        durasi_min:item.durasi_min||5,
-        durasi_max:item.durasi_max||40,
-        durasi_warning:item.durasi_warning||'',
-        energy_level:item.energy_level||3
+        durasi_min:item.durasi_min||5,durasi_max:item.durasi_max||40,
+        durasi_warning:item.durasi_warning||'',energy_level:item.energy_level||3
       }));
-      setTimeline(tl);
-      setMode(tpl.mode||'vocal');
-      setTplModal(false);
-      setLeftTab('style');
+      setTimeline(tl);setMode(tpl.mode||'vocal');
+      setTplModal(false);setLeftTab('style');
       showToast(`✓ Template "${tpl.nama}" dimuat`,'success');
     }catch(e){showToast('Gagal load template','error');}
   },[]);
 
-  /* genre toggle */
   const handleGenreToggle=useCallback((id)=>{
     setSel(p=>{
       const arr=p.ragam;
@@ -423,7 +433,6 @@ function App(){
   const durPct=Math.min((totalDur/MAX_DUR)*100,100);
   const durColor=totalDur>MAX_DUR?'#ef4444':totalDur>150?'#f59e0b':'#4ade80';
   const durClass=totalDur>MAX_DUR?'over':totalDur>150?'warn':'ok';
-  const hasContent=!!(buildStyle()||buildStruct());
 
   function buildStyle(){
     if(!D)return'';
@@ -460,12 +469,11 @@ function App(){
       return arr.map(s=>{
         const ts=s.time||s.timestamp||'';
         const sec=s.section||s.label||'';
-        const dyn=s.dynamics||s.dynamics_tag||'';
+        const dyn=s.dynamics||'';
         const desc=s.description||'';
         const lines=[`[${ts}] [${sec}]${dyn?` [${dyn}]`:''}`];
         if(desc)lines.push(`[${desc}]`);
-        lines.push('');
-        return lines.join('\n');
+        lines.push('');return lines.join('\n');
       }).join('')+'[End]';
     }catch(e){return'';}
   };
@@ -478,8 +486,7 @@ function App(){
       uid:Date.now()+Math.random(),secId:sec.id,label,
       durasi:sec.durasi_default,durasi_pilihan:sec.durasi_pilihan,
       durasi_min:sec.durasi_min,durasi_max:sec.durasi_max,
-      durasi_warning:sec.durasi_warning,
-      energy_level:sec.energy_level||3,
+      durasi_warning:sec.durasi_warning,energy_level:sec.energy_level||3,
       sub_tersedia:sec.sub_tersedia,activeSub:[...(sec.sub_default||[])]
     }]);
   };
@@ -506,7 +513,7 @@ function App(){
       if(locked.has(sid)){showToast('Tag ini dikunci karena konflik','error');return;}
       const sub=subMap[sid];
       if(sub?.flag==='warn')showToast(`⚠️ ${sub.warn_msg||'Perhatikan kombinasi ini'}`,'warn',4000);
-      if(sub?.flag==='red')showToast(`🔴 RED FLAG: ${sub.warn_msg||'Risiko tinggi'}`,'error',5000);
+      if(sub?.flag==='red')showToast(`🔴 ${sub.warn_msg||'Risiko tinggi'}`,'error',5000);
     }
     const msgs=isAdding?getConflictMsgs([...item.activeSub,sid],item.secId,conflictRules):[];
     msgs.forEach(m=>setTimeout(()=>showToast(`⚠️ ${m}`,'warn',4000),300));
@@ -582,7 +589,16 @@ function App(){
     }catch(e){showToast('Gagal ekspor','error');}
   };
 
-  /* template filter */
+  /* kamus filter */
+  const kamusItems=D?.kamus||[];
+  const kamusKategori=['Semua',...[...new Set(kamusItems.map(k=>k.kategori).filter(Boolean))]];
+  const filteredKamus=kamusItems.filter(k=>{
+    const matchKat=kamusFilter==='Semua'||k.kategori===kamusFilter;
+    const q=kamusSearch.toLowerCase();
+    const matchQ=!q||k.istilah.toLowerCase().includes(q)||k.singkat.toLowerCase().includes(q);
+    return matchKat&&matchQ;
+  });
+
   const tplCategories=['Semua',...[...new Set(templates.map(t=>t.kategori).filter(Boolean))]];
   const filteredTpl=tplFilter==='Semua'?templates:templates.filter(t=>t.kategori===tplFilter);
   const refCategories=['Semua',...[...new Set(referensi.map(r=>r.kategori_bundle).filter(Boolean))]];
@@ -598,9 +614,7 @@ function App(){
   const subMap=getAllSub(D);
   const conflictRules=D.conflict_rules||[];
   const curatedGenreName=activeGenre?(D.ragam.find(x=>x.id===activeGenre)?.label||''):'';
-
-  /* stars */
-  const renderStars=(n)=>'★'.repeat(n)+'☆'.repeat(5-n);
+  const renderStars=n=>'★'.repeat(n)+'☆'.repeat(5-n);
 
   return(
     <div className="app">
@@ -624,36 +638,38 @@ function App(){
         <div className="left">
           <div className="tab-bar">
             <div className={`tab ${leftTab==='style'?'active':''}`} onClick={()=>setLeftTab('style')}>🎸 Style</div>
-            <div className={`tab ${leftTab==='struct'?'active':''}`} onClick={()=>setLeftTab('struct')}>🏗️ Structure</div>
+            <div className={`tab ${leftTab==='struct'?'active':''}`} onClick={()=>setLeftTab('struct')}>🏗️ Struct</div>
+            <div className={`tab ${leftTab==='kamus'?'active':''}`} onClick={()=>setLeftTab('kamus')}>📖 Kamus</div>
           </div>
-          <div className="tab-content">
 
+          <div className="tab-content">
+            {/* ── TAB STYLE ── */}
             {leftTab==='style'&&<>
-              {/* EMPTY STATE */}
               {isEmpty&&(
                 <div className="empty-state">
                   <div className="empty-title">Mulai dari Template</div>
                   <div className="empty-sub">Pilih template racik untuk memulai lebih cepat,<br/>atau pilih tag secara manual di bawah.</div>
-                  <button className="btn-template-big" onClick={()=>{loadTemplates();setTplModal(true);}}>
-                    ⚡ Load Template Racik
-                  </button>
+                  <button className="btn-template-big" onClick={()=>{loadTemplates();setTplModal(true);}}>⚡ Load Template Racik</button>
                 </div>
               )}
               {curatedOn&&activeGenre&&compat&&(
                 <div className="curated-bar">
                   <strong>✦ Curated: {curatedGenreName}</strong><br/>
                   ✓ dicentang otomatis · ⚠️ kurang cocok · tersembunyi = tidak kompatibel
+                  <br/><span style={{color:'#555',fontSize:'0.62rem'}}>Tahan chip untuk lihat penjelasan</span>
                 </div>
               )}
-              <CuratedSection title="Genre / Ragam" cat="ragam" color="c-genre" D={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null}/>
-              <CuratedSection title="Mood / Rasa" cat="rasa" color="c-mood" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
-              {mode==='vocal'&&<CuratedSection title="Vokal / Swara" cat="swara" color="c-vocal" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>}
-              <CuratedSection title="Tempo / Wirama" cat="wirama" color="c-tempo" D={D} sel={sel} toggle={toggle} curatedOn={false} compat={null}/>
-              <CuratedSection title="Tangga Nada / Scale" cat="tangga_nada" color="c-scale" D={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null}/>
-              <CuratedSection title="Instrumen / Piranti" cat="piranti" color="c-instr" D={D} sel={sel} toggle={toggle} grouped curatedOn={curatedOn} compat={compat}/>
-              <CuratedSection title="Produksi" cat="produksi" color="c-prod" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat}/>
+              {!isEmpty&&<div style={{fontSize:'0.62rem',color:'#444',marginBottom:'10px',textAlign:'right'}}>💡 Tahan chip untuk penjelasan</div>}
+              <CuratedSection title="Genre / Ragam" cat="ragam" color="c-genre" D={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
+              <CuratedSection title="Mood / Rasa" cat="rasa" color="c-mood" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
+              {mode==='vocal'&&<CuratedSection title="Vokal / Swara" cat="swara" color="c-vocal" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>}
+              <CuratedSection title="Tempo / Wirama" cat="wirama" color="c-tempo" D={D} sel={sel} toggle={toggle} curatedOn={false} compat={null} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
+              <CuratedSection title="Tangga Nada / Scale" cat="tangga_nada" color="c-scale" D={D} sel={sel} toggle={toggle} grouped curatedOn={false} compat={null} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
+              <CuratedSection title="Instrumen / Piranti" cat="piranti" color="c-instr" D={D} sel={sel} toggle={toggle} grouped curatedOn={curatedOn} compat={compat} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
+              <CuratedSection title="Produksi" cat="produksi" color="c-prod" D={D} sel={sel} toggle={toggle} curatedOn={curatedOn} compat={compat} onLongPress={startLongPress} onLongPressEnd={endLongPress}/>
             </>}
 
+            {/* ── TAB STRUCTURE ── */}
             {leftTab==='struct'&&<>
               <div className="lib-title">Library — tap untuk tambah</div>
               <div className="lib-chips">
@@ -661,8 +677,6 @@ function App(){
                   <div key={sec.id} className="lib-chip" onClick={()=>addSection(sec)}>{sec.label}</div>
                 ))}
               </div>
-
-              {/* INTENSITY CURVE */}
               {timeline.length>0&&(
                 <div className="intensity-curve">
                   <div className="intensity-title">
@@ -670,13 +684,11 @@ function App(){
                     <span style={{color:'#333'}}>1=rendah 5=puncak</span>
                   </div>
                   <div className="intensity-bars">
-                    {timeline.map((item,i)=>{
+                    {timeline.map((item)=>{
                       const lvl=item.energy_level||3;
-                      const barH=(lvl/5)*100;
-                      const col=ENERGY_COLORS[lvl]||'#4338ca';
                       return(
                         <div key={item.uid} className="intensity-bar-wrap">
-                          <div className="intensity-bar" style={{height:`${barH}%`,background:col,opacity:0.85}}/>
+                          <div className="intensity-bar" style={{height:`${(lvl/5)*100}%`,background:ENERGY_COLORS[lvl]||'#4338ca',opacity:0.85}}/>
                           <div className="intensity-label">{item.label.split(' ')[0]}</div>
                         </div>
                       );
@@ -684,30 +696,22 @@ function App(){
                   </div>
                 </div>
               )}
-
-              {/* DURATION COUNTER */}
               <div className="dur-counter">
                 <div className="dur-counter-top">
                   <span className="dur-counter-label">Total Durasi ({timeline.length} section)</span>
-                  <span className={`dur-counter-val ${durClass}`}>
-                    {toMMSS(totalDur)} / 3:00{totalDur>MAX_DUR&&' ⚠️'}
-                  </span>
+                  <span className={`dur-counter-val ${durClass}`}>{toMMSS(totalDur)} / 3:00{totalDur>MAX_DUR&&' ⚠️'}</span>
                 </div>
-                <div className="dur-bar-bg">
-                  <div className="dur-bar-fill" style={{width:`${durPct}%`,background:durColor}}/>
-                </div>
+                <div className="dur-bar-bg"><div className="dur-bar-fill" style={{width:`${durPct}%`,background:durColor}}/></div>
               </div>
-
               {timeline.length===0&&<div style={{color:'#333',fontSize:'0.75rem',padding:'16px 0'}}>Tap section di atas untuk mulai.</div>}
               <div className="timeline">
                 {timeline.map((item,idx)=>{
-                  let cursor=0;
-                  for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
+                  let cursor=0;for(let i=0;i<idx;i++)cursor+=timeline[i].durasi;
                   const locked=getLockedSubs(item.activeSub,conflictRules);
                   const conflicts=getConflictMsgs(item.activeSub,item.secId,conflictRules);
-                  const durOk=item.durasi>=item.durasi_min&&item.durasi<=item.durasi_max;
+                  const durOk=item.durasi>=(item.durasi_min||5)&&item.durasi<=(item.durasi_max||40);
                   const lokalSubIds=['sub_kendang_in','sub_gamelan_full','sub_gong_resonance','sub_gong_hit','sub_senggakan','sub_kecak','sub_kendang_solo'];
-                  const visibleSubs=(item.sub_tersedia||[]).filter(sid=>!((!hasLokal)&&lokalSubIds.includes(sid)));
+                  const visibleSubs=(item.sub_tersedia||[]).filter(sid=>!(!hasLokal&&lokalSubIds.includes(sid)));
                   const lvl=item.energy_level||3;
                   return(
                     <div key={item.uid} className={`tl-item ${conflicts.length>0?'tl-warn':''}`}>
@@ -717,8 +721,7 @@ function App(){
                         <span className={`tl-dur-badge ${durOk?'ok':'warn'}`}>{item.durasi}s</span>
                         <div className="tl-energy">
                           {[1,2,3,4,5].map(n=>(
-                            <div key={n} className={`tl-energy-dot ${n<=lvl?'on':''}`}
-                              style={n<=lvl?{background:ENERGY_COLORS[lvl]}:{}}/>
+                            <div key={n} className="tl-energy-dot" style={{background:n<=lvl?(ENERGY_COLORS[lvl]||'#4338ca'):'#1e1e1e'}}/>
                           ))}
                         </div>
                         <div className="tl-btns">
@@ -738,7 +741,7 @@ function App(){
                         <div className="energy-row">
                           <span className="energy-label">Energi:</span>
                           {[1,2,3,4,5].map(n=>(
-                            <button key={n} className={`energy-btn ${lvl===n?'on':''}`}
+                            <button key={n} className="energy-btn"
                               style={lvl===n?{background:ENERGY_COLORS[n],borderColor:ENERGY_COLORS[n],color:'#fff'}:{}}
                               onClick={()=>setEnergyLevel(item.uid,n)}>{n}</button>
                           ))}
@@ -750,8 +753,7 @@ function App(){
                             const isLocked=locked.has(sid);
                             const flagCls=s.flag==='warn'?'flag-warn':s.flag==='red'?'flag-red':'';
                             return(
-                              <div key={sid}
-                                className={`sub-chip ${isOn?'on':''} ${flagCls} ${isLocked?'locked':''}`}
+                              <div key={sid} className={`sub-chip ${isOn?'on':''} ${flagCls} ${isLocked?'locked':''}`}
                                 onClick={()=>toggleSub(item.uid,sid,subMap,conflictRules)}
                                 title={s.warn_msg||s.tag}>
                                 {s.tag}
@@ -759,13 +761,61 @@ function App(){
                             );
                           })}
                         </div>
-                        {conflicts.map((msg,i)=>(
-                          <div key={i} className="conflict-msg">⚠️ {msg}</div>
-                        ))}
+                        {conflicts.map((msg,i)=><div key={i} className="conflict-msg">⚠️ {msg}</div>)}
                       </div>
                     </div>
                   );
                 })}
+              </div>
+            </>}
+
+            {/* ── TAB KAMUS ── */}
+            {leftTab==='kamus'&&<>
+              <input className="kamus-search" placeholder="🔍 Cari istilah..." value={kamusSearch} onChange={e=>setKamusSearch(e.target.value)}/>
+              <div className="kamus-filter">
+                {kamusKategori.map(k=>(
+                  <button key={k} className={`kamus-filter-btn ${kamusFilter===k?'on':''}`} onClick={()=>setKamusFilter(k)}>{k}</button>
+                ))}
+              </div>
+              {filteredKamus.length===0
+                ?<div className="kamus-empty">Tidak ada istilah ditemukan.</div>
+                :<div className="kamus-list">
+                  {filteredKamus.map(item=>{
+                    const isOpen=expandedKamus===item.id;
+                    return(
+                      <div key={item.id} className="kamus-item">
+                        <div className="kamus-header" onClick={()=>setExpandedKamus(isOpen?null:item.id)}>
+                          <div>
+                            <div className="kamus-istilah">{item.istilah}</div>
+                            <div className="kamus-kat">{item.kategori}</div>
+                            <div className="kamus-singkat">{item.singkat}</div>
+                          </div>
+                          <span style={{color:'#444',fontSize:'0.8rem'}}>{isOpen?'▲':'▼'}</span>
+                        </div>
+                        {isOpen&&<div className="kamus-body">
+                          <div className="kamus-panjang">{item.panjang}</div>
+                          <div className="kamus-tags">
+                            {item.cocok?.length>0&&(
+                              <div className="kamus-tag-group">
+                                <span className="label">✅ Cocok: </span>
+                                <span className="val green">{item.cocok.join(', ')}</span>
+                              </div>
+                            )}
+                            {item.hindari?.length>0&&(
+                              <div className="kamus-tag-group hindari">
+                                <span className="label">❌ Hindari: </span>
+                                <span className="val red">{item.hindari.join(', ')}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>}
+                      </div>
+                    );
+                  })}
+                </div>
+              }
+              <div style={{fontSize:'0.65rem',color:'#333',textAlign:'center',marginTop:12,paddingBottom:8}}>
+                {filteredKamus.length} dari {kamusItems.length} istilah
               </div>
             </>}
           </div>
@@ -782,7 +832,7 @@ function App(){
           <div className="out-body">
             {outTab==='output'&&<>
               {!styleText&&!structText
-                ?<div className="out-empty">Pilih tag di panel kiri.<br/><br/>🎸 Style → style prompt<br/>🏗️ Structure → struktur lagu</div>
+                ?<div className="out-empty">Pilih tag di panel kiri.<br/><br/>🎸 Style → style prompt<br/>🏗️ Struct → struktur lagu<br/>📖 Kamus → referensi istilah</div>
                 :<>
                   {styleText&&<><div className="out-title">Style Prompt</div><div className="out-text">{styleText}</div><div style={{height:14}}/></>}
                   {structText&&<><div className="out-title">Structure</div><div className="out-text">{structText}</div></>}
@@ -795,7 +845,6 @@ function App(){
                 <button onClick={()=>setPresetTab('saya')} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='saya'?'#4338ca':'#1a1a1a',color:presetTab==='saya'?'#fff':'#666'}}>🎛️ Preset Saya</button>
                 <button onClick={()=>{setPresetTab('referensi');if(referensi.length===0)loadReferensi();}} style={{flex:1,padding:'8px',borderRadius:'8px',border:'none',fontSize:'0.72rem',cursor:'pointer',fontWeight:600,background:presetTab==='referensi'?'#1e3a5f':'#1a1a1a',color:presetTab==='referensi'?'#93c5fd':'#666'}}>🎸 Referensi</button>
               </div>
-
               {presetTab==='saya'&&<>
                 {presets.length===0
                   ?<div className="preset-empty">Belum ada preset.<br/>Buat prompt lalu tap 💾 Simpan.</div>
@@ -817,7 +866,6 @@ function App(){
                   </div>
                 }
               </>}
-
               {presetTab==='referensi'&&<>
                 {refLoading?<div className="ref-loading">Memuat...</div>:<>
                   <div className="ref-filter">
@@ -833,7 +881,7 @@ function App(){
                           <div key={r.id} className="ref-item">
                             <div className="ref-header" onClick={()=>setExpandedRef(isOpen?null:r.id)}>
                               <div className="ref-name">{r.nama_preset}</div>
-                              <div className="ref-sub">{r.inspirasi_lagu?`${r.inspirasi_lagu} — `:''}  {r.artis||''} · {r.genre_label} · {r.bpm} {isOpen?'▲':'▼'}</div>
+                              <div className="ref-sub">{r.inspirasi_lagu?`${r.inspirasi_lagu} — `:''}{r.artis||''} · {r.genre_label} · {r.bpm} {isOpen?'▲':'▼'}</div>
                             </div>
                             {isOpen&&<div className="ref-body">
                               <div className="ref-meta">
@@ -860,7 +908,6 @@ function App(){
               </>}
             </>}
           </div>
-
           <div className="action-bar">
             <button className="act-btn btn-style" onClick={()=>copyText(styleText,'Style Prompt')} disabled={!styleText}>📋 Style</button>
             <button className="act-btn btn-struct" onClick={()=>copyText(structText,'Structure')} disabled={!structText}>📋 Struct</button>
@@ -932,13 +979,43 @@ function App(){
           </div>
         </div>
       )}
+
+      {/* TOOLTIP BOTTOM SHEET */}
+      {tooltip&&(
+        <div className="tooltip-overlay" onClick={()=>setTooltip(null)}>
+          <div className="tooltip-sheet" onClick={e=>e.stopPropagation()}>
+            <div className="tooltip-handle"/>
+            <div className="tooltip-istilah">{tooltip.istilah}</div>
+            <div className="tooltip-kat">{tooltip.kategori}</div>
+            <div className="tooltip-singkat">"{tooltip.singkat}"</div>
+            <div className="tooltip-panjang">{tooltip.panjang}</div>
+            <div className="tooltip-tags">
+              {tooltip.cocok?.length>0&&(
+                <div className="tooltip-tag-row">
+                  <span className="label">✅ Cocok untuk:</span>
+                  <span className="val green"> {tooltip.cocok.join(' · ')}</span>
+                </div>
+              )}
+              {tooltip.hindari?.length>0&&(
+                <div className="tooltip-tag-row">
+                  <span className="label">❌ Hindari:</span>
+                  <span className="val red"> {tooltip.hindari.join(' · ')}</span>
+                </div>
+              )}
+            </div>
+            <button onClick={()=>setTooltip(null)} style={{marginTop:16,width:'100%',padding:'10px',background:'#1a1a1a',border:'1px solid #333',borderRadius:'8px',color:'#666',fontSize:'0.75rem',cursor:'pointer'}}>Tutup</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-function CuratedSection({title,cat,color,D,sel,toggle,grouped,curatedOn,compat}){
+/* ══ CuratedSection ══ */
+function CuratedSection({title,cat,color,D,sel,toggle,grouped,curatedOn,compat,onLongPress,onLongPressEnd}){
   const items=D[cat]||[];
   const groups=grouped?[...new Set(items.map(x=>x.grup).filter(Boolean))]:[];
+
   const renderChip=(item)=>{
     const isOn=(sel[cat]||[]).includes(item.id);
     let state='normal';
@@ -952,11 +1029,17 @@ function CuratedSection({title,cat,color,D,sel,toggle,grouped,curatedOn,compat})
       <div key={item.id}
         className={['chip',color,isOn?'on':'',state==='auto'&&isOn?'auto-on':'',state==='warn'?'warn':''].filter(Boolean).join(' ')}
         onClick={()=>toggle(cat,item.id)}
-        title={item.desc||''}>
+        onTouchStart={()=>onLongPress&&onLongPress(item,cat)}
+        onTouchEnd={()=>onLongPressEnd&&onLongPressEnd()}
+        onMouseDown={()=>onLongPress&&onLongPress(item,cat)}
+        onMouseUp={()=>onLongPressEnd&&onLongPressEnd()}
+        onMouseLeave={()=>onLongPressEnd&&onLongPressEnd()}
+        title={item.desc||'Tahan untuk penjelasan'}>
         {item.label}
       </div>
     );
   };
+
   return(
     <div className="sec">
       <div className="sec-title">{title}</div>

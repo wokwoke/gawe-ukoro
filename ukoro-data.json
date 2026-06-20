@@ -17,699 +17,4916 @@
     "Lainnya"
   ],
   "ragam": [
-    { "id": "modernpop",     "label": "Modern Pop",         "grup": "Pop" },
-    { "id": "synthpop",      "label": "Synth Pop",          "grup": "Pop" },
-    { "id": "electropop",    "label": "Electropop",         "grup": "Pop" },
-    { "id": "darkpop",       "label": "Dark Pop",           "grup": "Pop" },
-    { "id": "indiefolk",     "label": "Indie Folk",         "grup": "Acoustic" },
-    { "id": "singersong",    "label": "Singer-songwriter",  "grup": "Acoustic" },
-    { "id": "country",       "label": "Country",            "grup": "Acoustic" },
-    { "id": "classicrock",   "label": "Classic Rock",       "grup": "Rock" },
-    { "id": "altrock",       "label": "Alternative Rock",   "grup": "Rock" },
-    { "id": "hardrock",      "label": "Hard Rock",          "grup": "Rock" },
-    { "id": "grunge",        "label": "Grunge",             "grup": "Rock" },
-    { "id": "heavymetal",    "label": "Heavy Metal",        "grup": "Rock" },
-    { "id": "punkrock",      "label": "Punk Rock",          "grup": "Rock" },
-    { "id": "numetal",       "label": "Nu Metal",           "grup": "Rock" },
-    { "id": "deephouse",     "label": "Deep House",         "grup": "EDM" },
-    { "id": "techno",        "label": "Techno",             "grup": "EDM" },
-    { "id": "trance",        "label": "Trance",             "grup": "EDM" },
-    { "id": "dubstep",       "label": "Dubstep",            "grup": "EDM" },
-    { "id": "futurebass",    "label": "Future Bass",        "grup": "EDM" },
-    { "id": "synthwave",     "label": "Synthwave",          "grup": "EDM" },
-    { "id": "cyberpunk",     "label": "Cyberpunk",          "grup": "EDM" },
-    { "id": "phonk",         "label": "Drift Phonk",        "grup": "EDM" },
-    { "id": "trap",          "label": "Trap",               "grup": "EDM" },
-    { "id": "boomBap",       "label": "Boom Bap",           "grup": "Hip-Hop" },
-    { "id": "rnb",           "label": "Contemporary R&B",   "grup": "Hip-Hop" },
-    { "id": "neosoul",       "label": "Neo-Soul",           "grup": "Hip-Hop" },
-    { "id": "smoothjazz",    "label": "Smooth Jazz",        "grup": "Jazz" },
-    { "id": "bossanova",     "label": "Bossa Nova",         "grup": "Jazz" },
-    { "id": "blues",         "label": "Delta Blues",        "grup": "Jazz" },
-    { "id": "gospel",        "label": "Gospel",             "grup": "Jazz" },
-    { "id": "cinematic",     "label": "Cinematic",          "grup": "Orchestral" },
-    { "id": "neoclassical",  "label": "Neoclassical",       "grup": "Orchestral" },
-    { "id": "progrock",      "label": "Progressive Rock",   "grup": "Orchestral" },
-    { "id": "dangdut",       "label": "Dangdut",            "grup": "Lokal" },
-    { "id": "koplo",         "label": "Dangdut Koplo",      "grup": "Lokal" },
-    { "id": "jedagujedug",   "label": "Jedag-Jedug",        "grup": "Lokal" },
-    { "id": "campursari",    "label": "Campursari",         "grup": "Lokal" },
-    { "id": "keroncong",     "label": "Keroncong",          "grup": "Lokal" },
-    { "id": "gamelanfusion", "label": "Gamelan Fusion",     "grup": "Lokal" },
-    { "id": "jaipongan",     "label": "Jaipongan",          "grup": "Lokal" },
-    { "id": "indietnik",     "label": "Indie Etnik",        "grup": "Lokal" },
-    { "id": "qasidah",       "label": "Qasidah / Hadrah",   "grup": "Lokal" }
+    {
+      "id": "modernpop",
+      "label": "Modern Pop",
+      "grup": "Pop"
+    },
+    {
+      "id": "synthpop",
+      "label": "Synth Pop",
+      "grup": "Pop"
+    },
+    {
+      "id": "electropop",
+      "label": "Electropop",
+      "grup": "Pop"
+    },
+    {
+      "id": "darkpop",
+      "label": "Dark Pop",
+      "grup": "Pop"
+    },
+    {
+      "id": "indiefolk",
+      "label": "Indie Folk",
+      "grup": "Acoustic"
+    },
+    {
+      "id": "singersong",
+      "label": "Singer-songwriter",
+      "grup": "Acoustic"
+    },
+    {
+      "id": "country",
+      "label": "Country",
+      "grup": "Acoustic"
+    },
+    {
+      "id": "classicrock",
+      "label": "Classic Rock",
+      "grup": "Rock"
+    },
+    {
+      "id": "altrock",
+      "label": "Alternative Rock",
+      "grup": "Rock"
+    },
+    {
+      "id": "hardrock",
+      "label": "Hard Rock",
+      "grup": "Rock"
+    },
+    {
+      "id": "grunge",
+      "label": "Grunge",
+      "grup": "Rock"
+    },
+    {
+      "id": "heavymetal",
+      "label": "Heavy Metal",
+      "grup": "Rock"
+    },
+    {
+      "id": "punkrock",
+      "label": "Punk Rock",
+      "grup": "Rock"
+    },
+    {
+      "id": "numetal",
+      "label": "Nu Metal",
+      "grup": "Rock"
+    },
+    {
+      "id": "deephouse",
+      "label": "Deep House",
+      "grup": "EDM"
+    },
+    {
+      "id": "techno",
+      "label": "Techno",
+      "grup": "EDM"
+    },
+    {
+      "id": "trance",
+      "label": "Trance",
+      "grup": "EDM"
+    },
+    {
+      "id": "dubstep",
+      "label": "Dubstep",
+      "grup": "EDM"
+    },
+    {
+      "id": "futurebass",
+      "label": "Future Bass",
+      "grup": "EDM"
+    },
+    {
+      "id": "synthwave",
+      "label": "Synthwave",
+      "grup": "EDM"
+    },
+    {
+      "id": "cyberpunk",
+      "label": "Cyberpunk",
+      "grup": "EDM"
+    },
+    {
+      "id": "phonk",
+      "label": "Drift Phonk",
+      "grup": "EDM"
+    },
+    {
+      "id": "trap",
+      "label": "Trap",
+      "grup": "EDM"
+    },
+    {
+      "id": "boomBap",
+      "label": "Boom Bap",
+      "grup": "Hip-Hop"
+    },
+    {
+      "id": "rnb",
+      "label": "Contemporary R&B",
+      "grup": "Hip-Hop"
+    },
+    {
+      "id": "neosoul",
+      "label": "Neo-Soul",
+      "grup": "Hip-Hop"
+    },
+    {
+      "id": "smoothjazz",
+      "label": "Smooth Jazz",
+      "grup": "Jazz"
+    },
+    {
+      "id": "bossanova",
+      "label": "Bossa Nova",
+      "grup": "Jazz"
+    },
+    {
+      "id": "blues",
+      "label": "Delta Blues",
+      "grup": "Jazz"
+    },
+    {
+      "id": "gospel",
+      "label": "Gospel",
+      "grup": "Jazz"
+    },
+    {
+      "id": "cinematic",
+      "label": "Cinematic",
+      "grup": "Orchestral"
+    },
+    {
+      "id": "neoclassical",
+      "label": "Neoclassical",
+      "grup": "Orchestral"
+    },
+    {
+      "id": "progrock",
+      "label": "Progressive Rock",
+      "grup": "Orchestral"
+    },
+    {
+      "id": "dangdut",
+      "label": "Dangdut",
+      "grup": "Lokal"
+    },
+    {
+      "id": "koplo",
+      "label": "Dangdut Koplo",
+      "grup": "Lokal"
+    },
+    {
+      "id": "jedagujedug",
+      "label": "Jedag-Jedug",
+      "grup": "Lokal"
+    },
+    {
+      "id": "campursari",
+      "label": "Campursari",
+      "grup": "Lokal"
+    },
+    {
+      "id": "keroncong",
+      "label": "Keroncong",
+      "grup": "Lokal"
+    },
+    {
+      "id": "gamelanfusion",
+      "label": "Gamelan Fusion",
+      "grup": "Lokal"
+    },
+    {
+      "id": "jaipongan",
+      "label": "Jaipongan",
+      "grup": "Lokal"
+    },
+    {
+      "id": "indietnik",
+      "label": "Indie Etnik",
+      "grup": "Lokal"
+    },
+    {
+      "id": "qasidah",
+      "label": "Qasidah / Hadrah",
+      "grup": "Lokal"
+    }
   ],
   "rasa": [
-    { "id": "uplifting",   "label": "Uplifting"         },
-    { "id": "euphoric",    "label": "Euphoric"           },
-    { "id": "triumphant",  "label": "Triumphant"         },
-    { "id": "playful",     "label": "Playful"            },
-    { "id": "gembira",     "label": "Gembira"            },
-    { "id": "relaxed",     "label": "Relaxed"            },
-    { "id": "dreamy",      "label": "Dreamy / Ethereal"  },
-    { "id": "melancholic", "label": "Melancholic"        },
-    { "id": "somber",      "label": "Somber / Gloomy"    },
-    { "id": "syahdu",      "label": "Syahdu / Haru"      },
-    { "id": "galau",       "label": "Galau"              },
-    { "id": "nostalgic",   "label": "Nostalgic"          },
-    { "id": "anxious",     "label": "Anxious / Tense"    },
-    { "id": "dark",        "label": "Dark"               },
-    { "id": "eerie",       "label": "Eerie / Haunting"   },
-    { "id": "magis",       "label": "Magis / Mistis"     },
-    { "id": "hypnotic",    "label": "Hypnotic / Trance"  },
-    { "id": "sensual",     "label": "Sensual / Intimate" },
-    { "id": "heroik",      "label": "Heroik / Agung"     },
-    { "id": "aggressive",  "label": "Aggressive"         },
-    { "id": "angry",       "label": "Angry / Raging"     }
+    {
+      "id": "uplifting",
+      "label": "Uplifting"
+    },
+    {
+      "id": "euphoric",
+      "label": "Euphoric"
+    },
+    {
+      "id": "triumphant",
+      "label": "Triumphant"
+    },
+    {
+      "id": "playful",
+      "label": "Playful"
+    },
+    {
+      "id": "gembira",
+      "label": "Gembira"
+    },
+    {
+      "id": "relaxed",
+      "label": "Relaxed"
+    },
+    {
+      "id": "dreamy",
+      "label": "Dreamy / Ethereal"
+    },
+    {
+      "id": "melancholic",
+      "label": "Melancholic"
+    },
+    {
+      "id": "somber",
+      "label": "Somber / Gloomy"
+    },
+    {
+      "id": "syahdu",
+      "label": "Syahdu / Haru"
+    },
+    {
+      "id": "galau",
+      "label": "Galau"
+    },
+    {
+      "id": "nostalgic",
+      "label": "Nostalgic"
+    },
+    {
+      "id": "anxious",
+      "label": "Anxious / Tense"
+    },
+    {
+      "id": "dark",
+      "label": "Dark"
+    },
+    {
+      "id": "eerie",
+      "label": "Eerie / Haunting"
+    },
+    {
+      "id": "magis",
+      "label": "Magis / Mistis"
+    },
+    {
+      "id": "hypnotic",
+      "label": "Hypnotic / Trance"
+    },
+    {
+      "id": "sensual",
+      "label": "Sensual / Intimate"
+    },
+    {
+      "id": "heroik",
+      "label": "Heroik / Agung"
+    },
+    {
+      "id": "aggressive",
+      "label": "Aggressive"
+    },
+    {
+      "id": "angry",
+      "label": "Angry / Raging"
+    }
   ],
   "swara": [
-    { "id": "femalesolo",  "label": "Female Solo Vocal"        },
-    { "id": "malesolo",    "label": "Male Solo Vocal"          },
-    { "id": "duet",        "label": "Duet Male / Female"       },
-    { "id": "choir",       "label": "Choir / Backing Vocals"   },
-    { "id": "soprano",     "label": "Soprano"                  },
-    { "id": "tenor",       "label": "Tenor"                    },
-    { "id": "bass_vocal",  "label": "Bass Vocal"               },
-    { "id": "soulful",     "label": "Soulful / Expressive"     },
-    { "id": "raspy",       "label": "Raspy / Gritty"           },
-    { "id": "breathy",     "label": "Breathy / Whisper"        },
-    { "id": "operatic",    "label": "Operatic"                 },
-    { "id": "autotuned",   "label": "Autotuned / Vocoder"      },
-    { "id": "vocalchops",  "label": "Vocal Chops / Memphis"    },
-    { "id": "melismatic",  "label": "Melismatic / Cengkok"     },
-    { "id": "senggakan",   "label": "Senggakan Ad-libs"        },
-    { "id": "growl",       "label": "Growl / Death Growl"      },
-    { "id": "spokenword",  "label": "Spoken Word / Narration"  },
-    { "id": "novocal",     "label": "No Vocals"                }
+    {
+      "id": "femalesolo",
+      "label": "Female Solo Vocal"
+    },
+    {
+      "id": "malesolo",
+      "label": "Male Solo Vocal"
+    },
+    {
+      "id": "duet",
+      "label": "Duet Male / Female"
+    },
+    {
+      "id": "choir",
+      "label": "Choir / Backing Vocals"
+    },
+    {
+      "id": "soprano",
+      "label": "Soprano"
+    },
+    {
+      "id": "tenor",
+      "label": "Tenor"
+    },
+    {
+      "id": "bass_vocal",
+      "label": "Bass Vocal"
+    },
+    {
+      "id": "soulful",
+      "label": "Soulful / Expressive"
+    },
+    {
+      "id": "raspy",
+      "label": "Raspy / Gritty"
+    },
+    {
+      "id": "breathy",
+      "label": "Breathy / Whisper"
+    },
+    {
+      "id": "operatic",
+      "label": "Operatic"
+    },
+    {
+      "id": "autotuned",
+      "label": "Autotuned / Vocoder"
+    },
+    {
+      "id": "vocalchops",
+      "label": "Vocal Chops / Memphis"
+    },
+    {
+      "id": "melismatic",
+      "label": "Melismatic / Cengkok"
+    },
+    {
+      "id": "senggakan",
+      "label": "Senggakan Ad-libs"
+    },
+    {
+      "id": "growl",
+      "label": "Growl / Death Growl"
+    },
+    {
+      "id": "spokenword",
+      "label": "Spoken Word / Narration"
+    },
+    {
+      "id": "novocal",
+      "label": "No Vocals"
+    }
   ],
   "wirama": [
-    { "id": "slow",       "label": "Slow Ballad",          "bpm": "60-80 BPM"   },
-    { "id": "midtempo",   "label": "Mid Tempo",            "bpm": "90-110 BPM"  },
-    { "id": "fast",       "label": "Fast Paced",           "bpm": "120-140 BPM" },
-    { "id": "bpm76",      "label": "76 BPM",               "bpm": "76 BPM"      },
-    { "id": "bpm90",      "label": "90 BPM",               "bpm": "90 BPM"      },
-    { "id": "bpm96",      "label": "96 BPM",               "bpm": "96 BPM"      },
-    { "id": "bpm100",     "label": "100 BPM",              "bpm": "100 BPM"     },
-    { "id": "bpm110",     "label": "110 BPM",              "bpm": "110 BPM"     },
-    { "id": "bpm126",     "label": "126 BPM",              "bpm": "126 BPM"     },
-    { "id": "bpm128",     "label": "128 BPM",              "bpm": "128 BPM"     },
-    { "id": "bpm130",     "label": "130 BPM",              "bpm": "130 BPM"     },
-    { "id": "bpm140",     "label": "140 BPM",              "bpm": "140 BPM"     },
-    { "id": "driving",    "label": "Driving / Relentless", "bpm": ""            },
-    { "id": "fourfloor",  "label": "Four-on-the-Floor",    "bpm": ""            },
-    { "id": "syncopated", "label": "Syncopated / Groovy",  "bpm": ""            },
-    { "id": "shuffle",    "label": "Shuffle / Swing",      "bpm": ""            },
-    { "id": "waltz68",    "label": "Waltz 6/8",            "bpm": ""            },
-    { "id": "koploBeat",  "label": "Koplo Beat",           "bpm": "130 BPM"     },
-    { "id": "jedagBeat",  "label": "Jedag-Jedug Rhythm",   "bpm": "128 BPM"     }
+    {
+      "id": "slow",
+      "label": "Slow Ballad",
+      "bpm": "60-80 BPM"
+    },
+    {
+      "id": "midtempo",
+      "label": "Mid Tempo",
+      "bpm": "90-110 BPM"
+    },
+    {
+      "id": "fast",
+      "label": "Fast Paced",
+      "bpm": "120-140 BPM"
+    },
+    {
+      "id": "bpm76",
+      "label": "76 BPM",
+      "bpm": "76 BPM"
+    },
+    {
+      "id": "bpm90",
+      "label": "90 BPM",
+      "bpm": "90 BPM"
+    },
+    {
+      "id": "bpm96",
+      "label": "96 BPM",
+      "bpm": "96 BPM"
+    },
+    {
+      "id": "bpm100",
+      "label": "100 BPM",
+      "bpm": "100 BPM"
+    },
+    {
+      "id": "bpm110",
+      "label": "110 BPM",
+      "bpm": "110 BPM"
+    },
+    {
+      "id": "bpm126",
+      "label": "126 BPM",
+      "bpm": "126 BPM"
+    },
+    {
+      "id": "bpm128",
+      "label": "128 BPM",
+      "bpm": "128 BPM"
+    },
+    {
+      "id": "bpm130",
+      "label": "130 BPM",
+      "bpm": "130 BPM"
+    },
+    {
+      "id": "bpm140",
+      "label": "140 BPM",
+      "bpm": "140 BPM"
+    },
+    {
+      "id": "driving",
+      "label": "Driving / Relentless",
+      "bpm": ""
+    },
+    {
+      "id": "fourfloor",
+      "label": "Four-on-the-Floor",
+      "bpm": ""
+    },
+    {
+      "id": "syncopated",
+      "label": "Syncopated / Groovy",
+      "bpm": ""
+    },
+    {
+      "id": "shuffle",
+      "label": "Shuffle / Swing",
+      "bpm": ""
+    },
+    {
+      "id": "waltz68",
+      "label": "Waltz 6/8",
+      "bpm": ""
+    },
+    {
+      "id": "koploBeat",
+      "label": "Koplo Beat",
+      "bpm": "130 BPM"
+    },
+    {
+      "id": "jedagBeat",
+      "label": "Jedag-Jedug Rhythm",
+      "bpm": "128 BPM"
+    }
   ],
   "tangga_nada": [
-    { "id": "major",          "label": "Major",           "grup": "Major Feel",  "desc": "Ceria, Terang, Resolved"          },
-    { "id": "lydian",         "label": "Lydian",          "grup": "Major Feel",  "desc": "Megah, Mengambang, Magical"       },
-    { "id": "mixolydian",     "label": "Mixolydian",      "grup": "Major Feel",  "desc": "Rock, Bluesy, Open"               },
-    { "id": "naturalminor",   "label": "Natural Minor",   "grup": "Minor Feel",  "desc": "Sedih, Gelap, Emotional"         },
-    { "id": "harmonicminor",  "label": "Harmonic Minor",  "grup": "Minor Feel",  "desc": "Dramatis, Timur Tengah"          },
-    { "id": "dorian",         "label": "Dorian",          "grup": "Minor Feel",  "desc": "Jazz, Funk, Tidak terlalu gelap" },
-    { "id": "phrygian",       "label": "Phrygian",        "grup": "Modal/Etnik", "desc": "Spanyol, Flamenco, Metal gelap"  },
-    { "id": "pentatonic",     "label": "Pentatonic",      "grup": "Modal/Etnik", "desc": "Asia, Folk, Blues"               },
-    { "id": "slendro",        "label": "Slendro",         "grup": "Modal/Etnik", "desc": "Gamelan Jawa, Magis"             },
-    { "id": "pelog",          "label": "Pelog",           "grup": "Modal/Etnik", "desc": "Gamelan Bali, Mistis"            },
-    { "id": "hijaz",          "label": "Hijaz",           "grup": "Modal/Etnik", "desc": "Arab, Qasidah, Timur Tengah"     }
+    {
+      "id": "major",
+      "label": "Major",
+      "grup": "Major Feel",
+      "desc": "Ceria, Terang, Resolved"
+    },
+    {
+      "id": "lydian",
+      "label": "Lydian",
+      "grup": "Major Feel",
+      "desc": "Megah, Mengambang, Magical"
+    },
+    {
+      "id": "mixolydian",
+      "label": "Mixolydian",
+      "grup": "Major Feel",
+      "desc": "Rock, Bluesy, Open"
+    },
+    {
+      "id": "naturalminor",
+      "label": "Natural Minor",
+      "grup": "Minor Feel",
+      "desc": "Sedih, Gelap, Emotional"
+    },
+    {
+      "id": "harmonicminor",
+      "label": "Harmonic Minor",
+      "grup": "Minor Feel",
+      "desc": "Dramatis, Timur Tengah"
+    },
+    {
+      "id": "dorian",
+      "label": "Dorian",
+      "grup": "Minor Feel",
+      "desc": "Jazz, Funk, Tidak terlalu gelap"
+    },
+    {
+      "id": "phrygian",
+      "label": "Phrygian",
+      "grup": "Modal/Etnik",
+      "desc": "Spanyol, Flamenco, Metal gelap"
+    },
+    {
+      "id": "pentatonic",
+      "label": "Pentatonic",
+      "grup": "Modal/Etnik",
+      "desc": "Asia, Folk, Blues"
+    },
+    {
+      "id": "slendro",
+      "label": "Slendro",
+      "grup": "Modal/Etnik",
+      "desc": "Gamelan Jawa, Magis"
+    },
+    {
+      "id": "pelog",
+      "label": "Pelog",
+      "grup": "Modal/Etnik",
+      "desc": "Gamelan Bali, Mistis"
+    },
+    {
+      "id": "hijaz",
+      "label": "Hijaz",
+      "grup": "Modal/Etnik",
+      "desc": "Arab, Qasidah, Timur Tengah"
+    }
   ],
   "piranti": [
-    { "id": "grandpiano",     "label": "Grand Piano",             "grup": "Keys"       },
-    { "id": "rhodes",         "label": "Rhodes Piano",            "grup": "Keys"       },
-    { "id": "wurlitzer",      "label": "Wurlitzer",               "grup": "Keys"       },
-    { "id": "acousticguitar", "label": "Acoustic Guitar",         "grup": "Guitar"     },
-    { "id": "electricguitar", "label": "Electric Guitar",         "grup": "Guitar"     },
-    { "id": "fuzzguitar",     "label": "Fuzz / Overdriven Guitar","grup": "Guitar"     },
-    { "id": "slapbass",       "label": "Slap Bass",               "grup": "Bass"       },
-    { "id": "walkingbass",    "label": "Walking Bassline",        "grup": "Bass"       },
-    { "id": "bass808",        "label": "Distorted 808 Bass",      "grup": "Bass"       },
-    { "id": "arpsynth",       "label": "Arpeggiated Synth",       "grup": "Synth"      },
-    { "id": "acidbass",       "label": "Acid Bassline",           "grup": "Synth"      },
-    { "id": "padsynth",       "label": "Atmospheric Pad Synth",   "grup": "Synth"      },
-    { "id": "stringsection",  "label": "String Section",          "grup": "Orchestral" },
-    { "id": "brasssection",   "label": "Brass Section",           "grup": "Orchestral" },
-    { "id": "acousticdrums",  "label": "Acoustic Drum Kit",       "grup": "Drums"      },
-    { "id": "drummachine",    "label": "Drum Machine",            "grup": "Drums"      },
-    { "id": "cowbell",        "label": "Aggressive Cowbell",      "grup": "Drums"      },
-    { "id": "kendangjawa",    "label": "Kendang Jawa",            "grup": "Lokal"      },
-    { "id": "kendangbali",    "label": "Kendang Bali",            "grup": "Lokal"      },
-    { "id": "kendangsunda",   "label": "Kendang Sunda",           "grup": "Lokal"      },
-    { "id": "suling",         "label": "Suling Sunda",            "grup": "Lokal"      },
-    { "id": "sulingbali",     "label": "Suling Bali",             "grup": "Lokal"      },
-    { "id": "kecapi",         "label": "Kecapi Sunda",            "grup": "Lokal"      },
-    { "id": "sasando",        "label": "Sasando NTT",             "grup": "Lokal"      },
-    { "id": "saron",          "label": "Saron Gamelan",           "grup": "Lokal"      },
-    { "id": "bonang",         "label": "Bonang Gamelan",          "grup": "Lokal"      },
-    { "id": "gongageng",      "label": "Gong Ageng",              "grup": "Lokal"      },
-    { "id": "cengceng",       "label": "Ceng-Ceng Bali",          "grup": "Lokal"      },
-    { "id": "rebana",         "label": "Rebana Melayu",           "grup": "Lokal"      },
-    { "id": "talempong",      "label": "Talempong Minang",        "grup": "Lokal"      },
-    { "id": "kolintang",      "label": "Kolintang Minahasa",      "grup": "Lokal"      },
-    { "id": "sampek",         "label": "Sampek Dayak",            "grup": "Lokal"      },
-    { "id": "tifa",           "label": "Tifa Papua",              "grup": "Lokal"      }
+    {
+      "id": "grandpiano",
+      "label": "Grand Piano",
+      "grup": "Keys"
+    },
+    {
+      "id": "rhodes",
+      "label": "Rhodes Piano",
+      "grup": "Keys"
+    },
+    {
+      "id": "wurlitzer",
+      "label": "Wurlitzer",
+      "grup": "Keys"
+    },
+    {
+      "id": "acousticguitar",
+      "label": "Acoustic Guitar",
+      "grup": "Guitar"
+    },
+    {
+      "id": "electricguitar",
+      "label": "Electric Guitar",
+      "grup": "Guitar"
+    },
+    {
+      "id": "fuzzguitar",
+      "label": "Fuzz / Overdriven Guitar",
+      "grup": "Guitar"
+    },
+    {
+      "id": "slapbass",
+      "label": "Slap Bass",
+      "grup": "Bass"
+    },
+    {
+      "id": "walkingbass",
+      "label": "Walking Bassline",
+      "grup": "Bass"
+    },
+    {
+      "id": "bass808",
+      "label": "Distorted 808 Bass",
+      "grup": "Bass"
+    },
+    {
+      "id": "arpsynth",
+      "label": "Arpeggiated Synth",
+      "grup": "Synth"
+    },
+    {
+      "id": "acidbass",
+      "label": "Acid Bassline",
+      "grup": "Synth"
+    },
+    {
+      "id": "padsynth",
+      "label": "Atmospheric Pad Synth",
+      "grup": "Synth"
+    },
+    {
+      "id": "stringsection",
+      "label": "String Section",
+      "grup": "Orchestral"
+    },
+    {
+      "id": "brasssection",
+      "label": "Brass Section",
+      "grup": "Orchestral"
+    },
+    {
+      "id": "acousticdrums",
+      "label": "Acoustic Drum Kit",
+      "grup": "Drums"
+    },
+    {
+      "id": "drummachine",
+      "label": "Drum Machine",
+      "grup": "Drums"
+    },
+    {
+      "id": "cowbell",
+      "label": "Aggressive Cowbell",
+      "grup": "Drums"
+    },
+    {
+      "id": "kendangjawa",
+      "label": "Kendang Jawa",
+      "grup": "Lokal"
+    },
+    {
+      "id": "kendangbali",
+      "label": "Kendang Bali",
+      "grup": "Lokal"
+    },
+    {
+      "id": "kendangsunda",
+      "label": "Kendang Sunda",
+      "grup": "Lokal"
+    },
+    {
+      "id": "suling",
+      "label": "Suling Sunda",
+      "grup": "Lokal"
+    },
+    {
+      "id": "sulingbali",
+      "label": "Suling Bali",
+      "grup": "Lokal"
+    },
+    {
+      "id": "kecapi",
+      "label": "Kecapi Sunda",
+      "grup": "Lokal"
+    },
+    {
+      "id": "sasando",
+      "label": "Sasando NTT",
+      "grup": "Lokal"
+    },
+    {
+      "id": "saron",
+      "label": "Saron Gamelan",
+      "grup": "Lokal"
+    },
+    {
+      "id": "bonang",
+      "label": "Bonang Gamelan",
+      "grup": "Lokal"
+    },
+    {
+      "id": "gongageng",
+      "label": "Gong Ageng",
+      "grup": "Lokal"
+    },
+    {
+      "id": "cengceng",
+      "label": "Ceng-Ceng Bali",
+      "grup": "Lokal"
+    },
+    {
+      "id": "rebana",
+      "label": "Rebana Melayu",
+      "grup": "Lokal"
+    },
+    {
+      "id": "talempong",
+      "label": "Talempong Minang",
+      "grup": "Lokal"
+    },
+    {
+      "id": "kolintang",
+      "label": "Kolintang Minahasa",
+      "grup": "Lokal"
+    },
+    {
+      "id": "sampek",
+      "label": "Sampek Dayak",
+      "grup": "Lokal"
+    },
+    {
+      "id": "tifa",
+      "label": "Tifa Papua",
+      "grup": "Lokal"
+    }
   ],
   "produksi": [
-    { "id": "hifi",       "label": "Hi-Fi / Polished"              },
-    { "id": "lofi",       "label": "Lo-Fi / Warm / Vinyl Crackle"  },
-    { "id": "cinematic",  "label": "Cinematic / Orchestral"        },
-    { "id": "reverberant","label": "Reverberant / Spacious"        },
-    { "id": "distorted",  "label": "Distorted / Fuzz / Overdriven" },
-    { "id": "ambient",    "label": "Ambient / Atmospheric"         },
-    { "id": "organic",    "label": "Acoustic / Organic / Unplugged"},
-    { "id": "electronic", "label": "Synthesized / Electronic"      },
-    { "id": "sidechain",  "label": "Sidechained Compression"       },
-    { "id": "gated",      "label": "Gated Reverb Drums"            },
-    { "id": "stadium",    "label": "Stadium Reverb"                },
-    { "id": "smallroom",  "label": "Small Room / Intimate"         },
-    { "id": "cathedral",  "label": "Cathedral / Hall Reverb"       }
+    {
+      "id": "hifi",
+      "label": "Hi-Fi / Polished"
+    },
+    {
+      "id": "lofi",
+      "label": "Lo-Fi / Warm / Vinyl Crackle"
+    },
+    {
+      "id": "cinematic",
+      "label": "Cinematic / Orchestral"
+    },
+    {
+      "id": "reverberant",
+      "label": "Reverberant / Spacious"
+    },
+    {
+      "id": "distorted",
+      "label": "Distorted / Fuzz / Overdriven"
+    },
+    {
+      "id": "ambient",
+      "label": "Ambient / Atmospheric"
+    },
+    {
+      "id": "organic",
+      "label": "Acoustic / Organic / Unplugged"
+    },
+    {
+      "id": "electronic",
+      "label": "Synthesized / Electronic"
+    },
+    {
+      "id": "sidechain",
+      "label": "Sidechained Compression"
+    },
+    {
+      "id": "gated",
+      "label": "Gated Reverb Drums"
+    },
+    {
+      "id": "stadium",
+      "label": "Stadium Reverb"
+    },
+    {
+      "id": "smallroom",
+      "label": "Small Room / Intimate"
+    },
+    {
+      "id": "cathedral",
+      "label": "Cathedral / Hall Reverb"
+    }
   ],
   "struktur_lagu": [
     {
-      "id": "intro", "label": "Intro", "kategori": "pembuka",
+      "id": "intro",
+      "label": "Intro",
+      "kategori": "pembuka",
       "energy_level": 2,
-      "durasi_min": 5, "durasi_max": 15, "durasi_default": 10,
-      "durasi_pilihan": [5,8,10,15],
+      "durasi_min": 5,
+      "durasi_max": 15,
+      "durasi_default": 10,
+      "durasi_pilihan": [
+        5,
+        8,
+        10,
+        15
+      ],
       "durasi_warning": "Intro ideal 5-15 detik",
       "logic_gate": "lofi_ambient_wajib_fadein",
-      "sub_default": ["sub_fade_in"],
-      "sub_tersedia": ["sub_atmospheric_pad","sub_vinyl","sub_lowpass","sub_fade_in","sub_reverb","sub_pianissimo","sub_swell","sub_kendang_in","sub_gong_resonance","sub_count_in"]
+      "sub_default": [
+        "sub_fade_in"
+      ],
+      "sub_tersedia": [
+        "sub_atmospheric_pad",
+        "sub_vinyl",
+        "sub_lowpass",
+        "sub_fade_in",
+        "sub_reverb",
+        "sub_pianissimo",
+        "sub_swell",
+        "sub_kendang_in",
+        "sub_gong_resonance",
+        "sub_count_in"
+      ]
     },
     {
-      "id": "buildup", "label": "Build-up", "kategori": "transisi",
+      "id": "buildup",
+      "label": "Build-up",
+      "kategori": "transisi",
       "energy_level": 3,
-      "durasi_min": 8, "durasi_max": 16, "durasi_default": 15,
-      "durasi_pilihan": [8,10,15,16],
+      "durasi_min": 8,
+      "durasi_max": 16,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        8,
+        10,
+        15,
+        16
+      ],
       "durasi_warning": "Build-up minimal 8 detik agar Crescendo terdengar",
       "logic_gate": "harus_diakhiri_energi_lebih_tinggi",
-      "sub_default": ["sub_crescendo","sub_snare_roll"],
-      "sub_tersedia": ["sub_crescendo","sub_snare_roll","sub_rising_energy","sub_modulation","sub_sidechain","sub_staccato","sub_subbass_riser"]
+      "sub_default": [
+        "sub_crescendo",
+        "sub_snare_roll"
+      ],
+      "sub_tersedia": [
+        "sub_crescendo",
+        "sub_snare_roll",
+        "sub_rising_energy",
+        "sub_modulation",
+        "sub_sidechain",
+        "sub_staccato",
+        "sub_subbass_riser"
+      ]
     },
     {
-      "id": "verse", "label": "Verse", "kategori": "utama",
+      "id": "verse",
+      "label": "Verse",
+      "kategori": "utama",
       "energy_level": 2,
-      "durasi_min": 15, "durasi_max": 30, "durasi_default": 30,
-      "durasi_pilihan": [15,20,25,30],
+      "durasi_min": 15,
+      "durasi_max": 30,
+      "durasi_default": 30,
+      "durasi_pilihan": [
+        15,
+        20,
+        25,
+        30
+      ],
       "durasi_warning": "Verse ideal 15-30 detik",
       "logic_gate": "volume_vokal_prioritas",
       "sub_default": [],
-      "sub_tersedia": ["sub_vocal_chops","sub_whisper","sub_low_energy","sub_reverb","sub_legato","sub_cengkok","sub_rhythmic_plucks","sub_palm_muted"]
+      "sub_tersedia": [
+        "sub_vocal_chops",
+        "sub_whisper",
+        "sub_low_energy",
+        "sub_reverb",
+        "sub_legato",
+        "sub_cengkok",
+        "sub_rhythmic_plucks",
+        "sub_palm_muted"
+      ]
     },
     {
-      "id": "prechorus", "label": "Pre-Chorus", "kategori": "transisi",
+      "id": "prechorus",
+      "label": "Pre-Chorus",
+      "kategori": "transisi",
       "energy_level": 3,
-      "durasi_min": 8, "durasi_max": 16, "durasi_default": 15,
-      "durasi_pilihan": [8,10,15,16],
+      "durasi_min": 8,
+      "durasi_max": 16,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        8,
+        10,
+        15,
+        16
+      ],
       "durasi_warning": "Pre-Chorus ideal 8-16 detik",
       "logic_gate": "harus_naik_ke_chorus",
-      "sub_default": ["sub_crescendo","sub_rising_energy"],
-      "sub_tersedia": ["sub_crescendo","sub_rising_energy","sub_swell","sub_snare_roll","sub_sidechain","sub_subbass_riser"]
+      "sub_default": [
+        "sub_crescendo",
+        "sub_rising_energy"
+      ],
+      "sub_tersedia": [
+        "sub_crescendo",
+        "sub_rising_energy",
+        "sub_swell",
+        "sub_snare_roll",
+        "sub_sidechain",
+        "sub_subbass_riser"
+      ]
     },
     {
-      "id": "chorus", "label": "Chorus", "kategori": "utama",
+      "id": "chorus",
+      "label": "Chorus",
+      "kategori": "utama",
       "energy_level": 5,
-      "durasi_min": 20, "durasi_max": 40, "durasi_default": 30,
-      "durasi_pilihan": [20,25,30,40],
+      "durasi_min": 20,
+      "durasi_max": 40,
+      "durasi_default": 30,
+      "durasi_pilihan": [
+        20,
+        25,
+        30,
+        40
+      ],
       "durasi_warning": "Chorus ideal 20-40 detik",
       "logic_gate": "max_energy_zone",
-      "sub_default": ["sub_fortissimo","sub_max_energy"],
-      "sub_tersedia": ["sub_fortissimo","sub_max_energy","sub_beat_drop","sub_808_kick","sub_driving_perc","sub_sidechain","sub_gamelan_full","sub_anthemic","sub_wall_of_sound"]
+      "sub_default": [
+        "sub_fortissimo",
+        "sub_max_energy"
+      ],
+      "sub_tersedia": [
+        "sub_fortissimo",
+        "sub_max_energy",
+        "sub_beat_drop",
+        "sub_808_kick",
+        "sub_driving_perc",
+        "sub_sidechain",
+        "sub_gamelan_full",
+        "sub_anthemic",
+        "sub_wall_of_sound"
+      ]
     },
     {
-      "id": "drop", "label": "Drop", "kategori": "utama",
+      "id": "drop",
+      "label": "Drop",
+      "kategori": "utama",
       "energy_level": 5,
-      "durasi_min": 20, "durasi_max": 40, "durasi_default": 30,
-      "durasi_pilihan": [20,25,30,40],
+      "durasi_min": 20,
+      "durasi_max": 40,
+      "durasi_default": 30,
+      "durasi_pilihan": [
+        20,
+        25,
+        30,
+        40
+      ],
       "durasi_warning": "Drop ideal 20-40 detik",
       "logic_gate": "harus_didahului_buildup",
-      "sub_default": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy"],
-      "sub_tersedia": ["sub_fortissimo","sub_beat_drop","sub_808_kick","sub_max_energy","sub_driving_perc","sub_sidechain","sub_wall_of_sound","sub_anthemic"]
+      "sub_default": [
+        "sub_fortissimo",
+        "sub_beat_drop",
+        "sub_808_kick",
+        "sub_max_energy"
+      ],
+      "sub_tersedia": [
+        "sub_fortissimo",
+        "sub_beat_drop",
+        "sub_808_kick",
+        "sub_max_energy",
+        "sub_driving_perc",
+        "sub_sidechain",
+        "sub_wall_of_sound",
+        "sub_anthemic"
+      ]
     },
     {
-      "id": "postchourus", "label": "Post-Chorus", "kategori": "transisi",
+      "id": "postchourus",
+      "label": "Post-Chorus",
+      "kategori": "transisi",
       "energy_level": 3,
-      "durasi_min": 8, "durasi_max": 15, "durasi_default": 15,
-      "durasi_pilihan": [8,10,12,15],
+      "durasi_min": 8,
+      "durasi_max": 15,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        8,
+        10,
+        12,
+        15
+      ],
       "durasi_warning": "Post-Chorus ideal 8-15 detik",
       "logic_gate": "tempat_terbaik_senggakan",
-      "sub_default": ["sub_half_time"],
-      "sub_tersedia": ["sub_glitch_vocal","sub_half_time","sub_adlib","sub_echo_vocal","sub_senggakan","sub_vocal_chops"]
+      "sub_default": [
+        "sub_half_time"
+      ],
+      "sub_tersedia": [
+        "sub_glitch_vocal",
+        "sub_half_time",
+        "sub_adlib",
+        "sub_echo_vocal",
+        "sub_senggakan",
+        "sub_vocal_chops"
+      ]
     },
     {
-      "id": "breakdown", "label": "Breakdown", "kategori": "transisi",
+      "id": "breakdown",
+      "label": "Breakdown",
+      "kategori": "transisi",
       "energy_level": 1,
-      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
-      "durasi_pilihan": [10,12,15,20],
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        10,
+        12,
+        15,
+        20
+      ],
       "durasi_warning": "Breakdown ideal 10-20 detik",
       "logic_gate": "hilangkan_drum_total",
-      "sub_default": ["sub_beat_cut","sub_pianissimo","sub_reverb"],
-      "sub_tersedia": ["sub_beat_cut","sub_pianissimo","sub_reverb","sub_whisper","sub_lowpass","sub_only_bass"]
+      "sub_default": [
+        "sub_beat_cut",
+        "sub_pianissimo",
+        "sub_reverb"
+      ],
+      "sub_tersedia": [
+        "sub_beat_cut",
+        "sub_pianissimo",
+        "sub_reverb",
+        "sub_whisper",
+        "sub_lowpass",
+        "sub_only_bass"
+      ]
     },
     {
-      "id": "bridge", "label": "Bridge", "kategori": "transisi",
+      "id": "bridge",
+      "label": "Bridge",
+      "kategori": "transisi",
       "energy_level": 3,
-      "durasi_min": 15, "durasi_max": 25, "durasi_default": 20,
-      "durasi_pilihan": [15,20,25],
+      "durasi_min": 15,
+      "durasi_max": 25,
+      "durasi_default": 20,
+      "durasi_pilihan": [
+        15,
+        20,
+        25
+      ],
       "durasi_warning": "Bridge ideal 15-25 detik",
       "logic_gate": "perubahan_emosi_sebelum_chorus_terakhir",
-      "sub_default": ["sub_modulation"],
-      "sub_tersedia": ["sub_modulation","sub_rising_energy","sub_swell","sub_key_change","sub_atmospheric_pad","sub_gong_resonance"]
+      "sub_default": [
+        "sub_modulation"
+      ],
+      "sub_tersedia": [
+        "sub_modulation",
+        "sub_rising_energy",
+        "sub_swell",
+        "sub_key_change",
+        "sub_atmospheric_pad",
+        "sub_gong_resonance"
+      ]
     },
     {
-      "id": "interlude", "label": "Interlude / Instrumental", "kategori": "transisi",
+      "id": "interlude",
+      "label": "Interlude / Instrumental",
+      "kategori": "transisi",
       "energy_level": 2,
-      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
-      "durasi_pilihan": [10,15,20],
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        10,
+        15,
+        20
+      ],
       "durasi_warning": "Interlude ideal 10-20 detik",
       "logic_gate": null,
       "sub_default": [],
-      "sub_tersedia": ["sub_reverb","sub_legato","sub_atmospheric_pad","sub_gamelan_full","sub_gong_resonance","sub_rhythmic_plucks"]
+      "sub_tersedia": [
+        "sub_reverb",
+        "sub_legato",
+        "sub_atmospheric_pad",
+        "sub_gamelan_full",
+        "sub_gong_resonance",
+        "sub_rhythmic_plucks"
+      ]
     },
     {
-      "id": "solo", "label": "Solo", "kategori": "utama",
+      "id": "solo",
+      "label": "Solo",
+      "kategori": "utama",
       "energy_level": 4,
-      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
-      "durasi_pilihan": [10,15,20],
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        10,
+        15,
+        20
+      ],
       "durasi_warning": "Solo ideal 10-20 detik — WAJIB pilih 1 instrumen spesifik",
       "logic_gate": "wajib_pilih_instrumen_spesifik",
       "sub_default": [],
-      "sub_tersedia": ["sub_guitar_solo","sub_synth_solo","sub_kendang_solo","sub_fortissimo","sub_legato","sub_reverb","sub_modulation"]
+      "sub_tersedia": [
+        "sub_guitar_solo",
+        "sub_synth_solo",
+        "sub_kendang_solo",
+        "sub_fortissimo",
+        "sub_legato",
+        "sub_reverb",
+        "sub_modulation"
+      ]
     },
     {
-      "id": "outro", "label": "Outro", "kategori": "penutup",
+      "id": "outro",
+      "label": "Outro",
+      "kategori": "penutup",
       "energy_level": 1,
-      "durasi_min": 10, "durasi_max": 20, "durasi_default": 15,
-      "durasi_pilihan": [10,12,15,20],
+      "durasi_min": 10,
+      "durasi_max": 20,
+      "durasi_default": 15,
+      "durasi_pilihan": [
+        10,
+        12,
+        15,
+        20
+      ],
       "durasi_warning": "Outro ideal 10-20 detik",
       "logic_gate": "sudden_stop_potong_di_detik_terakhir",
-      "sub_default": ["sub_echo_vocal","sub_atm_fade"],
-      "sub_tersedia": ["sub_echo_vocal","sub_atm_fade","sub_gong_hit","sub_sudden_stop","sub_reverb","sub_pianissimo","sub_fade_out"]
+      "sub_default": [
+        "sub_echo_vocal",
+        "sub_atm_fade"
+      ],
+      "sub_tersedia": [
+        "sub_echo_vocal",
+        "sub_atm_fade",
+        "sub_gong_hit",
+        "sub_sudden_stop",
+        "sub_reverb",
+        "sub_pianissimo",
+        "sub_fade_out"
+      ]
     }
   ],
   "sub_instruksi": {
     "dinamika": [
-      { "id": "sub_fortissimo",    "tag": "[Fortissimo]",              "flag": "normal" },
-      { "id": "sub_pianissimo",    "tag": "[Pianissimo]",              "flag": "normal" },
-      { "id": "sub_crescendo",     "tag": "[Crescendo]",               "flag": "normal" },
-      { "id": "sub_decrescendo",   "tag": "[Decrescendo]",             "flag": "normal" },
-      { "id": "sub_swell",         "tag": "[Swell]",                   "flag": "normal" },
-      { "id": "sub_staccato",      "tag": "[Staccato]",                "flag": "normal" },
-      { "id": "sub_legato",        "tag": "[Legato]",                  "flag": "normal" }
+      {
+        "id": "sub_fortissimo",
+        "tag": "[Fortissimo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_pianissimo",
+        "tag": "[Pianissimo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_crescendo",
+        "tag": "[Crescendo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_decrescendo",
+        "tag": "[Decrescendo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_swell",
+        "tag": "[Swell]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_staccato",
+        "tag": "[Staccato]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_legato",
+        "tag": "[Legato]",
+        "flag": "normal"
+      }
     ],
     "energi": [
-      { "id": "sub_max_energy",    "tag": "[Maximum Energy]",          "flag": "normal" },
-      { "id": "sub_low_energy",    "tag": "[Low Energy]",              "flag": "normal" },
-      { "id": "sub_rising_energy", "tag": "[Rising Energy]",           "flag": "normal" },
-      { "id": "sub_half_time",     "tag": "[Half-time Drum Pattern]",  "flag": "normal" },
-      { "id": "sub_driving_perc",  "tag": "[Driving Percussion]",      "flag": "normal" },
-      { "id": "sub_anthemic",      "tag": "[Anthemic Energy]",         "flag": "normal" },
-      { "id": "sub_wall_of_sound", "tag": "[Wall of Sound]",           "flag": "normal" }
+      {
+        "id": "sub_max_energy",
+        "tag": "[Maximum Energy]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_low_energy",
+        "tag": "[Low Energy]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_rising_energy",
+        "tag": "[Rising Energy]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_half_time",
+        "tag": "[Half-time Drum Pattern]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_driving_perc",
+        "tag": "[Driving Percussion]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_anthemic",
+        "tag": "[Anthemic Energy]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_wall_of_sound",
+        "tag": "[Wall of Sound]",
+        "flag": "normal"
+      }
     ],
     "vokal": [
-      { "id": "sub_vocal_chops",   "tag": "[Memphis Vocal Chops]",     "flag": "normal" },
-      { "id": "sub_glitch_vocal",  "tag": "[Glitch Vocals]",           "flag": "warn",
-        "warn_msg": "Jika Drop sudah ada Heavy 808 Bass, Glitch Vocals bisa clipping" },
-      { "id": "sub_whisper",       "tag": "[Only Whispering Vocals]",  "flag": "normal" },
-      { "id": "sub_adlib",         "tag": "[Ad-lib / Senggakan]",      "flag": "normal" },
-      { "id": "sub_echo_vocal",    "tag": "[Echoing Vocals]",          "flag": "normal" },
-      { "id": "sub_cengkok",       "tag": "[Cengkok Vocal Ornament]",  "flag": "normal" },
-      { "id": "sub_senggakan",     "tag": "[Senggakan Ad-libs]",       "flag": "warn",
-        "warn_msg": "Senggakan paling bagus di Post-Chorus, bukan Chorus penuh" }
+      {
+        "id": "sub_vocal_chops",
+        "tag": "[Memphis Vocal Chops]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_glitch_vocal",
+        "tag": "[Glitch Vocals]",
+        "flag": "warn",
+        "warn_msg": "Jika Drop sudah ada Heavy 808 Bass, Glitch Vocals bisa clipping"
+      },
+      {
+        "id": "sub_whisper",
+        "tag": "[Only Whispering Vocals]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_adlib",
+        "tag": "[Ad-lib / Senggakan]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_echo_vocal",
+        "tag": "[Echoing Vocals]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_cengkok",
+        "tag": "[Cengkok Vocal Ornament]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_senggakan",
+        "tag": "[Senggakan Ad-libs]",
+        "flag": "warn",
+        "warn_msg": "Senggakan paling bagus di Post-Chorus, bukan Chorus penuh"
+      }
     ],
     "instrumen": [
-      { "id": "sub_beat_cut",       "tag": "[Sudden Beat Cut]",         "flag": "normal" },
-      { "id": "sub_beat_drop",      "tag": "[Beat Drop]",               "flag": "normal" },
-      { "id": "sub_snare_roll",     "tag": "[Rapid-fire Snare Rolls]",  "flag": "normal" },
-      { "id": "sub_808_kick",       "tag": "[Heavy 808 Bass Kick]",     "flag": "normal" },
-      { "id": "sub_only_bass",      "tag": "[Only Bass Remains]",       "flag": "normal" },
-      { "id": "sub_lowpass",        "tag": "[Low-pass Filtered]",       "flag": "normal" },
-      { "id": "sub_atmospheric_pad","tag": "[Atmospheric Pad]",         "flag": "normal" },
-      { "id": "sub_modulation",     "tag": "[Modulation]",              "flag": "warn",
-        "warn_msg": "Modulation di Solo bisa membuat melodi terdengar salah nada" },
-      { "id": "sub_key_change",     "tag": "[Key Change]",              "flag": "warn",
-        "warn_msg": "Key Change mendadak bisa membuat vokal AI terdengar sumbang" },
-      { "id": "sub_rhythmic_plucks","tag": "[Rhythmic Plucks]",         "flag": "normal" },
-      { "id": "sub_palm_muted",     "tag": "[Palm Muted Guitar]",       "flag": "normal" },
-      { "id": "sub_count_in",       "tag": "[Count-in: 1, 2, 3, 4...]","flag": "normal" },
-      { "id": "sub_subbass_riser",  "tag": "[Sub-bass Riser]",          "flag": "normal" },
-      { "id": "sub_guitar_solo",    "tag": "[Guitar Solo]",             "flag": "normal" },
-      { "id": "sub_synth_solo",     "tag": "[Synth Solo]",              "flag": "normal" },
-      { "id": "sub_kendang_solo",   "tag": "[Kendang Solo]",            "flag": "normal" }
+      {
+        "id": "sub_beat_cut",
+        "tag": "[Sudden Beat Cut]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_beat_drop",
+        "tag": "[Beat Drop]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_snare_roll",
+        "tag": "[Rapid-fire Snare Rolls]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_808_kick",
+        "tag": "[Heavy 808 Bass Kick]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_only_bass",
+        "tag": "[Only Bass Remains]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_lowpass",
+        "tag": "[Low-pass Filtered]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_atmospheric_pad",
+        "tag": "[Atmospheric Pad]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_modulation",
+        "tag": "[Modulation]",
+        "flag": "warn",
+        "warn_msg": "Modulation di Solo bisa membuat melodi terdengar salah nada"
+      },
+      {
+        "id": "sub_key_change",
+        "tag": "[Key Change]",
+        "flag": "warn",
+        "warn_msg": "Key Change mendadak bisa membuat vokal AI terdengar sumbang"
+      },
+      {
+        "id": "sub_rhythmic_plucks",
+        "tag": "[Rhythmic Plucks]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_palm_muted",
+        "tag": "[Palm Muted Guitar]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_count_in",
+        "tag": "[Count-in: 1, 2, 3, 4...]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_subbass_riser",
+        "tag": "[Sub-bass Riser]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_guitar_solo",
+        "tag": "[Guitar Solo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_synth_solo",
+        "tag": "[Synth Solo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_kendang_solo",
+        "tag": "[Kendang Solo]",
+        "flag": "normal"
+      }
     ],
     "efek": [
-      { "id": "sub_reverb",         "tag": "[Spacious Reverb]",         "flag": "normal" },
-      { "id": "sub_sidechain",      "tag": "[Sidechained Compression]", "flag": "normal" },
-      { "id": "sub_fade_in",        "tag": "[Fading In...]",            "flag": "normal" },
-      { "id": "sub_fade_out",       "tag": "[Fading Echo]",             "flag": "normal" },
-      { "id": "sub_sudden_stop",    "tag": "[Sudden Stop on Last Beat]","flag": "normal" },
-      { "id": "sub_vinyl",          "tag": "[Vinyl Crackle]",           "flag": "normal" },
-      { "id": "sub_final_climax",   "tag": "[Final Climax]",            "flag": "red",
-        "warn_msg": "RED FLAG: Final Climax di Outro kontradiktif — pindahkan ke akhir Chorus terakhir" },
-      { "id": "sub_atm_fade",       "tag": "[Atmospheric Fade]",        "flag": "normal" }
+      {
+        "id": "sub_reverb",
+        "tag": "[Spacious Reverb]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_sidechain",
+        "tag": "[Sidechained Compression]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_fade_in",
+        "tag": "[Fading In...]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_fade_out",
+        "tag": "[Fading Echo]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_sudden_stop",
+        "tag": "[Sudden Stop on Last Beat]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_vinyl",
+        "tag": "[Vinyl Crackle]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_final_climax",
+        "tag": "[Final Climax]",
+        "flag": "red",
+        "warn_msg": "RED FLAG: Final Climax di Outro kontradiktif — pindahkan ke akhir Chorus terakhir"
+      },
+      {
+        "id": "sub_atm_fade",
+        "tag": "[Atmospheric Fade]",
+        "flag": "normal"
+      }
     ],
     "lokal": [
-      { "id": "sub_kendang_in",     "tag": "[Kendang enters]",          "flag": "normal" },
-      { "id": "sub_gamelan_full",   "tag": "[Full Gamelan Ensemble]",   "flag": "warn",
-        "warn_msg": "Gamelan di Chorus modern bisa muddy — pastikan ada ruang frekuensi" },
-      { "id": "sub_gong_resonance", "tag": "[Gong Resonance]",          "flag": "normal" },
-      { "id": "sub_gong_hit",       "tag": "[Final Gong Hit]",          "flag": "normal" },
-      { "id": "sub_senggakan",      "tag": "[Senggakan Ad-libs]",       "flag": "warn",
-        "warn_msg": "Senggakan paling bagus di Post-Chorus atau Interlude" },
-      { "id": "sub_kecak",          "tag": "[Kecak Polyrhythm]",        "flag": "normal" }
+      {
+        "id": "sub_kendang_in",
+        "tag": "[Kendang enters]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_gamelan_full",
+        "tag": "[Full Gamelan Ensemble]",
+        "flag": "warn",
+        "warn_msg": "Gamelan di Chorus modern bisa muddy — pastikan ada ruang frekuensi"
+      },
+      {
+        "id": "sub_gong_resonance",
+        "tag": "[Gong Resonance]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_gong_hit",
+        "tag": "[Final Gong Hit]",
+        "flag": "normal"
+      },
+      {
+        "id": "sub_senggakan",
+        "tag": "[Senggakan Ad-libs]",
+        "flag": "warn",
+        "warn_msg": "Senggakan paling bagus di Post-Chorus atau Interlude"
+      },
+      {
+        "id": "sub_kecak",
+        "tag": "[Kecak Polyrhythm]",
+        "flag": "normal"
+      }
     ]
   },
   "conflict_rules": [
     {
       "id": "pianissimo_vs_energy",
       "trigger": "sub_pianissimo",
-      "locks": ["sub_max_energy","sub_fortissimo","sub_808_kick","sub_anthemic","sub_wall_of_sound"],
+      "locks": [
+        "sub_max_energy",
+        "sub_fortissimo",
+        "sub_808_kick",
+        "sub_anthemic",
+        "sub_wall_of_sound"
+      ],
       "msg": "Pianissimo tidak bisa digabung dengan Maximum Energy / Fortissimo"
     },
     {
       "id": "final_climax_outro",
       "trigger": "sub_final_climax",
-      "warn_sections": ["outro"],
+      "warn_sections": [
+        "outro"
+      ],
       "msg": "Final Climax sebaiknya di Chorus terakhir, bukan Outro"
     },
     {
       "id": "senggakan_chorus",
       "trigger": "sub_senggakan",
-      "warn_sections": ["chorus","drop"],
+      "warn_sections": [
+        "chorus",
+        "drop"
+      ],
       "msg": "Senggakan akan tenggelam di Chorus penuh — pindah ke Post-Chorus"
     },
     {
       "id": "modulation_solo",
       "trigger": "sub_modulation",
-      "warn_sections": ["solo"],
+      "warn_sections": [
+        "solo"
+      ],
       "msg": "Modulation di Solo bisa membuat melodi terdengar salah nada"
     },
     {
       "id": "glitch_808",
       "trigger": "sub_glitch_vocal",
-      "warn_with": ["sub_808_kick","sub_max_energy"],
+      "warn_with": [
+        "sub_808_kick",
+        "sub_max_energy"
+      ],
       "msg": "Glitch Vocals + Heavy 808 bisa clipping — pastikan ada Sidechain"
     }
   ],
   "kompatibilitas": {
     "koplo": {
-      "auto_rasa":    ["gembira","euphoric","playful","uplifting"],
-      "auto_swara":   ["femalesolo","malesolo","senggakan"],
-      "auto_piranti": ["kendangjawa","bass808"],
-      "auto_produksi":["hifi","sidechain"],
-      "warn_rasa":    ["melancholic","nostalgic","galau"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["eerie","somber","dark","anxious","magis"],
-      "hide_swara":   ["operatic","growl","choir","spokenword"],
-      "hide_piranti": ["stringsection","brasssection","grandpiano","sasando","saron","bonang","gongageng"]
+      "auto_rasa": [
+        "gembira",
+        "euphoric",
+        "playful",
+        "uplifting"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "senggakan"
+      ],
+      "auto_piranti": [
+        "kendangjawa",
+        "bass808"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "sidechain"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "nostalgic",
+        "galau"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "eerie",
+        "somber",
+        "dark",
+        "anxious",
+        "magis"
+      ],
+      "hide_swara": [
+        "operatic",
+        "growl",
+        "choir",
+        "spokenword"
+      ],
+      "hide_piranti": [
+        "stringsection",
+        "brasssection",
+        "grandpiano",
+        "sasando",
+        "saron",
+        "bonang",
+        "gongageng"
+      ]
     },
     "dangdut": {
-      "auto_rasa":    ["gembira","melancholic","galau","nostalgic","syahdu"],
-      "auto_swara":   ["femalesolo","malesolo","melismatic"],
-      "auto_piranti": ["kendangjawa","suling","acousticguitar"],
-      "auto_produksi":["organic"],
-      "warn_rasa":    ["aggressive","dark"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["eerie","anxious","triumphant"],
-      "hide_swara":   ["growl","vocalchops","operatic"],
-      "hide_piranti": ["bass808","drummachine","fuzzguitar","cowbell"]
+      "auto_rasa": [
+        "gembira",
+        "melancholic",
+        "galau",
+        "nostalgic",
+        "syahdu"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "melismatic"
+      ],
+      "auto_piranti": [
+        "kendangjawa",
+        "suling",
+        "acousticguitar"
+      ],
+      "auto_produksi": [
+        "organic"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "dark"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "eerie",
+        "anxious",
+        "triumphant"
+      ],
+      "hide_swara": [
+        "growl",
+        "vocalchops",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "drummachine",
+        "fuzzguitar",
+        "cowbell"
+      ]
     },
     "jedagujedug": {
-      "auto_rasa":    ["euphoric","gembira","aggressive","uplifting"],
-      "auto_swara":   ["femalesolo","autotuned","senggakan"],
-      "auto_piranti": ["kendangjawa","bass808","arpsynth","padsynth"],
-      "auto_produksi":["hifi","sidechain","electronic"],
-      "warn_rasa":    ["melancholic","galau"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["dreamy","somber","magis","syahdu"],
-      "hide_swara":   ["operatic","growl","spokenword"],
-      "hide_piranti": ["sasando","saron","bonang","grandpiano","stringsection"]
+      "auto_rasa": [
+        "euphoric",
+        "gembira",
+        "aggressive",
+        "uplifting"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "autotuned",
+        "senggakan"
+      ],
+      "auto_piranti": [
+        "kendangjawa",
+        "bass808",
+        "arpsynth",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "sidechain",
+        "electronic"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "galau"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "dreamy",
+        "somber",
+        "magis",
+        "syahdu"
+      ],
+      "hide_swara": [
+        "operatic",
+        "growl",
+        "spokenword"
+      ],
+      "hide_piranti": [
+        "sasando",
+        "saron",
+        "bonang",
+        "grandpiano",
+        "stringsection"
+      ]
     },
     "gamelanfusion": {
-      "auto_rasa":    ["magis","heroik","dreamy","hypnotic","nostalgic"],
-      "auto_swara":   ["novocal","femalesolo","melismatic"],
-      "auto_piranti": ["saron","bonang","gongageng","kendangjawa","padsynth"],
-      "auto_produksi":["reverberant","ambient","cinematic"],
-      "warn_rasa":    ["euphoric","aggressive"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["playful","gembira"],
-      "hide_swara":   ["growl","vocalchops","senggakan"],
-      "hide_piranti": ["bass808","fuzzguitar","drummachine","cowbell"]
+      "auto_rasa": [
+        "magis",
+        "heroik",
+        "dreamy",
+        "hypnotic",
+        "nostalgic"
+      ],
+      "auto_swara": [
+        "novocal",
+        "femalesolo",
+        "melismatic"
+      ],
+      "auto_piranti": [
+        "saron",
+        "bonang",
+        "gongageng",
+        "kendangjawa",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "reverberant",
+        "ambient",
+        "cinematic"
+      ],
+      "warn_rasa": [
+        "euphoric",
+        "aggressive"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "playful",
+        "gembira"
+      ],
+      "hide_swara": [
+        "growl",
+        "vocalchops",
+        "senggakan"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "drummachine",
+        "cowbell"
+      ]
     },
     "keroncong": {
-      "auto_rasa":    ["syahdu","melancholic","nostalgic","relaxed","dreamy"],
-      "auto_swara":   ["femalesolo","malesolo","tenor","soulful"],
-      "auto_piranti": ["acousticguitar","rhodes","stringsection"],
-      "auto_produksi":["organic","lofi"],
-      "warn_rasa":    ["uplifting","playful"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["aggressive","euphoric","dark","eerie"],
-      "hide_swara":   ["growl","autotuned","vocalchops","senggakan"],
-      "hide_piranti": ["bass808","fuzzguitar","drummachine","cowbell","arpsynth"]
+      "auto_rasa": [
+        "syahdu",
+        "melancholic",
+        "nostalgic",
+        "relaxed",
+        "dreamy"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "tenor",
+        "soulful"
+      ],
+      "auto_piranti": [
+        "acousticguitar",
+        "rhodes",
+        "stringsection"
+      ],
+      "auto_produksi": [
+        "organic",
+        "lofi"
+      ],
+      "warn_rasa": [
+        "uplifting",
+        "playful"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "aggressive",
+        "euphoric",
+        "dark",
+        "eerie"
+      ],
+      "hide_swara": [
+        "growl",
+        "autotuned",
+        "vocalchops",
+        "senggakan"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "drummachine",
+        "cowbell",
+        "arpsynth"
+      ]
     },
     "campursari": {
-      "auto_rasa":    ["syahdu","gembira","nostalgic","melancholic","galau"],
-      "auto_swara":   ["femalesolo","malesolo","duet","melismatic"],
-      "auto_piranti": ["kendangjawa","rhodes","suling","acousticguitar"],
-      "auto_produksi":["organic","hifi"],
-      "warn_rasa":    ["aggressive","eerie","dark"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["anxious","somber"],
-      "hide_swara":   ["growl","vocalchops","operatic"],
-      "hide_piranti": ["bass808","fuzzguitar","cowbell","arpsynth"]
+      "auto_rasa": [
+        "syahdu",
+        "gembira",
+        "nostalgic",
+        "melancholic",
+        "galau"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "duet",
+        "melismatic"
+      ],
+      "auto_piranti": [
+        "kendangjawa",
+        "rhodes",
+        "suling",
+        "acousticguitar"
+      ],
+      "auto_produksi": [
+        "organic",
+        "hifi"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "eerie",
+        "dark"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "anxious",
+        "somber"
+      ],
+      "hide_swara": [
+        "growl",
+        "vocalchops",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "cowbell",
+        "arpsynth"
+      ]
     },
     "jaipongan": {
-      "auto_rasa":    ["gembira","playful","heroik","uplifting"],
-      "auto_swara":   ["femalesolo","melismatic","senggakan"],
-      "auto_piranti": ["kendangsunda","kecapi","suling","gongageng"],
-      "auto_produksi":["organic","hifi"],
-      "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["somber","eerie","dark","aggressive"],
-      "hide_swara":   ["growl","autotuned","vocalchops"],
-      "hide_piranti": ["bass808","electricguitar","fuzzguitar","drummachine"]
+      "auto_rasa": [
+        "gembira",
+        "playful",
+        "heroik",
+        "uplifting"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "melismatic",
+        "senggakan"
+      ],
+      "auto_piranti": [
+        "kendangsunda",
+        "kecapi",
+        "suling",
+        "gongageng"
+      ],
+      "auto_produksi": [
+        "organic",
+        "hifi"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "nostalgic"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "somber",
+        "eerie",
+        "dark",
+        "aggressive"
+      ],
+      "hide_swara": [
+        "growl",
+        "autotuned",
+        "vocalchops"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "electricguitar",
+        "fuzzguitar",
+        "drummachine"
+      ]
     },
     "indietnik": {
-      "auto_rasa":    ["dreamy","melancholic","nostalgic","magis"],
-      "auto_swara":   ["femalesolo","breathy","melismatic"],
-      "auto_piranti": ["acousticguitar","kecapi","suling","sasando"],
-      "auto_produksi":["organic","lofi","reverberant"],
-      "warn_rasa":    ["aggressive","euphoric"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","dark","anxious"],
-      "hide_swara":   ["growl","senggakan","vocalchops"],
-      "hide_piranti": ["bass808","fuzzguitar","cowbell","drummachine"]
+      "auto_rasa": [
+        "dreamy",
+        "melancholic",
+        "nostalgic",
+        "magis"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "breathy",
+        "melismatic"
+      ],
+      "auto_piranti": [
+        "acousticguitar",
+        "kecapi",
+        "suling",
+        "sasando"
+      ],
+      "auto_produksi": [
+        "organic",
+        "lofi",
+        "reverberant"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "euphoric"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "dark",
+        "anxious"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "vocalchops"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "cowbell",
+        "drummachine"
+      ]
     },
     "qasidah": {
-      "auto_rasa":    ["uplifting","heroik","syahdu","gembira"],
-      "auto_swara":   ["malesolo","choir","tenor","soulful"],
-      "auto_piranti": ["rebana","suling","acousticguitar"],
-      "auto_produksi":["organic","hifi"],
-      "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["dark","eerie","aggressive","sensual"],
-      "hide_swara":   ["growl","vocalchops","autotuned"],
-      "hide_piranti": ["bass808","fuzzguitar","cowbell","drummachine"]
+      "auto_rasa": [
+        "uplifting",
+        "heroik",
+        "syahdu",
+        "gembira"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "choir",
+        "tenor",
+        "soulful"
+      ],
+      "auto_piranti": [
+        "rebana",
+        "suling",
+        "acousticguitar"
+      ],
+      "auto_produksi": [
+        "organic",
+        "hifi"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "nostalgic"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "dark",
+        "eerie",
+        "aggressive",
+        "sensual"
+      ],
+      "hide_swara": [
+        "growl",
+        "vocalchops",
+        "autotuned"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "cowbell",
+        "drummachine"
+      ]
     },
     "phonk": {
-      "auto_rasa":    ["aggressive","dark","anxious","hypnotic"],
-      "auto_swara":   ["vocalchops","autotuned","breathy"],
-      "auto_piranti": ["bass808","cowbell","drummachine","padsynth"],
-      "auto_produksi":["lofi","distorted","electronic","sidechain"],
-      "warn_rasa":    ["melancholic","dark"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["uplifting","gembira","syahdu","dreamy","heroik"],
-      "hide_swara":   ["operatic","tenor","melismatic","senggakan","choir"],
-      "hide_piranti": ["grandpiano","saron","rebana","sasando","kendangjawa","stringsection"]
+      "auto_rasa": [
+        "aggressive",
+        "dark",
+        "anxious",
+        "hypnotic"
+      ],
+      "auto_swara": [
+        "vocalchops",
+        "autotuned",
+        "breathy"
+      ],
+      "auto_piranti": [
+        "bass808",
+        "cowbell",
+        "drummachine",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "lofi",
+        "distorted",
+        "electronic",
+        "sidechain"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "dark"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "uplifting",
+        "gembira",
+        "syahdu",
+        "dreamy",
+        "heroik"
+      ],
+      "hide_swara": [
+        "operatic",
+        "tenor",
+        "melismatic",
+        "senggakan",
+        "choir"
+      ],
+      "hide_piranti": [
+        "grandpiano",
+        "saron",
+        "rebana",
+        "sasando",
+        "kendangjawa",
+        "stringsection"
+      ]
     },
     "deephouse": {
-      "auto_rasa":    ["relaxed","hypnotic","sensual","dreamy"],
-      "auto_swara":   ["femalesolo","breathy","soulful","autotuned"],
-      "auto_piranti": ["bass808","padsynth","rhodes","drummachine"],
-      "auto_produksi":["hifi","sidechain","electronic"],
-      "warn_rasa":    ["aggressive","angry"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["triumphant","heroik","gembira"],
-      "hide_swara":   ["growl","senggakan","operatic","melismatic"],
-      "hide_piranti": ["saron","kendangjawa","rebana","fuzzguitar"]
+      "auto_rasa": [
+        "relaxed",
+        "hypnotic",
+        "sensual",
+        "dreamy"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "breathy",
+        "soulful",
+        "autotuned"
+      ],
+      "auto_piranti": [
+        "bass808",
+        "padsynth",
+        "rhodes",
+        "drummachine"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "sidechain",
+        "electronic"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "angry"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "triumphant",
+        "heroik",
+        "gembira"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "operatic",
+        "melismatic"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "rebana",
+        "fuzzguitar"
+      ]
     },
     "synthwave": {
-      "auto_rasa":    ["nostalgic","dreamy","dark","relaxed"],
-      "auto_swara":   ["femalesolo","malesolo","breathy","autotuned"],
-      "auto_piranti": ["arpsynth","padsynth","drummachine","electricguitar"],
-      "auto_produksi":["electronic","reverberant","lofi"],
-      "warn_rasa":    ["gembira","playful"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["heroik","triumphant","syahdu"],
-      "hide_swara":   ["growl","senggakan","melismatic"],
-      "hide_piranti": ["kendangjawa","saron","rebana","acousticdrums"]
+      "auto_rasa": [
+        "nostalgic",
+        "dreamy",
+        "dark",
+        "relaxed"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "breathy",
+        "autotuned"
+      ],
+      "auto_piranti": [
+        "arpsynth",
+        "padsynth",
+        "drummachine",
+        "electricguitar"
+      ],
+      "auto_produksi": [
+        "electronic",
+        "reverberant",
+        "lofi"
+      ],
+      "warn_rasa": [
+        "gembira",
+        "playful"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "heroik",
+        "triumphant",
+        "syahdu"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "melismatic"
+      ],
+      "hide_piranti": [
+        "kendangjawa",
+        "saron",
+        "rebana",
+        "acousticdrums"
+      ]
     },
     "trance": {
-      "auto_rasa":    ["euphoric","uplifting","hypnotic","triumphant"],
-      "auto_swara":   ["femalesolo","soprano","breathy","autotuned"],
-      "auto_piranti": ["arpsynth","padsynth","drummachine","bass808"],
-      "auto_produksi":["hifi","sidechain","electronic"],
-      "warn_rasa":    ["melancholic","dark"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["somber","syahdu","magis","gembira"],
-      "hide_swara":   ["growl","senggakan","melismatic","spokenword"],
-      "hide_piranti": ["kendangjawa","suling","rebana","saron"]
+      "auto_rasa": [
+        "euphoric",
+        "uplifting",
+        "hypnotic",
+        "triumphant"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "soprano",
+        "breathy",
+        "autotuned"
+      ],
+      "auto_piranti": [
+        "arpsynth",
+        "padsynth",
+        "drummachine",
+        "bass808"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "sidechain",
+        "electronic"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "dark"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "somber",
+        "syahdu",
+        "magis",
+        "gembira"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "melismatic",
+        "spokenword"
+      ],
+      "hide_piranti": [
+        "kendangjawa",
+        "suling",
+        "rebana",
+        "saron"
+      ]
     },
     "dubstep": {
-      "auto_rasa":    ["aggressive","dark","anxious","triumphant"],
-      "auto_swara":   ["autotuned","vocalchops","malesolo"],
-      "auto_piranti": ["bass808","arpsynth","drummachine","padsynth"],
-      "auto_produksi":["distorted","electronic","hifi","sidechain"],
-      "warn_rasa":    ["melancholic","euphoric"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["syahdu","dreamy","sensual","gembira"],
-      "hide_swara":   ["operatic","melismatic","senggakan"],
-      "hide_piranti": ["saron","kendangjawa","sasando","grandpiano","stringsection"]
+      "auto_rasa": [
+        "aggressive",
+        "dark",
+        "anxious",
+        "triumphant"
+      ],
+      "auto_swara": [
+        "autotuned",
+        "vocalchops",
+        "malesolo"
+      ],
+      "auto_piranti": [
+        "bass808",
+        "arpsynth",
+        "drummachine",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "distorted",
+        "electronic",
+        "hifi",
+        "sidechain"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "euphoric"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "syahdu",
+        "dreamy",
+        "sensual",
+        "gembira"
+      ],
+      "hide_swara": [
+        "operatic",
+        "melismatic",
+        "senggakan"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "sasando",
+        "grandpiano",
+        "stringsection"
+      ]
     },
     "trap": {
-      "auto_rasa":    ["aggressive","dark","anxious"],
-      "auto_swara":   ["malesolo","autotuned","vocalchops","breathy"],
-      "auto_piranti": ["bass808","drummachine","padsynth","arpsynth"],
-      "auto_produksi":["hifi","electronic","sidechain"],
-      "warn_rasa":    ["melancholic","nostalgic"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","syahdu","heroik","playful"],
-      "hide_swara":   ["operatic","melismatic","senggakan","choir"],
-      "hide_piranti": ["saron","kendangjawa","rebana","grandpiano","stringsection"]
+      "auto_rasa": [
+        "aggressive",
+        "dark",
+        "anxious"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "autotuned",
+        "vocalchops",
+        "breathy"
+      ],
+      "auto_piranti": [
+        "bass808",
+        "drummachine",
+        "padsynth",
+        "arpsynth"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "electronic",
+        "sidechain"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "nostalgic"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "syahdu",
+        "heroik",
+        "playful"
+      ],
+      "hide_swara": [
+        "operatic",
+        "melismatic",
+        "senggakan",
+        "choir"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "rebana",
+        "grandpiano",
+        "stringsection"
+      ]
     },
     "altrock": {
-      "auto_rasa":    ["melancholic","angry","dark","anxious","nostalgic"],
-      "auto_swara":   ["malesolo","raspy","breathy"],
-      "auto_piranti": ["electricguitar","slapbass","acousticdrums"],
-      "auto_produksi":["distorted","reverberant","lofi"],
-      "warn_rasa":    ["aggressive","somber"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","euphoric","playful","syahdu"],
-      "hide_swara":   ["growl","operatic","senggakan","melismatic"],
-      "hide_piranti": ["saron","kendangjawa","bass808","padsynth","cowbell"]
+      "auto_rasa": [
+        "melancholic",
+        "angry",
+        "dark",
+        "anxious",
+        "nostalgic"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "raspy",
+        "breathy"
+      ],
+      "auto_piranti": [
+        "electricguitar",
+        "slapbass",
+        "acousticdrums"
+      ],
+      "auto_produksi": [
+        "distorted",
+        "reverberant",
+        "lofi"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "somber"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "euphoric",
+        "playful",
+        "syahdu"
+      ],
+      "hide_swara": [
+        "growl",
+        "operatic",
+        "senggakan",
+        "melismatic"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "bass808",
+        "padsynth",
+        "cowbell"
+      ]
     },
     "numetal": {
-      "auto_rasa":    ["aggressive","angry","anxious","dark"],
-      "auto_swara":   ["malesolo","raspy","growl","spokenword"],
-      "auto_piranti": ["fuzzguitar","slapbass","acousticdrums","arpsynth"],
-      "auto_produksi":["distorted","hifi","electronic"],
-      "warn_rasa":    ["melancholic","triumphant"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","dreamy","syahdu","sensual"],
-      "hide_swara":   ["soprano","melismatic","senggakan","operatic"],
-      "hide_piranti": ["sasando","suling","kecapi","rebana","stringsection"]
+      "auto_rasa": [
+        "aggressive",
+        "angry",
+        "anxious",
+        "dark"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "raspy",
+        "growl",
+        "spokenword"
+      ],
+      "auto_piranti": [
+        "fuzzguitar",
+        "slapbass",
+        "acousticdrums",
+        "arpsynth"
+      ],
+      "auto_produksi": [
+        "distorted",
+        "hifi",
+        "electronic"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "triumphant"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "dreamy",
+        "syahdu",
+        "sensual"
+      ],
+      "hide_swara": [
+        "soprano",
+        "melismatic",
+        "senggakan",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "sasando",
+        "suling",
+        "kecapi",
+        "rebana",
+        "stringsection"
+      ]
     },
     "progrock": {
-      "auto_rasa":    ["triumphant","heroik","anxious","dreamy"],
-      "auto_swara":   ["tenor","operatic","choir","malesolo"],
-      "auto_piranti": ["grandpiano","electricguitar","stringsection","acousticdrums"],
-      "auto_produksi":["cinematic","hifi","reverberant"],
-      "warn_rasa":    ["playful","gembira"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["syahdu","sensual","galau"],
-      "hide_swara":   ["senggakan","vocalchops","autotuned"],
-      "hide_piranti": ["bass808","kendangjawa","rebana","cowbell","drummachine"]
+      "auto_rasa": [
+        "triumphant",
+        "heroik",
+        "anxious",
+        "dreamy"
+      ],
+      "auto_swara": [
+        "tenor",
+        "operatic",
+        "choir",
+        "malesolo"
+      ],
+      "auto_piranti": [
+        "grandpiano",
+        "electricguitar",
+        "stringsection",
+        "acousticdrums"
+      ],
+      "auto_produksi": [
+        "cinematic",
+        "hifi",
+        "reverberant"
+      ],
+      "warn_rasa": [
+        "playful",
+        "gembira"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "syahdu",
+        "sensual",
+        "galau"
+      ],
+      "hide_swara": [
+        "senggakan",
+        "vocalchops",
+        "autotuned"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "kendangjawa",
+        "rebana",
+        "cowbell",
+        "drummachine"
+      ]
     },
     "heavymetal": {
-      "auto_rasa":    ["aggressive","angry","dark","triumphant"],
-      "auto_swara":   ["malesolo","raspy","growl"],
-      "auto_piranti": ["fuzzguitar","slapbass","acousticdrums"],
-      "auto_produksi":["distorted","hifi"],
-      "warn_rasa":    ["anxious","eerie"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["dreamy","syahdu","relaxed","gembira","sensual"],
-      "hide_swara":   ["soprano","melismatic","senggakan","breathy","operatic"],
-      "hide_piranti": ["sasando","suling","kecapi","grandpiano","rebana","stringsection"]
+      "auto_rasa": [
+        "aggressive",
+        "angry",
+        "dark",
+        "triumphant"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "raspy",
+        "growl"
+      ],
+      "auto_piranti": [
+        "fuzzguitar",
+        "slapbass",
+        "acousticdrums"
+      ],
+      "auto_produksi": [
+        "distorted",
+        "hifi"
+      ],
+      "warn_rasa": [
+        "anxious",
+        "eerie"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "dreamy",
+        "syahdu",
+        "relaxed",
+        "gembira",
+        "sensual"
+      ],
+      "hide_swara": [
+        "soprano",
+        "melismatic",
+        "senggakan",
+        "breathy",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "sasando",
+        "suling",
+        "kecapi",
+        "grandpiano",
+        "rebana",
+        "stringsection"
+      ]
     },
     "grunge": {
-      "auto_rasa":    ["angry","melancholic","somber","anxious","dark"],
-      "auto_swara":   ["malesolo","raspy","breathy"],
-      "auto_piranti": ["fuzzguitar","slapbass","acousticdrums"],
-      "auto_produksi":["distorted","lofi","organic"],
-      "warn_rasa":    ["aggressive","nostalgic"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["euphoric","gembira","uplifting","heroik"],
-      "hide_swara":   ["operatic","autotuned","senggakan","melismatic"],
-      "hide_piranti": ["saron","kendangjawa","bass808","padsynth","arpsynth"]
+      "auto_rasa": [
+        "angry",
+        "melancholic",
+        "somber",
+        "anxious",
+        "dark"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "raspy",
+        "breathy"
+      ],
+      "auto_piranti": [
+        "fuzzguitar",
+        "slapbass",
+        "acousticdrums"
+      ],
+      "auto_produksi": [
+        "distorted",
+        "lofi",
+        "organic"
+      ],
+      "warn_rasa": [
+        "aggressive",
+        "nostalgic"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "euphoric",
+        "gembira",
+        "uplifting",
+        "heroik"
+      ],
+      "hide_swara": [
+        "operatic",
+        "autotuned",
+        "senggakan",
+        "melismatic"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "bass808",
+        "padsynth",
+        "arpsynth"
+      ]
     },
     "classicrock": {
-      "auto_rasa":    ["uplifting","triumphant","nostalgic","playful","aggressive"],
-      "auto_swara":   ["malesolo","raspy","tenor"],
-      "auto_piranti": ["electricguitar","grandpiano","slapbass","acousticdrums"],
-      "auto_produksi":["hifi","organic","reverberant"],
-      "warn_rasa":    ["eerie","somber","melancholic"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["syahdu","magis","sensual"],
-      "hide_swara":   ["growl","senggakan","melismatic","operatic"],
-      "hide_piranti": ["saron","kendangjawa","bass808","drummachine","cowbell"]
+      "auto_rasa": [
+        "uplifting",
+        "triumphant",
+        "nostalgic",
+        "playful",
+        "aggressive"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "raspy",
+        "tenor"
+      ],
+      "auto_piranti": [
+        "electricguitar",
+        "grandpiano",
+        "slapbass",
+        "acousticdrums"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "organic",
+        "reverberant"
+      ],
+      "warn_rasa": [
+        "eerie",
+        "somber",
+        "melancholic"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "syahdu",
+        "magis",
+        "sensual"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "melismatic",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "saron",
+        "kendangjawa",
+        "bass808",
+        "drummachine",
+        "cowbell"
+      ]
     },
     "modernpop": {
-      "auto_rasa":    ["uplifting","euphoric","melancholic","galau","playful"],
-      "auto_swara":   ["femalesolo","malesolo","duet","autotuned"],
-      "auto_piranti": ["grandpiano","acousticguitar","bass808","padsynth"],
-      "auto_produksi":["hifi","electronic","sidechain"],
-      "warn_rasa":    ["eerie","dark"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["somber","magis"],
-      "hide_swara":   ["growl","operatic"],
-      "hide_piranti": ["saron","gongageng","tifa","sampek","rebana"]
+      "auto_rasa": [
+        "uplifting",
+        "euphoric",
+        "melancholic",
+        "galau",
+        "playful"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "duet",
+        "autotuned"
+      ],
+      "auto_piranti": [
+        "grandpiano",
+        "acousticguitar",
+        "bass808",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "electronic",
+        "sidechain"
+      ],
+      "warn_rasa": [
+        "eerie",
+        "dark"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "somber",
+        "magis"
+      ],
+      "hide_swara": [
+        "growl",
+        "operatic"
+      ],
+      "hide_piranti": [
+        "saron",
+        "gongageng",
+        "tifa",
+        "sampek",
+        "rebana"
+      ]
     },
     "indiefolk": {
-      "auto_rasa":    ["melancholic","nostalgic","dreamy","relaxed","syahdu"],
-      "auto_swara":   ["malesolo","femalesolo","duet","breathy"],
-      "auto_piranti": ["acousticguitar","grandpiano","stringsection"],
-      "auto_produksi":["organic","lofi","reverberant"],
-      "warn_rasa":    ["uplifting","playful"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["aggressive","euphoric","gembira","dark"],
-      "hide_swara":   ["growl","autotuned","senggakan","vocalchops"],
-      "hide_piranti": ["bass808","drummachine","fuzzguitar","cowbell","arpsynth"]
+      "auto_rasa": [
+        "melancholic",
+        "nostalgic",
+        "dreamy",
+        "relaxed",
+        "syahdu"
+      ],
+      "auto_swara": [
+        "malesolo",
+        "femalesolo",
+        "duet",
+        "breathy"
+      ],
+      "auto_piranti": [
+        "acousticguitar",
+        "grandpiano",
+        "stringsection"
+      ],
+      "auto_produksi": [
+        "organic",
+        "lofi",
+        "reverberant"
+      ],
+      "warn_rasa": [
+        "uplifting",
+        "playful"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "aggressive",
+        "euphoric",
+        "gembira",
+        "dark"
+      ],
+      "hide_swara": [
+        "growl",
+        "autotuned",
+        "senggakan",
+        "vocalchops"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "drummachine",
+        "fuzzguitar",
+        "cowbell",
+        "arpsynth"
+      ]
     },
     "smoothjazz": {
-      "auto_rasa":    ["relaxed","sensual","dreamy","nostalgic"],
-      "auto_swara":   ["femalesolo","malesolo","breathy","soulful"],
-      "auto_piranti": ["rhodes","walkingbass","acousticdrums","brasssection"],
-      "auto_produksi":["hifi","organic","reverberant"],
-      "warn_rasa":    ["melancholic","uplifting"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["aggressive","gembira","anxious","dark"],
-      "hide_swara":   ["growl","senggakan","autotuned","vocalchops"],
-      "hide_piranti": ["bass808","fuzzguitar","saron","kendangjawa","cowbell"]
+      "auto_rasa": [
+        "relaxed",
+        "sensual",
+        "dreamy",
+        "nostalgic"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "breathy",
+        "soulful"
+      ],
+      "auto_piranti": [
+        "rhodes",
+        "walkingbass",
+        "acousticdrums",
+        "brasssection"
+      ],
+      "auto_produksi": [
+        "hifi",
+        "organic",
+        "reverberant"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "uplifting"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "aggressive",
+        "gembira",
+        "anxious",
+        "dark"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "autotuned",
+        "vocalchops"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "saron",
+        "kendangjawa",
+        "cowbell"
+      ]
     },
     "bossanova": {
-      "auto_rasa":    ["relaxed","dreamy","sensual","nostalgic"],
-      "auto_swara":   ["femalesolo","malesolo","breathy","soulful"],
-      "auto_piranti": ["acousticguitar","rhodes","walkingbass"],
-      "auto_produksi":["organic","lofi"],
-      "warn_rasa":    ["melancholic","uplifting"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["aggressive","gembira","dark","eerie"],
-      "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
-      "hide_piranti": ["bass808","fuzzguitar","drummachine","saron","cowbell"]
+      "auto_rasa": [
+        "relaxed",
+        "dreamy",
+        "sensual",
+        "nostalgic"
+      ],
+      "auto_swara": [
+        "femalesolo",
+        "malesolo",
+        "breathy",
+        "soulful"
+      ],
+      "auto_piranti": [
+        "acousticguitar",
+        "rhodes",
+        "walkingbass"
+      ],
+      "auto_produksi": [
+        "organic",
+        "lofi"
+      ],
+      "warn_rasa": [
+        "melancholic",
+        "uplifting"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "aggressive",
+        "gembira",
+        "dark",
+        "eerie"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "vocalchops",
+        "autotuned"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "fuzzguitar",
+        "drummachine",
+        "saron",
+        "cowbell"
+      ]
     },
     "cinematic": {
-      "auto_rasa":    ["triumphant","heroik","dreamy","melancholic","anxious","eerie"],
-      "auto_swara":   ["soprano","choir","operatic","novocal"],
-      "auto_piranti": ["stringsection","brasssection","grandpiano","padsynth"],
-      "auto_produksi":["cinematic","reverberant","hifi","stadium"],
-      "warn_rasa":    ["playful","uplifting"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","euphoric"],
-      "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
-      "hide_piranti": ["bass808","kendangjawa","cowbell","drummachine","fuzzguitar"]
+      "auto_rasa": [
+        "triumphant",
+        "heroik",
+        "dreamy",
+        "melancholic",
+        "anxious",
+        "eerie"
+      ],
+      "auto_swara": [
+        "soprano",
+        "choir",
+        "operatic",
+        "novocal"
+      ],
+      "auto_piranti": [
+        "stringsection",
+        "brasssection",
+        "grandpiano",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "cinematic",
+        "reverberant",
+        "hifi",
+        "stadium"
+      ],
+      "warn_rasa": [
+        "playful",
+        "uplifting"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "euphoric"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "vocalchops",
+        "autotuned"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "kendangjawa",
+        "cowbell",
+        "drummachine",
+        "fuzzguitar"
+      ]
     },
     "neoclassical": {
-      "auto_rasa":    ["melancholic","dreamy","triumphant","nostalgic","heroik"],
-      "auto_swara":   ["soprano","choir","operatic","novocal"],
-      "auto_piranti": ["grandpiano","stringsection","padsynth"],
-      "auto_produksi":["cinematic","reverberant","hifi","organic"],
-      "warn_rasa":    ["playful","uplifting"],
-      "warn_swara":   [], "warn_piranti": [],
-      "hide_rasa":    ["gembira","aggressive","euphoric"],
-      "hide_swara":   ["growl","senggakan","vocalchops","autotuned"],
-      "hide_piranti": ["bass808","kendangjawa","cowbell","drummachine","fuzzguitar"]
+      "auto_rasa": [
+        "melancholic",
+        "dreamy",
+        "triumphant",
+        "nostalgic",
+        "heroik"
+      ],
+      "auto_swara": [
+        "soprano",
+        "choir",
+        "operatic",
+        "novocal"
+      ],
+      "auto_piranti": [
+        "grandpiano",
+        "stringsection",
+        "padsynth"
+      ],
+      "auto_produksi": [
+        "cinematic",
+        "reverberant",
+        "hifi",
+        "organic"
+      ],
+      "warn_rasa": [
+        "playful",
+        "uplifting"
+      ],
+      "warn_swara": [],
+      "warn_piranti": [],
+      "hide_rasa": [
+        "gembira",
+        "aggressive",
+        "euphoric"
+      ],
+      "hide_swara": [
+        "growl",
+        "senggakan",
+        "vocalchops",
+        "autotuned"
+      ],
+      "hide_piranti": [
+        "bass808",
+        "kendangjawa",
+        "cowbell",
+        "drummachine",
+        "fuzzguitar"
+      ]
     }
-  }
+  },
+  "kamus": [
+    {
+      "id": "uplifting",
+      "istilah": "Uplifting",
+      "kategori": "Mood",
+      "singkat": "Memberi semangat & harapan",
+      "panjang": "Nada mayor cerah yang naik, energi positif mengalir. Terasa seperti matahari terbit atau finish line lomba. Chord progression cenderung I-V-vi-IV yang klasik ceria.",
+      "cocok": [
+        "Pop",
+        "Gospel",
+        "Cinematic Anthem",
+        "Dangdut ceria"
+      ],
+      "hindari": [
+        "Dark Ambient",
+        "Delta Blues",
+        "Somber apapun"
+      ]
+    },
+    {
+      "id": "euphoric",
+      "istilah": "Euphoric",
+      "kategori": "Mood",
+      "singkat": "Kebahagiaan meledak-ledak, euforia total",
+      "panjang": "Energi kebahagiaan yang tidak tertahan, seperti menang besar atau jatuh cinta pertama kali. Lebih intens dari Uplifting — ini puncak emosi positif.",
+      "cocok": [
+        "EDM Drop",
+        "Koplo puncak",
+        "Trance",
+        "Future Bass"
+      ],
+      "hindari": [
+        "Ballad",
+        "Keroncong",
+        "Lo-Fi chill"
+      ]
+    },
+    {
+      "id": "triumphant",
+      "istilah": "Triumphant",
+      "kategori": "Mood",
+      "singkat": "Kemenangan megah & heroik",
+      "panjang": "Perasaan menang perang atau mencapai puncak gunung. Megah, berwibawa, penuh brass dan string. Beda dari Euphoric — ini lebih agung dan berat.",
+      "cocok": [
+        "Cinematic Epic",
+        "Orchestral",
+        "Game OST boss fight"
+      ],
+      "hindari": [
+        "Lo-Fi",
+        "Indie Folk intim",
+        "Ambient"
+      ]
+    },
+    {
+      "id": "playful",
+      "istilah": "Playful",
+      "kategori": "Mood",
+      "singkat": "Jenaka, ringan, sedikit nakal",
+      "panjang": "Ceria seperti anak-anak bermain. Ada unsur humor, ritme yang melompat-lompat, tidak serius. Beda dari Uplifting — ini lebih ringan dan tidak dramatis.",
+      "cocok": [
+        "Bubblegum Pop",
+        "Cartoon OST",
+        "Indie Pop quirky"
+      ],
+      "hindari": [
+        "Heavy Metal",
+        "Dark Cinematic",
+        "Blues"
+      ]
+    },
+    {
+      "id": "gembira",
+      "istilah": "Gembira",
+      "kategori": "Mood",
+      "singkat": "Sukacita khas hajatan & perayaan lokal",
+      "panjang": "Kegembiraan kolektif ala pesta kampung, lebaran, atau pernikahan adat. Lebih komunal dan ramai dari Euphoric. Sangat khas nuansa Indonesia.",
+      "cocok": [
+        "Dangdut Koplo",
+        "Campursari pesta",
+        "Jaipongan"
+      ],
+      "hindari": [
+        "Ambient",
+        "Dark Pop",
+        "Melancholic apapun"
+      ]
+    },
+    {
+      "id": "relaxed",
+      "istilah": "Relaxed",
+      "kategori": "Mood",
+      "singkat": "Santai tanpa beban, chill",
+      "panjang": "Kondisi rileks yang nyaman, seperti rebahan di sore hari. Tidak ada urgensi. Tempo lambat-sedang, tekstur hangat, tidak ada elemen mengejutkan.",
+      "cocok": [
+        "Lo-Fi Hip-Hop",
+        "Bossa Nova",
+        "Acoustic Folk"
+      ],
+      "hindari": [
+        "Phonk",
+        "Hard Rock",
+        "Koplo"
+      ]
+    },
+    {
+      "id": "dreamy",
+      "istilah": "Dreamy / Ethereal",
+      "kategori": "Mood",
+      "singkat": "Mengambang seperti mimpi, tidak nyata",
+      "panjang": "Blur antara sadar dan tidur. Melodi mengambang, reverb tebal, seperti melihat sesuatu dari balik kaca buram. Indah tapi tidak jelas.",
+      "cocok": [
+        "Shoegaze",
+        "Dream Pop",
+        "Lo-Fi",
+        "Ambient"
+      ],
+      "hindari": [
+        "Staccato agresif",
+        "Drum Machine keras",
+        "Phonk"
+      ]
+    },
+    {
+      "id": "melancholic",
+      "istilah": "Melancholic",
+      "kategori": "Mood",
+      "singkat": "Sedih mendalam tapi indah",
+      "panjang": "Kesedihan yang dinikmati, bukan yang menyiksa. Seperti mengenang sesuatu yang indah tapi sudah pergi. Minor yang lembut, bukan yang garang.",
+      "cocok": [
+        "Ballad",
+        "Indie Folk",
+        "Keroncong",
+        "Tembang Sunda"
+      ],
+      "hindari": [
+        "EDM keras",
+        "Koplo",
+        "Aggressive apapun"
+      ]
+    },
+    {
+      "id": "somber",
+      "istilah": "Somber / Gloomy",
+      "kategori": "Mood",
+      "singkat": "Kelam berat, suram, tanpa harapan",
+      "panjang": "Lebih gelap dari Melancholic. Tidak ada keindahan — hanya berat dan menekan. Seperti pemakaman atau kehilangan total.",
+      "cocok": [
+        "Dark Blues",
+        "Post-Rock",
+        "Gothic Ambient"
+      ],
+      "hindari": [
+        "Upbeat apapun",
+        "Koplo",
+        "Pop ceria"
+      ]
+    },
+    {
+      "id": "syahdu",
+      "istilah": "Syahdu / Haru",
+      "kategori": "Mood",
+      "singkat": "Haru campur indah, nostalgia manis",
+      "panjang": "Perasaan khas Indonesia — haru yang indah, seperti nonton sunset sambil mengenang masa lalu. Antara sedih dan bahagia, tapi lebih ke damai.",
+      "cocok": [
+        "Keroncong",
+        "Tembang Sunda",
+        "Campursari",
+        "Pop Jawa"
+      ],
+      "hindari": [
+        "EDM keras",
+        "Metal",
+        "Phonk agresif"
+      ]
+    },
+    {
+      "id": "galau",
+      "istilah": "Galau",
+      "kategori": "Mood",
+      "singkat": "Bimbang antara sedih dan harapan",
+      "panjang": "Khas lagu patah hati Indonesia modern. Tidak sepenuhnya sedih, tidak sepenuhnya hopeful — terjebak di tengah. Sangat relatable untuk pendengar lokal.",
+      "cocok": [
+        "Pop Indonesia",
+        "Indie lokal",
+        "Dangdut melankolis"
+      ],
+      "hindari": [
+        "Triumphant",
+        "Euphoric",
+        "Aggressive"
+      ]
+    },
+    {
+      "id": "nostalgic",
+      "istilah": "Nostalgic",
+      "kategori": "Mood",
+      "singkat": "Kerinduan pada masa lalu",
+      "panjang": "Perasaan rindu yang manis-pahit pada sesuatu yang sudah lewat. Sering dipicu reverb analog atau suara vinyl.",
+      "cocok": [
+        "Synthwave retro",
+        "Lo-Fi",
+        "Classic Rock",
+        "Keroncong"
+      ],
+      "hindari": [
+        "Futuristic EDM",
+        "Cyberpunk",
+        "Aggressive"
+      ]
+    },
+    {
+      "id": "anxious",
+      "istilah": "Anxious / Tense",
+      "kategori": "Mood",
+      "singkat": "Gelisah, tegang, tidak nyaman",
+      "panjang": "Rasa tidak aman dan waspada yang terus-menerus. Ritme tidak stabil, disonansi halus, tidak ada resolusi chord yang menenangkan.",
+      "cocok": [
+        "Thriller Cinematic",
+        "Dark Techno",
+        "Experimental"
+      ],
+      "hindari": [
+        "Uplifting",
+        "Relaxed",
+        "Gospel"
+      ]
+    },
+    {
+      "id": "dark",
+      "istilah": "Dark",
+      "kategori": "Mood",
+      "singkat": "Gelap umum, bayangan & ancaman",
+      "panjang": "Nuansa gelap yang menyelimuti seluruh lagu. Minor kuat, tempo lambat-sedang, tekstur berat.",
+      "cocok": [
+        "Dark Pop",
+        "Trap",
+        "Gothic Rock",
+        "Dark Ambient"
+      ],
+      "hindari": [
+        "Bubblegum Pop",
+        "Gospel",
+        "Koplo ceria"
+      ]
+    },
+    {
+      "id": "eerie",
+      "istilah": "Eerie / Haunting",
+      "kategori": "Mood",
+      "singkat": "Menyeramkan halus, ada yang mengintai",
+      "panjang": "Ketidaknyamanan halus yang merayap di kulit. Bukan teriakan horor — lebih ke bisikan yang salah, nada yang sedikit fals, keheningan yang terlalu sunyi.",
+      "cocok": [
+        "Horror Cinematic",
+        "Dark Ambient",
+        "Experimental"
+      ],
+      "hindari": [
+        "Uplifting",
+        "Dance",
+        "Koplo"
+      ]
+    },
+    {
+      "id": "magis",
+      "istilah": "Magis / Mistis",
+      "kategori": "Mood",
+      "singkat": "Dunia lain, keramat, sakral",
+      "panjang": "Berbeda dari Eerie — ini bukan menakutkan, tapi agung dan tidak terjangkau. Seperti masuk hutan keramat atau menyaksikan ritual kuno.",
+      "cocok": [
+        "Gamelan ritual",
+        "Ambient etnik",
+        "World Music"
+      ],
+      "hindari": [
+        "Pop komersial",
+        "EDM modern",
+        "Rock keras"
+      ]
+    },
+    {
+      "id": "hypnotic",
+      "istilah": "Hypnotic / Trance",
+      "kategori": "Mood",
+      "singkat": "Berulang memabukkan, menarik ke trance",
+      "panjang": "Pola yang terus berulang hingga pendengar kehilangan kesadaran waktu. Seperti meditasi atau kesurupan.",
+      "cocok": [
+        "Techno",
+        "Minimal Electronic",
+        "Psych Rock",
+        "Gamelan"
+      ],
+      "hindari": [
+        "Lagu dengan banyak variasi mendadak",
+        "Pop chorus-verse kontras"
+      ]
+    },
+    {
+      "id": "sensual",
+      "istilah": "Sensual / Intimate",
+      "kategori": "Mood",
+      "singkat": "Mesra, intim, hangat dekat",
+      "panjang": "Nuansa kedekatan fisik dan emosional. Tempo lambat, vokal berbisik, bassline yang bergerak malas. Atmosfer kamar yang temaram.",
+      "cocok": [
+        "Contemporary R&B",
+        "Neo-Soul",
+        "Slow Jam",
+        "Bossa Nova"
+      ],
+      "hindari": [
+        "Choir besar",
+        "Metal",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "heroik",
+      "istilah": "Heroik / Agung",
+      "kategori": "Mood",
+      "singkat": "Kebesaran & keagungan berwibawa",
+      "panjang": "Keagungan yang tenang — bukan kemenangan yang meledak, tapi wibawa yang terasa saat raja berjalan masuk ruangan. Gamelan ageng sangat cocok.",
+      "cocok": [
+        "Gamelan ageng",
+        "Cinematic Epic",
+        "Orchestral"
+      ],
+      "hindari": [
+        "Playful",
+        "Lo-Fi",
+        "Bedroom Pop"
+      ]
+    },
+    {
+      "id": "aggressive",
+      "istilah": "Aggressive",
+      "kategori": "Mood",
+      "singkat": "Garang, siap menyerang, meledak",
+      "panjang": "Energi negatif yang dilepaskan keluar dengan kekuatan penuh. Distorsi, tempo cepat, ketukan keras.",
+      "cocok": [
+        "Heavy Metal",
+        "Hard Rock",
+        "Phonk",
+        "Hardcore EDM"
+      ],
+      "hindari": [
+        "Ballad",
+        "Keroncong",
+        "Ambient",
+        "Lo-Fi"
+      ]
+    },
+    {
+      "id": "angry",
+      "istilah": "Angry / Raging",
+      "kategori": "Mood",
+      "singkat": "Marah mendalam, amarah terkontrol",
+      "panjang": "Berbeda dari Aggressive — Angry bisa lebih dingin dan terkontrol. Seperti kemarahan yang diredam tapi terasa dari setiap not.",
+      "cocok": [
+        "Post-Punk",
+        "Grunge",
+        "Dark Hip-Hop",
+        "Industrial"
+      ],
+      "hindari": [
+        "Uplifting",
+        "Gospel",
+        "Danceable Pop"
+      ]
+    },
+    {
+      "id": "hifi",
+      "istilah": "Hi-Fi / Polished",
+      "kategori": "Produksi",
+      "singkat": "Suara studio profesional, bersih tajam",
+      "panjang": "Standar industri musik komersial. Setiap instrumen terdengar jelas di posisinya, tidak ada noise yang tidak disengaja. Seperti lagu yang siap diputar di radio atau Spotify.",
+      "cocok": [
+        "Pop modern",
+        "K-Pop",
+        "EDM komersial",
+        "Dangdut modern"
+      ],
+      "hindari": [
+        "Grunge",
+        "Lo-Fi",
+        "Raw Punk"
+      ]
+    },
+    {
+      "id": "lofi",
+      "istilah": "Lo-Fi / Warm",
+      "kategori": "Produksi",
+      "singkat": "Sengaja hangat & kotor, feel retro",
+      "panjang": "Kualitas rekaman yang disengaja dibuat tidak sempurna. Ada noise, vinyl crackle, sedikit out-of-tune. Bukan gagal — ini estetika.",
+      "cocok": [
+        "Lo-Fi Hip-Hop",
+        "Indie bedroom pop",
+        "Jazz retro"
+      ],
+      "hindari": [
+        "EDM polished",
+        "K-Pop",
+        "Cinematic megah"
+      ]
+    },
+    {
+      "id": "cinematic_prod",
+      "istilah": "Cinematic / Orchestral",
+      "kategori": "Produksi",
+      "singkat": "Megah seperti soundtrack film Hollywood",
+      "panjang": "Skala besar, banyak layer instrumen, dinamika dramatis dari sangat pelan ke sangat keras. Dirancang untuk mendukung visual atau membangkitkan imajinasi sinematik.",
+      "cocok": [
+        "Orchestral Epic",
+        "Game OST",
+        "Trailer musik"
+      ],
+      "hindari": [
+        "Bedroom pop",
+        "Lo-Fi",
+        "Minimalist"
+      ]
+    },
+    {
+      "id": "reverberant",
+      "istilah": "Reverberant / Spacious",
+      "kategori": "Produksi",
+      "singkat": "Gema ruangan besar, terasa luas",
+      "panjang": "Efek seperti bernyanyi di katedral, gua, atau aula besar. Instrumen terasa jauh dan melayang. Memberi kesan megah atau kesepian tergantung genre.",
+      "cocok": [
+        "Post-Rock",
+        "Shoegaze",
+        "Dark Ambient",
+        "Gamelan ritual"
+      ],
+      "hindari": [
+        "Dry Hip-Hop",
+        "Staccato EDM",
+        "Dangdut koplo"
+      ]
+    },
+    {
+      "id": "distorted",
+      "istilah": "Distorted / Fuzz",
+      "kategori": "Produksi",
+      "singkat": "Suara pecah disengaja, gahar",
+      "panjang": "Gelombang suara yang dipotong hingga menghasilkan efek kotor dan agresif. Identik dengan gitar rock/metal. Bukan rusak — ini karakter.",
+      "cocok": [
+        "Heavy Metal",
+        "Grunge",
+        "Hard Rock",
+        "Noise Pop"
+      ],
+      "hindari": [
+        "Bossa Nova",
+        "Keroncong",
+        "Classical",
+        "Gospel"
+      ]
+    },
+    {
+      "id": "ambient_prod",
+      "istilah": "Ambient / Atmospheric",
+      "kategori": "Produksi",
+      "singkat": "Minim ketukan, fokus pada tekstur udara",
+      "panjang": "Musik yang lebih terasa daripada didengar. Tidak ada melodi kuat atau ketukan dominan — hanya lapisan suara yang menciptakan atmosfer.",
+      "cocok": [
+        "Ambient",
+        "Dark Ambient",
+        "Gamelan ritual",
+        "Meditasi"
+      ],
+      "hindari": [
+        "Koplo",
+        "Hard Rock",
+        "EDM dengan beat keras"
+      ]
+    },
+    {
+      "id": "organic",
+      "istilah": "Acoustic / Organic",
+      "kategori": "Produksi",
+      "singkat": "Alat musik asli tanpa proses digital",
+      "panjang": "Suara yang keluar langsung dari instrumen fisik tanpa manipulasi elektronik besar. Hangat, bernapas, sedikit imperfect secara alami. Terasa manusiawi.",
+      "cocok": [
+        "Folk",
+        "Singer-songwriter",
+        "Keroncong",
+        "Campursari"
+      ],
+      "hindari": [
+        "EDM",
+        "Phonk",
+        "Synthwave",
+        "Cyberpunk"
+      ]
+    },
+    {
+      "id": "electronic",
+      "istilah": "Synthesized / Electronic",
+      "kategori": "Produksi",
+      "singkat": "Dominasi instrumen & suara digital komputer",
+      "panjang": "Semua atau sebagian besar suara dibuat secara elektronik. Tidak ada instrumen akustik atau sangat sedikit. Terasa futuristik dan presisi sempurna.",
+      "cocok": [
+        "EDM",
+        "Synthwave",
+        "Phonk",
+        "Electropop",
+        "K-Pop modern"
+      ],
+      "hindari": [
+        "Folk akustik",
+        "Keroncong",
+        "Campursari tradisional"
+      ]
+    },
+    {
+      "id": "sidechain",
+      "istilah": "Sidechained Compression",
+      "kategori": "Produksi",
+      "singkat": "Volume memompa mengikuti kick drum",
+      "panjang": "Efek di mana volume instrumen lain naik-turun mengikuti ketukan kick drum. Menciptakan efek pumping yang khas dance music.",
+      "cocok": [
+        "House",
+        "EDM",
+        "Deep House",
+        "Dance Pop"
+      ],
+      "hindari": [
+        "Ballad",
+        "Acoustic",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "gated",
+      "istilah": "Gated Reverb Drums",
+      "kategori": "Produksi",
+      "singkat": "Gema drum dipotong mendadak, megah retro",
+      "panjang": "Gema besar pada snare drum yang tiba-tiba dipotong — bukan mengalir habis alami. Sangat identik dengan musik pop era 80-an.",
+      "cocok": [
+        "80s Pop",
+        "Synthpop retro",
+        "New Wave",
+        "Power Ballad"
+      ],
+      "hindari": [
+        "EDM modern",
+        "Lo-Fi",
+        "Jazz akustik"
+      ]
+    },
+    {
+      "id": "stadium",
+      "istilah": "Stadium Reverb",
+      "kategori": "Produksi",
+      "singkat": "Gema stadion, megah & jauh",
+      "panjang": "Reverb skala sangat besar yang membuat suara terasa berada di stadion outdoor. Cocok untuk lagu-lagu arena rock, power ballad, dan anthem.",
+      "cocok": [
+        "Power Ballad",
+        "Arena Rock",
+        "Cinematic",
+        "Orchestral Pop"
+      ],
+      "hindari": [
+        "Intimate acoustic",
+        "Lo-Fi",
+        "Jazz kafe"
+      ]
+    },
+    {
+      "id": "smallroom",
+      "istilah": "Small Room / Intimate",
+      "kategori": "Produksi",
+      "singkat": "Reverb kecil, dekat & intim",
+      "panjang": "Efek seperti bernyanyi di ruangan kecil atau studio kamar. Suara terasa dekat dan personal. Kontras dengan stadium reverb.",
+      "cocok": [
+        "Singer-songwriter",
+        "Bedroom Pop",
+        "R&B intim",
+        "Lo-Fi"
+      ],
+      "hindari": [
+        "Cinematic megah",
+        "Arena Rock",
+        "Orchestral"
+      ]
+    },
+    {
+      "id": "cathedral",
+      "istilah": "Cathedral / Hall Reverb",
+      "kategori": "Produksi",
+      "singkat": "Gema katedral, agung & sakral",
+      "panjang": "Reverb panjang yang membuat suara bergema seperti di dalam katedral atau aula konser besar. Terasa sakral dan megah.",
+      "cocok": [
+        "Classical",
+        "Gospel",
+        "Cinematic",
+        "Gamelan ritual"
+      ],
+      "hindari": [
+        "EDM keras",
+        "Phonk",
+        "Koplo"
+      ]
+    },
+    {
+      "id": "major",
+      "istilah": "Major",
+      "kategori": "Tangga Nada",
+      "singkat": "Ceria, terang, resolved",
+      "panjang": "Skala mayor adalah fondasi musik yang terasa 'selesai' dan positif. Chord progression mengalir dengan mulus menuju resolusi yang memuaskan. Paling umum di pop, folk, dan gospel.",
+      "cocok": [
+        "Pop ceria",
+        "Gospel",
+        "Folk",
+        "Dangdut gembira"
+      ],
+      "hindari": [
+        "Dark Ambient",
+        "Doom Metal",
+        "Horror Cinematic"
+      ]
+    },
+    {
+      "id": "lydian",
+      "istilah": "Lydian",
+      "kategori": "Tangga Nada",
+      "singkat": "Megah, mengambang, magical",
+      "panjang": "Major dengan satu nada dinaikkan (#4) yang memberi nuansa magis dan melayang. Sangat khas musik film fantasi dan sci-fi.",
+      "cocok": [
+        "Cinematic Fantasy",
+        "Dreamy Pop",
+        "Film Score"
+      ],
+      "hindari": [
+        "Blues",
+        "Metal",
+        "Dangdut"
+      ]
+    },
+    {
+      "id": "mixolydian",
+      "istilah": "Mixolydian",
+      "kategori": "Tangga Nada",
+      "singkat": "Rock, bluesy, open & bebas",
+      "panjang": "Major dengan nada ke-7 diturunkan. Terasa seperti major tapi ada sesuatu yang 'terbuka' dan tidak sepenuhnya resolved. Sangat khas rock klasik dan folk.",
+      "cocok": [
+        "Classic Rock",
+        "Folk Rock",
+        "Blues",
+        "Celtic"
+      ],
+      "hindari": [
+        "Classical formal",
+        "K-Pop polished"
+      ]
+    },
+    {
+      "id": "naturalminor",
+      "istilah": "Natural Minor",
+      "kategori": "Tangga Nada",
+      "singkat": "Sedih, gelap, emotional",
+      "panjang": "Skala minor paling umum. Terasa sedih dan introspektif tapi tidak terlalu dramatis. Fondasi musik pop, rock, dan R&B yang emosional.",
+      "cocok": [
+        "Pop melankolis",
+        "Rock",
+        "R&B",
+        "Indie Folk",
+        "Dangdut galau"
+      ],
+      "hindari": [
+        "Gospel ceria",
+        "Dangdut pesta",
+        "Euphoric EDM"
+      ]
+    },
+    {
+      "id": "harmonicminor",
+      "istilah": "Harmonic Minor",
+      "kategori": "Tangga Nada",
+      "singkat": "Dramatis, Timur Tengah, teatrikal",
+      "panjang": "Minor dengan nada ke-7 dinaikkan, menciptakan interval augmented yang khas. Terasa dramatis dan eksotis — sangat khas musik Timur Tengah dan musik klasik Eropa.",
+      "cocok": [
+        "Middle Eastern",
+        "Cinematic dramatic",
+        "Metal",
+        "Flamenco"
+      ],
+      "hindari": [
+        "Lo-Fi chill",
+        "Indie Folk biasa"
+      ]
+    },
+    {
+      "id": "dorian",
+      "istilah": "Dorian",
+      "kategori": "Tangga Nada",
+      "singkat": "Jazz, funk, tidak terlalu gelap",
+      "panjang": "Minor dengan nada ke-6 dinaikkan. Terasa lebih 'hopeful' dari minor biasa — gelap tapi ada sinar. Sangat khas jazz, funk, dan soul.",
+      "cocok": [
+        "Jazz",
+        "Funk",
+        "Neo-Soul",
+        "Blues modern"
+      ],
+      "hindari": [
+        "Classical formal",
+        "Dangdut koplo"
+      ]
+    },
+    {
+      "id": "phrygian",
+      "istilah": "Phrygian",
+      "kategori": "Tangga Nada",
+      "singkat": "Spanyol, Flamenco, Metal gelap",
+      "panjang": "Minor dengan nada ke-2 diturunkan. Sangat eksotis dan 'asing'. Khas musik Spanyol/Flamenco dan Metal gelap.",
+      "cocok": [
+        "Flamenco",
+        "Spanish Guitar",
+        "Heavy Metal",
+        "Dark Cinematic"
+      ],
+      "hindari": [
+        "Pop ceria",
+        "Gospel",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "pentatonic",
+      "istilah": "Pentatonic",
+      "kategori": "Tangga Nada",
+      "singkat": "Asia, Folk, Blues, universal",
+      "panjang": "Hanya 5 nada, sangat mudah diingat dan hampir tidak pernah terdengar 'salah'. Fondasi musik Asia Timur, blues, dan folk di seluruh dunia.",
+      "cocok": [
+        "Blues",
+        "Folk",
+        "Asian Music",
+        "Rock solo gitar"
+      ],
+      "hindari": [
+        "Classical Western formal"
+      ]
+    },
+    {
+      "id": "slendro",
+      "istilah": "Slendro",
+      "kategori": "Tangga Nada",
+      "singkat": "Gamelan Jawa, magis, 5 nada",
+      "panjang": "Sistem nada 5-tone khas gamelan Jawa. Intervalnya tidak sama dengan skala Barat — menciptakan nuansa yang sangat khas Jawa dan mistis.",
+      "cocok": [
+        "Gamelan Jawa",
+        "Campursari",
+        "Cinematic Etnik"
+      ],
+      "hindari": [
+        "Western Classical",
+        "EDM modern tanpa etnik"
+      ]
+    },
+    {
+      "id": "pelog",
+      "istilah": "Pelog",
+      "kategori": "Tangga Nada",
+      "singkat": "Gamelan Bali, mistis, 7 nada",
+      "panjang": "Sistem nada 7-tone khas gamelan Bali. Lebih kompleks dari Slendro dengan interval yang tidak rata — menciptakan nuansa ritual dan sakral Bali.",
+      "cocok": [
+        "Gamelan Bali",
+        "Ritual Ambient",
+        "Cinematic Etnik Bali"
+      ],
+      "hindari": [
+        "Western Pop",
+        "EDM modern"
+      ]
+    },
+    {
+      "id": "hijaz",
+      "istilah": "Hijaz",
+      "kategori": "Tangga Nada",
+      "singkat": "Arab, Qasidah, Timur Tengah",
+      "panjang": "Maqam khas musik Arab dengan interval augmented yang sangat khas. Langsung membawa nuansa Timur Tengah, qasidah, dan musik religi Islam.",
+      "cocok": [
+        "Qasidah",
+        "Middle Eastern",
+        "World Music Arab"
+      ],
+      "hindari": [
+        "Western Pop biasa",
+        "EDM",
+        "Rock"
+      ]
+    },
+    {
+      "id": "femalesolo",
+      "istilah": "Female Solo Vocal",
+      "kategori": "Vokal",
+      "singkat": "Satu penyanyi wanita sebagai vokal utama",
+      "panjang": "Satu suara wanita mendominasi lagu tanpa vokal pria. Range bisa dari alto rendah hingga soprano tinggi tergantung pilihan lain.",
+      "cocok": [
+        "Pop",
+        "R&B",
+        "Dangdut",
+        "Tembang Sunda",
+        "Keroncong"
+      ],
+      "hindari": []
+    },
+    {
+      "id": "malesolo",
+      "istilah": "Male Solo Vocal",
+      "kategori": "Vokal",
+      "singkat": "Satu penyanyi pria sebagai vokal utama",
+      "panjang": "Satu suara pria mendominasi lagu. Bisa tenor tinggi untuk rock atau bass rendah untuk jazz dan blues.",
+      "cocok": [
+        "Rock",
+        "Blues",
+        "Jazz",
+        "Campursari",
+        "Qasidah"
+      ],
+      "hindari": []
+    },
+    {
+      "id": "duet",
+      "istilah": "Duet Male / Female",
+      "kategori": "Vokal",
+      "singkat": "Dua penyanyi pria dan wanita bersama",
+      "panjang": "Dua suara berbeda gender yang saling melengkapi. Bisa bergantian, bisa harmoni, bisa dialog. Memberi dimensi percakapan atau romansa.",
+      "cocok": [
+        "Pop romantis",
+        "Dangdut duet",
+        "R&B",
+        "Campursari"
+      ],
+      "hindari": []
+    },
+    {
+      "id": "choir",
+      "istilah": "Choir / Backing Vocals",
+      "kategori": "Vokal",
+      "singkat": "Banyak suara berlapis sebagai paduan",
+      "panjang": "Kelompok suara yang memperkuat atau menemani vokal utama. Memberi kesan besar, ramai, dan komunal.",
+      "cocok": [
+        "Gospel",
+        "Cinematic",
+        "Koplo rame",
+        "Anthem"
+      ],
+      "hindari": [
+        "Intimate Lo-Fi",
+        "Whispering solo"
+      ]
+    },
+    {
+      "id": "soprano",
+      "istilah": "Soprano",
+      "kategori": "Vokal",
+      "singkat": "Suara wanita paling tinggi, nyaring & ringan",
+      "panjang": "Register vokal wanita tertinggi. Terdengar cemerlang dan melayang. Sangat cocok untuk melodi yang naik tinggi dan ekspresi emosi yang intens.",
+      "cocok": [
+        "Opera",
+        "Classical",
+        "Ballad dramatis",
+        "Tembang Sunda"
+      ],
+      "hindari": [
+        "Dark Hip-Hop",
+        "Heavy Metal death vocal"
+      ]
+    },
+    {
+      "id": "tenor",
+      "istilah": "Tenor",
+      "kategori": "Vokal",
+      "singkat": "Suara pria tinggi, cerah & kuat",
+      "panjang": "Register vokal pria tertinggi yang umum. Memberi kesan cerah dan kuat sekaligus. Standar untuk pop, rock, dan musik klasik pria.",
+      "cocok": [
+        "Pop",
+        "Rock",
+        "Opera",
+        "R&B",
+        "Campursari"
+      ],
+      "hindari": [
+        "Dark Doom Metal",
+        "Ultra bass deep"
+      ]
+    },
+    {
+      "id": "bass_vocal",
+      "istilah": "Bass Vocal",
+      "kategori": "Vokal",
+      "singkat": "Suara pria sangat rendah, berat & dalam",
+      "panjang": "Register paling rendah dalam vokal manusia. Memberi kesan berwibawa, misterius, atau menakutkan.",
+      "cocok": [
+        "Gospel",
+        "Blues",
+        "Jazz",
+        "Spoken word",
+        "Dark Cinematic"
+      ],
+      "hindari": [
+        "Cute Pop",
+        "Soprano-range melody"
+      ]
+    },
+    {
+      "id": "soulful",
+      "istilah": "Soulful / Expressive",
+      "kategori": "Vokal",
+      "singkat": "Penuh penghayatan & emosi mendalam",
+      "panjang": "Cara bernyanyi yang menuangkan emosi ke setiap not. Bukan tentang teknik sempurna — tentang rasa yang tersampaikan.",
+      "cocok": [
+        "R&B",
+        "Soul",
+        "Gospel",
+        "Neo-Soul",
+        "Blues"
+      ],
+      "hindari": [
+        "Autotuned flat",
+        "Robotic vocal",
+        "Death Metal"
+      ]
+    },
+    {
+      "id": "raspy",
+      "istilah": "Raspy / Gritty",
+      "kategori": "Vokal",
+      "singkat": "Serak-serak basah, kasar & berkarakter",
+      "panjang": "Kualitas suara yang tidak mulus — ada gesekan dan kekasaran. Memberi kesan otentik dan emosional.",
+      "cocok": [
+        "Rock",
+        "Blues",
+        "Grunge",
+        "Country",
+        "Indie Folk"
+      ],
+      "hindari": [
+        "Classical opera",
+        "Autotuned pop polished"
+      ]
+    },
+    {
+      "id": "breathy",
+      "istilah": "Breathy / Whisper",
+      "kategori": "Vokal",
+      "singkat": "Berbisik intim, napas terdengar jelas",
+      "panjang": "Suara yang lebih banyak napas dari nada. Terasa sangat dekat ke telinga pendengar, intim dan personal.",
+      "cocok": [
+        "R&B intim",
+        "Lo-Fi",
+        "Dream Pop",
+        "Sensual Jazz"
+      ],
+      "hindari": [
+        "Choir besar",
+        "Rock keras",
+        "Koplo energik"
+      ]
+    },
+    {
+      "id": "operatic",
+      "istilah": "Operatic",
+      "kategori": "Vokal",
+      "singkat": "Gaya megah & dramatis ala opera klasik",
+      "panjang": "Teknik vokal opera dengan vibrato besar, proyeksi kuat, dan ornamen dramatis. Terasa megah dan teaterikal.",
+      "cocok": [
+        "Classical",
+        "Orchestral Epic",
+        "Neoclassical",
+        "Opera EDM fusion"
+      ],
+      "hindari": [
+        "Lo-Fi",
+        "Bedroom Pop",
+        "Trap biasa"
+      ]
+    },
+    {
+      "id": "autotuned",
+      "istilah": "Autotuned / Vocoder",
+      "kategori": "Vokal",
+      "singkat": "Vokal dimodifikasi elektronik komputer",
+      "panjang": "Pitch vokal dikoreksi atau dimanipulasi secara digital. Bisa halus hingga tidak terdengar, atau ekstrem hingga terdengar robotic.",
+      "cocok": [
+        "Pop modern",
+        "Trap",
+        "EDM",
+        "K-Pop",
+        "Future R&B"
+      ],
+      "hindari": [
+        "Acoustic Folk",
+        "Keroncong tradisional",
+        "Blues otentik"
+      ]
+    },
+    {
+      "id": "vocalchops",
+      "istilah": "Vocal Chops / Memphis",
+      "kategori": "Vokal",
+      "singkat": "Vokal dipotong-potong jadi pola ritmis",
+      "panjang": "Sampel vokal yang dipotong pendek-pendek dan disusun ulang sebagai instrumen ritmis. Sangat identik dengan musik Phonk dan Memphis Rap.",
+      "cocok": [
+        "Phonk",
+        "Trap",
+        "EDM eksperimental",
+        "Lo-Fi Hip-Hop"
+      ],
+      "hindari": [
+        "Ballad",
+        "Keroncong",
+        "Acoustic apapun"
+      ]
+    },
+    {
+      "id": "melismatic",
+      "istilah": "Melismatic / Cengkok",
+      "kategori": "Vokal",
+      "singkat": "Satu suku kata dinyanyikan meliuk banyak nada",
+      "panjang": "Teknik menghiasi melodi dengan rangkaian nada cepat pada satu kata. Di musik Jawa-Sunda disebut cengkok.",
+      "cocok": [
+        "R&B",
+        "Gospel",
+        "Dangdut",
+        "Tembang Sunda",
+        "Qasidah"
+      ],
+      "hindari": [
+        "Punk Rock",
+        "Staccato EDM",
+        "Spoken Word"
+      ]
+    },
+    {
+      "id": "senggakan",
+      "istilah": "Senggakan Ad-libs",
+      "kategori": "Vokal",
+      "singkat": "Teriakan/seruan vokal latar khas Koplo",
+      "panjang": "Seruan spontan dari penyanyi latar di sela-sela vokal utama. Khas dangdut koplo — teriakan seperti Hoo! E! Yoo! yang memberi energi tambahan.",
+      "cocok": [
+        "Dangdut Koplo",
+        "Jaipongan",
+        "Campursari rame"
+      ],
+      "hindari": [
+        "Ballad intim",
+        "Classical",
+        "Lo-Fi chill"
+      ]
+    },
+    {
+      "id": "growl",
+      "istilah": "Growl / Death Growl",
+      "kategori": "Vokal",
+      "singkat": "Geraman ekstrem khas Metal berat",
+      "panjang": "Teknik vokal di mana suara dihasilkan dari tenggorokan dengan cara yang agresif. Bukan tentang melodi — tentang intensitas dan agresi.",
+      "cocok": [
+        "Death Metal",
+        "Deathcore",
+        "Black Metal",
+        "Metalcore"
+      ],
+      "hindari": [
+        "Pop",
+        "Dangdut",
+        "Jazz",
+        "semua genre non-metal"
+      ]
+    },
+    {
+      "id": "spokenword",
+      "istilah": "Spoken Word / Narration",
+      "kategori": "Vokal",
+      "singkat": "Berbicara biasa sebagai bagian lagu",
+      "panjang": "Vokal yang tidak bernyanyi melainkan berbicara atau bernarasi. Bisa sebagai intro dramatis, interlude, atau keseluruhan lagu.",
+      "cocok": [
+        "Hip-Hop",
+        "Spoken Word Poetry",
+        "Cinematic",
+        "Experimental"
+      ],
+      "hindari": [
+        "Dance Pop",
+        "EDM",
+        "Koplo"
+      ]
+    },
+    {
+      "id": "novocal",
+      "istilah": "No Vocals / Instrumental",
+      "kategori": "Vokal",
+      "singkat": "Tidak ada vokal sama sekali",
+      "panjang": "Lagu murni instrumental tanpa suara manusia. Cocok untuk musik latar, meditasi, atau ketika instrumen menjadi pusat perhatian.",
+      "cocok": [
+        "Ambient",
+        "Cinematic",
+        "Gamelan",
+        "Lo-Fi instrumental"
+      ],
+      "hindari": []
+    },
+    {
+      "id": "sub_fortissimo",
+      "istilah": "Fortissimo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Dimainkan sekeras-kerasnya (ff)",
+      "panjang": "Istilah dinamika musik klasik untuk volume maksimum. Seluruh instrumen bermain dengan kekuatan penuh. Biasanya muncul di puncak klimaks lagu.",
+      "cocok": [
+        "Drop",
+        "Chorus puncak",
+        "Final Climax"
+      ],
+      "hindari": [
+        "Intro halus",
+        "Breakdown",
+        "Pianissimo bagian"
+      ]
+    },
+    {
+      "id": "sub_pianissimo",
+      "istilah": "Pianissimo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Dimainkan selembut-lembutnya (pp)",
+      "panjang": "Kebalikan Fortissimo — volume paling minimum. Hampir berbisik. Sangat efektif sebagai kontras setelah bagian keras.",
+      "cocok": [
+        "Breakdown",
+        "Intro mistis",
+        "Contrast section"
+      ],
+      "hindari": [
+        "Drop utama",
+        "Maximum energy section"
+      ]
+    },
+    {
+      "id": "sub_crescendo",
+      "istilah": "Crescendo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Pelan-pelan semakin keras",
+      "panjang": "Volume dan intensitas yang naik secara bertahap. Sangat efektif di Pre-Chorus atau Build-up sebelum Drop.",
+      "cocok": [
+        "Pre-Chorus",
+        "Build-up",
+        "Rising section"
+      ],
+      "hindari": [
+        "Sudden drop",
+        "Static energy section"
+      ]
+    },
+    {
+      "id": "sub_decrescendo",
+      "istilah": "Decrescendo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Pelan-pelan semakin lembut",
+      "panjang": "Intensitas yang turun bertahap. Memberi kesan menghilang atau menyerah. Sangat efektif di Outro.",
+      "cocok": [
+        "Outro",
+        "Post-Chorus turun",
+        "Fade ending"
+      ],
+      "hindari": [
+        "Build-up",
+        "Rising energy"
+      ]
+    },
+    {
+      "id": "sub_swell",
+      "istilah": "Swell",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Membesar cepat lalu mengecil seperti ombak",
+      "panjang": "Volume yang tiba-tiba membesar lalu kembali mengecil dalam satu gerakan cepat. Seperti ombak yang datang dan pergi.",
+      "cocok": [
+        "Transisi",
+        "Interlude dramatis",
+        "Chorus intro"
+      ],
+      "hindari": [
+        "Static groove section"
+      ]
+    },
+    {
+      "id": "sub_staccato",
+      "istilah": "Staccato",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Nada pendek terputus-putus tajam",
+      "panjang": "Setiap not dimainkan sangat pendek dan langsung diputus. Memberi kesan tegas, mesin, atau playful tergantung konteks.",
+      "cocok": [
+        "Build-up tegang",
+        "EDM glitchy",
+        "Quirky section"
+      ],
+      "hindari": [
+        "Legato ballad",
+        "Smooth jazz flowing"
+      ]
+    },
+    {
+      "id": "sub_legato",
+      "istilah": "Legato",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Nada panjang mengalir sambung-menyambung",
+      "panjang": "Kebalikan Staccato — setiap not disambung halus ke not berikutnya tanpa jeda. Seperti suara yang mengalir seperti air.",
+      "cocok": [
+        "Ballad",
+        "Tembang Sunda",
+        "Smooth Jazz",
+        "Romantic section"
+      ],
+      "hindari": [
+        "Staccato EDM",
+        "Aggressive Metal",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "sub_max_energy",
+      "istilah": "Maximum Energy",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Energi penuh, semua instrumen masuk",
+      "panjang": "Semua elemen musik hadir di volume dan intensitas tertinggi. Tidak ada yang ditahan. Momen paling spektakuler dalam lagu.",
+      "cocok": [
+        "Drop utama",
+        "Final Chorus",
+        "Climax"
+      ],
+      "hindari": [
+        "Intro",
+        "Breakdown",
+        "Outro fade"
+      ]
+    },
+    {
+      "id": "sub_half_time",
+      "istilah": "Half-time Drum Pattern",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Drum melambat setengah tempo, terasa berat",
+      "panjang": "Snare drum dipindah ke ketukan 3 saja sehingga terasa setengah tempo. Lagu terasa tiba-tiba melambat dan lebih berat meski BPM tidak berubah.",
+      "cocok": [
+        "Post-Chorus",
+        "Breakdown",
+        "Bridge berat"
+      ],
+      "hindari": [
+        "Build-up cepat",
+        "Four-on-the-floor section"
+      ]
+    },
+    {
+      "id": "sub_beat_cut",
+      "istilah": "Sudden Beat Cut",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Semua instrumen berhenti mendadak",
+      "panjang": "Semua suara terhenti secara tiba-tiba — tidak ada fade, tidak ada diminuendo. Hening total yang mengejutkan.",
+      "cocok": [
+        "Breakdown awal",
+        "Dramatic pause",
+        "Pre-final section"
+      ],
+      "hindari": [
+        "Smooth transition",
+        "Fade ending"
+      ]
+    },
+    {
+      "id": "sub_beat_drop",
+      "istilah": "Beat Drop",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Ledakan instrumen utama masuk tiba-tiba",
+      "panjang": "Momen ketika semua instrumen masuk sekaligus setelah bagian tenang atau build-up. Puncak ketegangan yang akhirnya dilepaskan.",
+      "cocok": [
+        "Drop section",
+        "Main Chorus",
+        "Climax"
+      ],
+      "hindari": [
+        "Pianissimo section",
+        "Fade out"
+      ]
+    },
+    {
+      "id": "sub_808_kick",
+      "istilah": "Heavy 808 Bass Kick",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Kick drum 808 super berat di dada",
+      "panjang": "Kick drum dari Roland TR-808 yang diperkuat hingga terasa secara fisik di dada pendengar. Fondasi Hip-Hop, Trap, dan EDM modern.",
+      "cocok": [
+        "Trap Drop",
+        "Hip-Hop verse",
+        "EDM breakdown",
+        "Phonk"
+      ],
+      "hindari": [
+        "Acoustic Folk",
+        "Keroncong",
+        "Classical"
+      ]
+    },
+    {
+      "id": "sub_wall_of_sound",
+      "istilah": "Wall of Sound",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Semua frekuensi diisi, suara masif",
+      "panjang": "Teknik produksi di mana seluruh rentang frekuensi diisi dengan instrumen berlapis-lapis. Terdengar sangat besar dan menyelimuti pendengar.",
+      "cocok": [
+        "Chorus klimaks",
+        "Power Ballad",
+        "Arena Rock",
+        "Cinematic"
+      ],
+      "hindari": [
+        "Minimalist section",
+        "Intimate acoustic"
+      ]
+    },
+    {
+      "id": "sub_anthemic",
+      "istilah": "Anthemic Energy",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Energi anthem, mengajak semua ikut",
+      "panjang": "Kualitas musik yang membuat orang ingin bernyanyi bersama atau mengangkat tangan. Terasa komunal dan menyatukan.",
+      "cocok": [
+        "Chorus utama",
+        "Stadium Rock",
+        "Pop Anthem",
+        "Gospel"
+      ],
+      "hindari": [
+        "Intimate solo",
+        "Dark Ambient",
+        "Experimental"
+      ]
+    },
+    {
+      "id": "sub_glitch_vocal",
+      "istilah": "Glitch Vocals",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Vokal distorsi digital, stuttering",
+      "panjang": "Efek elektronik yang membuat vokal terdengar seperti file audio yang corrupt — stuttering, repeat cepat, pitch shift mendadak.",
+      "cocok": [
+        "Experimental EDM",
+        "Future Bass",
+        "Cyberpunk",
+        "Post-Chorus"
+      ],
+      "hindari": [
+        "Classical",
+        "Gospel natural",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "sub_echo_vocal",
+      "istilah": "Echoing Vocals",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Vokal bergema berulang menghilang",
+      "panjang": "Efek gema pada vokal yang membuat suara terulang semakin lembut hingga menghilang. Memberi kesan jarak, kesepian, atau kemegahan.",
+      "cocok": [
+        "Outro",
+        "Breakdown spiritual",
+        "Dreamy section"
+      ],
+      "hindari": [
+        "Staccato EDM",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "sub_cengkok",
+      "istilah": "Cengkok Vocal Ornament",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Ornamen vokal meliuk khas Jawa-Sunda",
+      "panjang": "Hiasan melodi vokal khas musik Jawa dan Sunda — satu kata dinyanyikan meliuk melewati beberapa nada. Tanda keahlian vokal tradisional.",
+      "cocok": [
+        "Tembang Sunda",
+        "Dangdut",
+        "Campursari",
+        "Indie Etnik"
+      ],
+      "hindari": [
+        "Death Metal",
+        "EDM robotic",
+        "Staccato section"
+      ]
+    },
+    {
+      "id": "sub_senggakan",
+      "istilah": "Senggakan Ad-libs",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Teriakan spontan vokal latar berenergi",
+      "panjang": "Seruan spontan dari penyanyi atau backing vocalist di sela-sela melodi utama. Di Barat disebut ad-lib, di musik Koplo disebut senggakan.",
+      "cocok": [
+        "Koplo Chorus",
+        "Gospel",
+        "R&B soulful",
+        "Jaipongan"
+      ],
+      "hindari": [
+        "Lo-Fi intim",
+        "Classical formal",
+        "Ambient"
+      ]
+    },
+    {
+      "id": "sub_adlib",
+      "istilah": "Ad-lib / Senggakan",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Improvisasi vokal bebas di sela melodi",
+      "panjang": "Vokal tambahan yang tidak tertulis di notasi — improvisasi spontan. Memberi kesan hidup dan ekspresif.",
+      "cocok": [
+        "Gospel",
+        "R&B",
+        "Soul",
+        "Koplo Post-Chorus"
+      ],
+      "hindari": [
+        "Classical ketat",
+        "Minimalist ambient"
+      ]
+    },
+    {
+      "id": "sub_whisper",
+      "istilah": "Only Whispering Vocals",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Hanya vokal berbisik tanpa instrumen keras",
+      "panjang": "Momen di mana semua instrumen turun drastis atau hilang, menyisakan hanya vokal yang berbisik. Sangat intim dan dramatis.",
+      "cocok": [
+        "Breakdown intim",
+        "Bridge dramatis",
+        "Intro misterius"
+      ],
+      "hindari": [
+        "Maximum energy section",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "sub_vocal_chops",
+      "istilah": "Memphis Vocal Chops",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Vokal dipotong jadi ornamen ritmis Phonk",
+      "panjang": "Teknik khas Memphis Rap dan Phonk — sampel vokal pendek dipotong-potong dan disusun ulang sebagai pola ritmis.",
+      "cocok": [
+        "Phonk",
+        "Trap",
+        "Dark Hip-Hop",
+        "EDM glitch"
+      ],
+      "hindari": [
+        "Ballad",
+        "Keroncong",
+        "Acoustic apapun"
+      ]
+    },
+    {
+      "id": "sub_reverb",
+      "istilah": "Spacious Reverb",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Gema ruang yang sangat luas",
+      "panjang": "Efek reverb besar yang membuat suara terasa berada di ruangan sangat besar. Berbeda dari Reverberant biasa — ini lebih ekstrem dan dramatis.",
+      "cocok": [
+        "Outro spiritual",
+        "Breakdown dramatis",
+        "Ambient section"
+      ],
+      "hindari": [
+        "Dry Hip-Hop",
+        "Staccato Koplo",
+        "EDM padat"
+      ]
+    },
+    {
+      "id": "sub_sidechain",
+      "istilah": "Sidechained Compression",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Volume memompa ikuti kick drum",
+      "panjang": "Volume instrumen tertentu turun otomatis setiap kick drum memukul, lalu naik kembali. Menciptakan efek pumping khas dance music.",
+      "cocok": [
+        "House section",
+        "EDM groove",
+        "Dance Pop"
+      ],
+      "hindari": [
+        "Acoustic section",
+        "Ballad",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "sub_fade_in",
+      "istilah": "Fading In",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Volume naik perlahan dari keheningan",
+      "panjang": "Lagu atau section dimulai dari senyap lalu volume naik bertahap. Memberi kesan sesuatu muncul dari kejauhan.",
+      "cocok": [
+        "Intro",
+        "Setelah Breakdown",
+        "Ambient opening"
+      ],
+      "hindari": [
+        "Sudden drop",
+        "Beat Cut section"
+      ]
+    },
+    {
+      "id": "sub_fade_out",
+      "istilah": "Fading Echo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Suara bergema sambil mengecil menghilang",
+      "panjang": "Kombinasi echo dan fade out — suara terakhir bergema berulang sambil semakin pelan hingga sunyi total. Cara klasik untuk mengakhiri lagu.",
+      "cocok": [
+        "Outro",
+        "Final section",
+        "Dreamy ending"
+      ],
+      "hindari": [
+        "Sudden stop",
+        "Big Finish abrupt"
+      ]
+    },
+    {
+      "id": "sub_sudden_stop",
+      "istilah": "Sudden Stop on Last Beat",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Berhenti mendadak di ketukan terakhir",
+      "panjang": "Lagu berhenti total secara tiba-tiba tepat di ketukan terakhir tanpa fade atau echo. Efek sangat dramatis yang membuat pendengar tersentak.",
+      "cocok": [
+        "Big Finish",
+        "Climax end",
+        "Dramatic outro"
+      ],
+      "hindari": [
+        "Fade ending",
+        "Smooth outro"
+      ]
+    },
+    {
+      "id": "sub_vinyl",
+      "istilah": "Vinyl Crackle",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Suara kresek piringan hitam jadul",
+      "panjang": "Noise khas piringan hitam yang sudah tua. Bukan kerusakan — ini estetika Lo-Fi yang disengaja untuk memberi nuansa hangat dan nostalgik.",
+      "cocok": [
+        "Lo-Fi",
+        "Retro Jazz",
+        "Nostalgic section",
+        "Chill Hip-Hop"
+      ],
+      "hindari": [
+        "Hi-Fi polished",
+        "Futuristic EDM",
+        "Modern Pop bersih"
+      ]
+    },
+    {
+      "id": "sub_atm_fade",
+      "istilah": "Atmospheric Fade",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Instrumen menghilang satu per satu",
+      "panjang": "Cara mengakhiri lagu di mana instrumen keluar satu per satu hingga tersisa hanya satu suara atau hening. Berbeda dari fade out biasa yang lebih gradual.",
+      "cocok": [
+        "Outro cinematic",
+        "Ambient ending",
+        "Post-rock"
+      ],
+      "hindari": [
+        "Sudden stop",
+        "EDM hard ending"
+      ]
+    },
+    {
+      "id": "sub_lowpass",
+      "istilah": "Low-pass Filtered",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Frekuensi tinggi dipangkas, suara teredam",
+      "panjang": "Filter audio yang memangkas semua frekuensi tinggi, membuat suara terdengar seperti dari balik tembok atau di bawah air.",
+      "cocok": [
+        "Intro yang build",
+        "Dreamy section",
+        "Transition"
+      ],
+      "hindari": [
+        "Maximum clarity section",
+        "Hi-Fi full open"
+      ]
+    },
+    {
+      "id": "sub_atmospheric_pad",
+      "istilah": "Atmospheric Pad",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Lapisan synth mengambang sebagai latar",
+      "panjang": "Suara synthesizer yang panjang, lembut, dan mengambang yang mengisi ruang harmoni di belakang melodi utama. Tidak ada ritme — hanya tekstur.",
+      "cocok": [
+        "Intro",
+        "Interlude",
+        "Ambient section",
+        "Dreamy part"
+      ],
+      "hindari": [
+        "Staccato EDM",
+        "Koplo keras",
+        "Metal riff"
+      ]
+    },
+    {
+      "id": "sub_modulation",
+      "istilah": "Modulation",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Pindah nada dasar, biasanya naik",
+      "panjang": "Perubahan kunci/tonalitas lagu — seluruh lagu pindah ke nada dasar baru. Biasanya naik satu atau dua semitone untuk efek dramatis.",
+      "cocok": [
+        "Final Chorus",
+        "Bridge ke climax",
+        "Dramatic turn"
+      ],
+      "hindari": [
+        "Verse biasa",
+        "Static section"
+      ]
+    },
+    {
+      "id": "sub_key_change",
+      "istilah": "Key Change",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Perubahan kunci untuk efek dramatis",
+      "panjang": "Perpindahan nada dasar. Biasanya digunakan di chorus terakhir untuk memberi kesan lagu naik level. Trik favorit lagu pop anthemic.",
+      "cocok": [
+        "Final Chorus",
+        "Climax",
+        "Big finish"
+      ],
+      "hindari": [
+        "Intro",
+        "Verse pertama"
+      ]
+    },
+    {
+      "id": "sub_rising_energy",
+      "istilah": "Rising Energy",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Energi terus naik menuju puncak",
+      "panjang": "Intensitas yang meningkat bertahap — lebih instrumen masuk, volume naik, ketegangan membangun. Pendengar merasakan akan ada sesuatu yang besar.",
+      "cocok": [
+        "Pre-Chorus",
+        "Build-up",
+        "Bridge menuju final chorus"
+      ],
+      "hindari": [
+        "Static section",
+        "Post-drop cool down"
+      ]
+    },
+    {
+      "id": "sub_low_energy",
+      "istilah": "Low Energy",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Energi minimal, tenang & sederhana",
+      "panjang": "Hanya beberapa instrumen yang bermain dengan volume rendah. Memberi napas pada lagu dan kontras dari bagian energi tinggi.",
+      "cocok": [
+        "Verse pertama",
+        "Breakdown",
+        "Intro"
+      ],
+      "hindari": [
+        "Drop",
+        "Maximum chorus"
+      ]
+    },
+    {
+      "id": "sub_driving_perc",
+      "istilah": "Driving Percussion",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Perkusi maju terus tanpa henti",
+      "panjang": "Ketukan perkusi yang konstan dan tidak pernah berhenti. Mendorong lagu terus maju seperti mesin. Memberi energi dan momentum yang tidak bisa dihentikan.",
+      "cocok": [
+        "Drop aktif",
+        "Chorus energik",
+        "Fast section"
+      ],
+      "hindari": [
+        "Breakdown",
+        "Pianissimo",
+        "Ambient section"
+      ]
+    },
+    {
+      "id": "sub_snare_roll",
+      "istilah": "Rapid-fire Snare Rolls",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Snare drum berputar sangat cepat",
+      "panjang": "Ketukan snare drum yang dimainkan sangat cepat berurutan. Biasanya digunakan untuk membangun ketegangan sebelum Drop atau Chorus besar.",
+      "cocok": [
+        "Pre-Drop Build-up",
+        "Military March",
+        "EDM transition"
+      ],
+      "hindari": [
+        "Ballad",
+        "Slow Jazz",
+        "Ambient"
+      ]
+    },
+    {
+      "id": "sub_only_bass",
+      "istilah": "Only Bass Remains",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Semua instrumen hilang kecuali bass",
+      "panjang": "Momen di mana semua instrumen tiba-tiba diam, menyisakan hanya bass yang berjalan sendirian. Efek sangat dramatis.",
+      "cocok": [
+        "Breakdown klimaks",
+        "Pre-final section"
+      ],
+      "hindari": [
+        "Tutti section",
+        "Maximum energy"
+      ]
+    },
+    {
+      "id": "sub_subbass_riser",
+      "istilah": "Sub-bass Riser",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Bass rendah naik perlahan membangun tensi",
+      "panjang": "Efek bass frekuensi sangat rendah yang naik secara bertahap, menciptakan tekanan yang semakin besar sebelum Drop atau Chorus. Sangat terasa secara fisik.",
+      "cocok": [
+        "Build-up",
+        "Pre-Drop",
+        "Pre-Chorus EDM"
+      ],
+      "hindari": [
+        "Acoustic section",
+        "Pianissimo",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "sub_count_in",
+      "istilah": "Count-in",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Hitungan masuk 1-2-3-4",
+      "panjang": "Hitungan verbal atau ketukan stik drum sebelum lagu dimulai. Sangat membantu untuk sinkronisasi visual di CapCut atau video editing.",
+      "cocok": [
+        "Rock",
+        "Pop",
+        "Intro untuk video edit",
+        "CapCut template"
+      ],
+      "hindari": [
+        "Ambient fade-in",
+        "Atmospheric intro"
+      ]
+    },
+    {
+      "id": "sub_rhythmic_plucks",
+      "istilah": "Rhythmic Plucks",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Petikan ritmis sebagai groove pengisi",
+      "panjang": "Petikan gitar atau instrumen petik lainnya dalam pola ritmis yang berulang. Mengisi ruang harmonik sambil menjaga groove tanpa mendominasi.",
+      "cocok": [
+        "Verse acoustic",
+        "Indie Folk",
+        "Bossa Nova",
+        "Interlude"
+      ],
+      "hindari": [
+        "Maximum energy Chorus",
+        "808 Bass section"
+      ]
+    },
+    {
+      "id": "sub_palm_muted",
+      "istilah": "Palm Muted Guitar",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Gitar teredam telapak tangan, bunyi ketat",
+      "panjang": "Teknik gitar di mana telapak tangan menyentuh senar dekat bridge menghasilkan suara pendek dan ketat. Khas rock dan metal untuk verse yang menahan energi.",
+      "cocok": [
+        "Rock Verse",
+        "Metal riff",
+        "Grunge",
+        "Nu Metal"
+      ],
+      "hindari": [
+        "Clean jazz",
+        "Classical",
+        "Acoustic folk"
+      ]
+    },
+    {
+      "id": "sub_guitar_solo",
+      "istilah": "Guitar Solo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Solo gitar elektrik mengambil alih melodi",
+      "panjang": "Bagian di mana gitar elektrik memainkan melodi improvisasi atau komposisi sebagai pusat perhatian. Emosi tertinggi instrumen dalam rock.",
+      "cocok": [
+        "Rock Solo",
+        "Classic Rock",
+        "Metal",
+        "Blues",
+        "Power Ballad"
+      ],
+      "hindari": [
+        "EDM tanpa gitar",
+        "Ambient",
+        "Gamelan tanpa fusion"
+      ]
+    },
+    {
+      "id": "sub_synth_solo",
+      "istilah": "Synth Solo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Solo synthesizer mengambil alih melodi",
+      "panjang": "Synthesizer memainkan melodi solo yang ekspresif sebagai pusat perhatian. Khas Synthwave, EDM, dan musik elektronik yang melodis.",
+      "cocok": [
+        "Synthwave",
+        "Electropop",
+        "EDM melodic",
+        "80s Retro"
+      ],
+      "hindari": [
+        "Acoustic Folk",
+        "Classical",
+        "Gamelan tradisional"
+      ]
+    },
+    {
+      "id": "sub_kendang_solo",
+      "istilah": "Kendang Solo",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Solo kendang sebagai pusat perhatian",
+      "panjang": "Kendang memainkan pola solo kompleks sebagai showcase. Menunjukkan kemampuan perkusi tradisional dan memberi momen dramatis dalam lagu etnik.",
+      "cocok": [
+        "Gamelan Fusion",
+        "Jaipongan",
+        "Campursari",
+        "Etnik Fusion"
+      ],
+      "hindari": [
+        "Western Classical",
+        "EDM",
+        "Ballad barat"
+      ]
+    },
+    {
+      "id": "sub_final_climax",
+      "istilah": "Final Climax",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Puncak tertinggi lagu, semua keluar",
+      "panjang": "Momen paling megah dalam keseluruhan lagu — semua elemen hadir, dinamika maksimum, emosi puncak. Hanya boleh ada satu dalam satu lagu.",
+      "cocok": [
+        "Outro Big Finish",
+        "Final Chorus terakhir"
+      ],
+      "hindari": [
+        "Di tengah lagu",
+        "Verse biasa",
+        "Outro fade"
+      ]
+    },
+    {
+      "id": "sub_kendang_in",
+      "istilah": "Kendang enters",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Kendang masuk sebagai penanda transisi",
+      "panjang": "Kendang yang tiba-tiba masuk di tengah lagu sebagai penanda perubahan section atau eskalasi energi. Sangat efektif untuk lagu fusion etnik-elektronik.",
+      "cocok": [
+        "Drop etnik",
+        "Chorus Koplo",
+        "Transisi gamelan"
+      ],
+      "hindari": [
+        "Pure EDM tanpa etnik",
+        "Classical barat"
+      ]
+    },
+    {
+      "id": "sub_gamelan_full",
+      "istilah": "Full Gamelan Ensemble",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Seluruh ansambel gamelan masuk bersama",
+      "panjang": "Semua instrumen gamelan — saron, bonang, kenong, kempul, gong, kendang — bermain bersamaan. Tekstur yang sangat kaya dan khas.",
+      "cocok": [
+        "Gamelan Fusion climax",
+        "Cinematic Etnik",
+        "Heroik lokal"
+      ],
+      "hindari": [
+        "Pure pop barat",
+        "EDM minimalis"
+      ]
+    },
+    {
+      "id": "sub_gong_resonance",
+      "istilah": "Gong Resonance",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Gema gong yang panjang mengisi ruang",
+      "panjang": "Suara gong yang dibiarkan bergema panjang tanpa dipotong. Mengisi seluruh ruang audio dengan resonansi yang dalam dan meditatif.",
+      "cocok": [
+        "Intro gamelan",
+        "Interlude ritual",
+        "Ambient mistis"
+      ],
+      "hindari": [
+        "Fast EDM",
+        "Staccato section",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "sub_gong_hit",
+      "istilah": "Final Gong Hit",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Pukulan gong penutup yang agung",
+      "panjang": "Satu pukulan gong besar di akhir lagu sebagai tanda penutup yang definitif. Cara tradisional mengakhiri pertunjukan gamelan.",
+      "cocok": [
+        "Outro gamelan",
+        "Big Finish etnik",
+        "Akhir Cinematic"
+      ],
+      "hindari": [
+        "EDM fade out",
+        "Pop ending biasa"
+      ]
+    },
+    {
+      "id": "sub_kecak",
+      "istilah": "Kecak Polyrhythm",
+      "kategori": "Sub-Instruksi",
+      "singkat": "Vokal perkusif cak-cak berlapis banyak orang",
+      "panjang": "Pola vokal perkusif dari tarian Kecak Bali — banyak suara mengucapkan suku kata berbeda secara bersamaan membentuk ritme kompleks.",
+      "cocok": [
+        "Bali Ritual Fusion",
+        "World Music",
+        "Cinematic Etnik"
+      ],
+      "hindari": [
+        "Solo ballad",
+        "Lo-Fi chill",
+        "Pop biasa"
+      ]
+    },
+    {
+      "id": "major_scale",
+      "istilah": "Major Scale",
+      "kategori": "Tangga Nada",
+      "singkat": "Skala dasar musik ceria Barat",
+      "panjang": "Tujuh nada dengan interval yang menciptakan nuansa ceria dan terang. Do-Re-Mi-Fa-Sol-La-Si. Paling umum di semua genre musik populer.",
+      "cocok": [
+        "Pop",
+        "Gospel",
+        "Folk",
+        "Country"
+      ],
+      "hindari": [
+        "Dark Ambient",
+        "Horror"
+      ]
+    },
+    {
+      "id": "kendangjawa",
+      "istilah": "Kendang Jawa",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Drum dua sisi, jantung gamelan Jawa",
+      "panjang": "Instrumen perkusi utama gamelan Jawa. Dipukul dengan telapak tangan di kedua sisi. Menentukan tempo dan transisi seluruh ansambel gamelan.",
+      "cocok": [
+        "Gamelan Jawa",
+        "Campursari",
+        "Dangdut tradisional"
+      ],
+      "hindari": [
+        "Pure EDM tanpa sentuhan etnik"
+      ]
+    },
+    {
+      "id": "kendangbali",
+      "istilah": "Kendang Bali",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Kendang agresif & cepat khas Bali",
+      "panjang": "Lebih kecil dan nyaring dari kendang Jawa. Ritme lebih padat, cepat, dan kompleks. Sangat perkusif dan dominan.",
+      "cocok": [
+        "Gamelan Bali",
+        "Kecak fusion",
+        "Bali EDM fusion"
+      ],
+      "hindari": [
+        "Tembang Sunda halus",
+        "Keroncong"
+      ]
+    },
+    {
+      "id": "suling",
+      "istilah": "Suling Sunda",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Seruling bambu sendu khas Sunda",
+      "panjang": "Seruling bambu vertikal dengan suara melismatik yang khas — naik turun meliuk halus. Sangat ekspresif dan sendu. Identik dengan suasana pedesaan Sunda.",
+      "cocok": [
+        "Tembang Sunda",
+        "Pop Sunda",
+        "Indie Etnik",
+        "Ambient"
+      ],
+      "hindari": [
+        "Hard Rock",
+        "EDM keras",
+        "Metal"
+      ]
+    },
+    {
+      "id": "kecapi",
+      "istilah": "Kecapi Sunda",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Sitar datar Sunda, suara lembut mengalun",
+      "panjang": "Alat musik petik datar dengan banyak senar. Suara lembut dan mengalun panjang. Sering dimainkan bersama suling dalam tembang Sunda.",
+      "cocok": [
+        "Tembang Sunda",
+        "Pop Sunda",
+        "Keroncong fusion",
+        "Lo-Fi Etnik"
+      ],
+      "hindari": [
+        "Metal",
+        "EDM",
+        "Phonk"
+      ]
+    },
+    {
+      "id": "sasando",
+      "istilah": "Sasando NTT",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Harpa tabung bambu NTT, suara ethereal",
+      "panjang": "Instrumen unik dari Rote, NTT — dawai dipasang melingkar di tabung bambu dengan resonator daun lontar. Suara ethereal dan melingkar yang sangat unik.",
+      "cocok": [
+        "World Music",
+        "Ambient Etnik",
+        "Indie Etnik",
+        "Dreamy"
+      ],
+      "hindari": [
+        "Hard Rock",
+        "EDM keras",
+        "Phonk"
+      ]
+    },
+    {
+      "id": "saron",
+      "istilah": "Saron Gamelan",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Bilah logam gamelan, melodi utama",
+      "panjang": "Deretan bilah logam yang dipukul dengan pemukul kayu. Menghasilkan suara nyaring metalik yang menjadi melodi utama gamelan.",
+      "cocok": [
+        "Gamelan Fusion",
+        "Cinematic Etnik",
+        "Ambient Lokal"
+      ],
+      "hindari": [
+        "Pop komersial tanpa sentuhan etnik"
+      ]
+    },
+    {
+      "id": "gongageng",
+      "istilah": "Gong Ageng",
+      "kategori": "Instrumen Lokal",
+      "singkat": "Gong terbesar, penanda akhir frase",
+      "panjang": "Gong terbesar dalam ansambel gamelan. Suaranya sangat dalam, resonan, dan bertahan lama. Memberi kesan agung dan sakral.",
+      "cocok": [
+        "Gamelan ritual",
+        "Cinematic Epic",
+        "Ambient Magis"
+      ],
+      "hindari": [
+        "Lagu cepat dengan banyak hit",
+        "EDM"
+      ]
+    },
+    {
+      "id": "bass808",
+      "istilah": "Distorted 808 Bass",
+      "kategori": "Instrumen",
+      "singkat": "Sub-bass elektronik berat pengetuk dada",
+      "panjang": "Suara bass dari drum machine Roland TR-808 yang didistorsi hingga sangat berat. Terasa lebih di dada daripada di telinga. Fondasi Hip-Hop, Trap, dan EDM modern.",
+      "cocok": [
+        "Trap",
+        "Hip-Hop",
+        "Phonk",
+        "EDM",
+        "Koplo modern"
+      ],
+      "hindari": [
+        "Acoustic Folk",
+        "Keroncong",
+        "Classical"
+      ]
+    },
+    {
+      "id": "rhodes",
+      "istilah": "Rhodes Piano",
+      "kategori": "Instrumen",
+      "singkat": "Piano elektrik klasik, suara hangat bergetar",
+      "panjang": "Piano elektrik vintage dengan suara yang hangat, sedikit bergetar, dan sangat ekspresif. Sangat penting untuk Jazz, R&B, Lo-Fi, dan Soul.",
+      "cocok": [
+        "Jazz",
+        "R&B",
+        "Neo-Soul",
+        "Lo-Fi",
+        "Bossa Nova"
+      ],
+      "hindari": [
+        "Heavy Metal",
+        "Phonk agresif",
+        "EDM hard"
+      ]
+    },
+    {
+      "id": "grandpiano",
+      "istilah": "Grand Piano",
+      "kategori": "Instrumen",
+      "singkat": "Piano konser megah, penuh & resonan",
+      "panjang": "Piano akustik ukuran besar dengan resonansi penuh dan dinamika yang sangat luas. Dari bisikan halus hingga teriakan keras. Cocok untuk hampir semua genre.",
+      "cocok": [
+        "Classical",
+        "Pop Ballad",
+        "Jazz",
+        "Cinematic",
+        "R&B"
+      ],
+      "hindari": [
+        "Pure EDM elektronik",
+        "Phonk tanpa piano"
+      ]
+    },
+    {
+      "id": "stringsection",
+      "istilah": "String Section",
+      "kategori": "Instrumen",
+      "singkat": "Ansambel biola/cello, mewah & dramatis",
+      "panjang": "Kelompok instrumen gesek (violin, viola, cello, double bass) yang bermain bersama. Suara yang sangat ekspresif dan bisa dari lembut hingga sangat dramatis.",
+      "cocok": [
+        "Cinematic",
+        "Classical",
+        "Pop Ballad",
+        "Neo-Soul"
+      ],
+      "hindari": [
+        "Pure EDM",
+        "Phonk",
+        "Koplo keras"
+      ]
+    },
+    {
+      "id": "acousticguitar",
+      "istilah": "Acoustic Guitar",
+      "kategori": "Instrumen",
+      "singkat": "Gitar kayu, hangat & organik",
+      "panjang": "Gitar akustik menghasilkan suara hangat dan organik yang sangat versatile. Bisa finger-picking halus atau strumming kuat.",
+      "cocok": [
+        "Folk",
+        "Pop",
+        "Singer-songwriter",
+        "Country",
+        "Indie"
+      ],
+      "hindari": [
+        "Pure EDM",
+        "Heavy Metal (tanpa clean section)"
+      ]
+    }
+  ]
 }
