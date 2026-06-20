@@ -1,0 +1,13 @@
+c5cbcf0f4fefd8476024f5f6e9ce0132870f2bbb|2026-06-20 22:08:01 +0700|docs: tambah dokumentasi konsep, changelog, dan originalitas untuk keperluan hak cipta
+2baa6fa27c7f67ea178c1c45bf0301f224d12ae3|2026-06-20 14:28:01 +0700|feat: tangga nada + intensity curve + energy level + template popup
+aee84a96e98889f3716af9b3056b0609746c7f84|2026-06-19 15:24:00 +0700|feat: logic gate + duration counter + flag system + conflict detection
+88dcdf755cd41584155167a0a7c1946ca5260555|2026-06-19 15:19:40 +0700|feat: logic gate data + 8 sub baru + durasi ideal + flag system
+5aabb41ca070fe3172b12aaac70897e98e63f875|2026-06-19 09:24:39 +0700|feat: curated mode + compatibility map
+e4fda5c47953164683a3bffa5624fa679845912b|2026-06-19 08:59:30 +0700|feat: supabase integration + referensi lagu
+2000a0029535794b2aa220be1b574932715bebf5|2026-06-19 08:49:34 +0700|feat: supabase integration + referensi lagu
+3f84625f9dbb3b310cf0b33e7a1d6c95d0fe2693|2026-06-19 08:30:12 +0700|feat: supabase integration + referensi lagu
+2dd3c72a994c9a11bbc917ba26f3b5315d1b3fd1|2026-06-19 06:47:33 +0700|fix: copy button fallback + toast notifications
+86ea7eb3402c73c0a6db4502df494549c64b3e0f|2026-06-18 18:49:47 +0700|v2: full preset builder with structure and save
+0ac7ad1079b814074b353110908d426b482f79bc|2026-06-18 15:36:33 +0700|init: gawe ukoro v1
+918823518340d28dabb5c61a79d8f87f55e5dc11|2026-06-18 15:30:31 +0700|init
+697b48f43bd408b22a6d514132d626c3a6d92de3|2026-06-18 13:49:01 +0700|Initial commit
